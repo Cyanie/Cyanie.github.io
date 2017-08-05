@@ -9,17 +9,20 @@
   <link rel="dns-prefetch" href="https://cyanie.github.io">
   <title>AtCoder泛做-ARC#068~076 | Cyani&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="未完成: ARC#069F, ARC#070E/F, ARC#074E/F  AtCoder Regular Contest 068 E - Snuke Line 给定$n$个区间$[l,r]$和一个数$m$。对于$d=1,2,3…,m$，求$kd(1&amp;lt;=kd&amp;lt;=m,k\in Z)$被多少个不同区间覆盖（对于不同的$k$，只算一次）。$1&amp;lt;=n,m&amp;lt;=3\times 10^">
+  <meta name="description" content="未完成: ARC#069F, ARC#070E/F, ARC#074F  AtCoder Regular Contest 068 E - Snuke Line 给定$n$个区间$[l,r]$和一个数$m$。对于$d=1,2,3…,m$，求$kd(1&amp;lt;=kd&amp;lt;=m,k\in Z)$被多少个不同区间覆盖（对于不同的$k$，只算一次）。$1&amp;lt;=n,m&amp;lt;=3\times 10^5,">
 <meta name="keywords" content="训练">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AtCoder泛做-ARC#068~076">
 <meta property="og:url" content="https://cyanie.github.io/2017/07/15/Training-ARC-068-076/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
-<meta property="og:description" content="未完成: ARC#069F, ARC#070E/F, ARC#074E/F  AtCoder Regular Contest 068 E - Snuke Line 给定$n$个区间$[l,r]$和一个数$m$。对于$d=1,2,3…,m$，求$kd(1&amp;lt;=kd&amp;lt;=m,k\in Z)$被多少个不同区间覆盖（对于不同的$k$，只算一次）。$1&amp;lt;=n,m&amp;lt;=3\times 10^">
-<meta property="og:updated_time" content="2017-08-04T09:41:39.073Z">
+<meta property="og:description" content="未完成: ARC#069F, ARC#070E/F, ARC#074F  AtCoder Regular Contest 068 E - Snuke Line 给定$n$个区间$[l,r]$和一个数$m$。对于$d=1,2,3…,m$，求$kd(1&amp;lt;=kd&amp;lt;=m,k\in Z)$被多少个不同区间覆盖（对于不同的$k$，只算一次）。$1&amp;lt;=n,m&amp;lt;=3\times 10^5,">
+<meta property="og:image" content="https://cyanie.github.io/img/ARC#072F-1.PNG">
+<meta property="og:image" content="https://cyanie.github.io/img/ARC#072F-2.PNG">
+<meta property="og:updated_time" content="2017-08-05T14:22:22.959Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AtCoder泛做-ARC#068~076">
-<meta name="twitter:description" content="未完成: ARC#069F, ARC#070E/F, ARC#074E/F  AtCoder Regular Contest 068 E - Snuke Line 给定$n$个区间$[l,r]$和一个数$m$。对于$d=1,2,3…,m$，求$kd(1&amp;lt;=kd&amp;lt;=m,k\in Z)$被多少个不同区间覆盖（对于不同的$k$，只算一次）。$1&amp;lt;=n,m&amp;lt;=3\times 10^">
+<meta name="twitter:description" content="未完成: ARC#069F, ARC#070E/F, ARC#074F  AtCoder Regular Contest 068 E - Snuke Line 给定$n$个区间$[l,r]$和一个数$m$。对于$d=1,2,3…,m$，求$kd(1&amp;lt;=kd&amp;lt;=m,k\in Z)$被多少个不同区间覆盖（对于不同的$k$，只算一次）。$1&amp;lt;=n,m&amp;lt;=3\times 10^5,">
+<meta name="twitter:image" content="https://cyanie.github.io/img/ARC#072F-1.PNG">
   
     <link rel="alternative" href="/atom.xml" title="Cyani&#39;s Blog" type="application/atom+xml">
   
@@ -185,7 +188,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <font color="red">未完成: ARC#069F, ARC#070E/F, ARC#074E/F</font>
+        <font color="red">未完成: ARC#069F, ARC#070E/F, ARC#074F</font>
 
 <h5 id="AtCoder-Regular-Contest-068"><a href="#AtCoder-Regular-Contest-068" class="headerlink" title="AtCoder Regular Contest 068"></a>AtCoder Regular Contest 068</h5><blockquote>
 <p><strong>E - Snuke Line</strong> 给定$n$个区间$[l,r]$和一个数$m$。对于$d=1,2,3…,m$，求$kd(1&lt;=kd&lt;=m,k\in Z)$被多少个不同区间覆盖（对于不同的$k$，只算一次）。$1&lt;=n,m&lt;=3\times 10^5,1&lt;=l&lt;=r&lt;=m$</p>
@@ -253,9 +256,29 @@
 <p>于是问题转化为如何就$suf[i]$。显然，$suf[n+1]=1$，而且随着$i$的减小，$suf[i]$一定是非递减的。当$ai&gt;=2\times suf[i+1]$，可以取到$suf[i]=suf[i+1]$（此时无法执行操作）；否则$suf[i]=suf[i+1]+ai$。 </p>
 <p><a href="http://arc072.contest.atcoder.jp/submissions/1455720" target="_blank" rel="external">Code</a></p>
 <blockquote>
-<p><strong>F - Dam</strong> 有一个水坝容积为$L$，一开始没有水。此后$n$天，在第$i$天早晨，会进来体积为$Vi$，温度为$Ti$的水；为了下一天水不会溢出，第$i$天傍晚需要排出一些水</p>
+<p><strong>F - Dam</strong> 有一个水坝容积为$L$，一开始没有水。此后$n$天，在第$i$天早晨，会进来体积为$Vi$，温度为$Ti$的水；为了下一天水不会溢出，第$i$天傍晚需要排出一些水。对于体积$V1$，温度$T1$和体积$V2$，温度$T2$的水混合，体积为$V1+V2$，水温为$\large \frac {T1\times V1+T2\times V2}{V1+V2}$。回答$n$个询问，对于第$i$个询问，输出在第$i$天能够达到的最大水温。$n&lt;=5\times 10^5$</p>
 </blockquote>
-<p><a href="http://arc072.contest.atcoder.jp/submissions/1455831" target="_blank" rel="external">Code</a></p>
+<p>假设混合得到的水体积为$V2$，温度为$T3$。由题目可知$T1\times V1+T2\times V2 = T3\times V3$。考虑将$(x,y)=(V,TV)$抽象为一个向量，那么，水的混合就变成了向量之和！</p>
+<p>观察这个向量，发现$T$对应的就是它的斜率！将水排出，相当于是原向量乘上&lt;1的实数！将可能的状态画在坐标系上，可以发现这一定是一个上凸包。如图。</p>
+<p><img src="\img\ARC#072F-1.PNG" alt="ARC#072F-1"></p>
+<p>而新加入一个向量后，最右端的会被删除。此时不一定还是凸包，在左端比较相邻的斜率，合并即可。</p>
+<p><img src="\img\ARC#072F-2.PNG" alt="ARC#072F-2"></p>
+<p>整个过程用双端队列维护，复杂度$O(n)$。</p>
+<h5 id="AtCoder-Regular-Contest-073"><a href="#AtCoder-Regular-Contest-073" class="headerlink" title="AtCoder Regular Contest 073"></a>AtCoder Regular Contest 073</h5><p><a href="http://arc072.contest.atcoder.jp/submissions/1455831" target="_blank" rel="external">Code</a></p>
+<blockquote>
+<p><strong>E - Ball Coloring</strong> 有$n$个包，每个包里各有两个球，权值为$xi$和$yi$。你需要将一个球涂为红色，另一个球涂为蓝色。令$Rmin$为红球中的最小权值，$Rmax,Bmin,Bmax$同样定义。求出$(Rmax-Rmin)\times (Bmax-Bmin)$的最小值。$n&lt;=2\times 10^5$</p>
+</blockquote>
+<p>假设所有权值中的最大值为$Max$，最小值$Min$。不失一般性地，有两种情况：</p>
+<p>$Rmax=Max,Bmin=Min$，此时需要最大化$Rmin$，最小化$Bmax$，于是将两个球中较大的涂为红色，较小的涂为蓝色。</p>
+<p>$Rmax=Max,Rmin=Min$（Min和Max不在同一包里），此时需要最小化$Bmax$，最大化$Bmin$，令$xi&lt;=yi$，之后按照$x$升序排序。我们说，最优方案一定是，排序后，前$k\ (1&lt;=k&lt;=n)$个的$xi$涂为红色，后$n-k$个涂为蓝色。如何证明，考虑反证法。</p>
+<p>假设第$p(p&gt;=k+2)$涂为了红色，那么$Bmin$并不会增大，而$Bmax$并不会减小，所以一定不会是更优解。于是简单证明了结论。</p>
+<p><a href="http://arc073.contest.atcoder.jp/submissions/1482509" target="_blank" rel="external">Code</a></p>
+<blockquote>
+<p><strong>F - Many Moves</strong> 在一根长度为$n$的数轴上，有两个方块，位置为$A,B$。并且在同一时刻，你能移动一块方块一个单位距离。你需要依次到达位置$xi$，求最少所需时间。$n,Q&lt;=2\times 10^5$</p>
+</blockquote>
+<p>以$xi$作为阶段，注意到上次的一个方块位置一定是在$x[i-1]$，于是不难想到$O(n^2)$的DP。$f[i,j]$表示到位置$xi$，另一个位置为$j$的最小时间。若原来位置为$x[i-1]$的到位置$xi$，即有$f[i,j]=f[i-1,j]+|x[i]-x[i-1]|$。否则即有$f[i,x[i-1]]=f[i,j]+|j-x[i-1]|$。</p>
+<p>考虑如何从优化转移的时间。对于前面的状态转移方程，事实上就是线段树的区间加。对于后面的状态转移方程，考虑维护$f[i,j]-j$和$f[i,j]+j$的值，在$[1,x[i-1]]$取$f[i,j]-j$的最值；在$[x[i-1],n]$取$f[i,j]+j$的最值即可。阶段间的转移优化到了$O(logn)$。</p>
+<p><a href="http://arc073.contest.atcoder.jp/submissions/1476079" target="_blank" rel="external">Code</a></p>
 
       
 
@@ -479,11 +502,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">集训</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -491,11 +514,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">训练</a>
+                <a href="javascript:void(0)" class="js-tag color3">集训</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">训练</a>
               </li>
             
             <div class="clearfix"></div>

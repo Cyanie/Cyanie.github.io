@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://cyanie.github.io/2017/07/15/Training-ARC-068-076/</loc>
+    <lastmod>2017-08-05T14:22:22.959Z</lastmod>
+    <data>
+        <display>
+        <title>AtCoder泛做-ARC#068~076</title>
+        <pubTime>2017-07-14T16:00:00.000Z</pubTime>
+        
+        <tag>训练</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://cyanie.github.io/2017/08/04/Algorithms-Tree-count/</loc>
     <lastmod>2017-08-05T12:13:03.162Z</lastmod>
     <data>
@@ -29,23 +46,6 @@
         <pubTime>2017-08-05T12:05:00.000Z</pubTime>
         
         <tag>笔记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cyanie.github.io/2017/07/15/Training-ARC-068-076/</loc>
-    <lastmod>2017-08-04T09:41:39.073Z</lastmod>
-    <data>
-        <display>
-        <title>AtCoder泛做-ARC#068~076</title>
-        <pubTime>2017-07-14T16:00:00.000Z</pubTime>
-        
-        <tag>训练</tag>
          
          
            
