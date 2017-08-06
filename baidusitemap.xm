@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>https://cyanie.github.io/2017/08/06/Training-DP/</loc>
+    <lastmod>2017-08-06T01:58:47.430Z</lastmod>
+    <data>
+        <display>
+        <title></title>
+        <pubTime>2017-08-06T01:58:47.430Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://cyanie.github.io/2017/07/15/Training-ARC-068-076/</loc>
     <lastmod>2017-08-05T14:22:22.959Z</lastmod>
     <data>
