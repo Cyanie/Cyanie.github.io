@@ -165,6 +165,75 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Training-CF-Div2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/08/Training-CF-Div2/">CodeForces泛做-Div2(C,D,E)</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/08/Training-CF-Div2/" class="archive-article-date">
+  	<time datetime="2017-08-08T00:08:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。</p>
+<font color="red">未完成: </font>
+
+<h5 id="Codeforces-Round-301-Div-2"><a href="#Codeforces-Round-301-Div-2" class="headerlink" title="Codeforces Round #301 (Div. 2)"></a><a href="http://codeforces.com/contest/540" target="_blank" rel="external">Codeforces Round #301 (Div. 2)</a></h5><p>540C，4Y。BFS判连通。注意起始点与终点重合或相邻的情况，终点经过两次，只要有两个空格与终点相邻即可。</p>
+<p>540D，1Y。概率DP。乘上转移的概率即可。</p>
+<p>540E，3Y。离散化+树状数组统计逆序对。设出现的数为${a}$，未出现的为${b}$，发现a-&gt;a，a-&gt;b，b-&gt;a有贡献，分类讨论即可。</p>
+<p><strong>反思</strong> 把所有特殊情况考虑周全，仔细分类讨论。</p>
+<h5 id="Codeforces-Round-302-Div-2"><a href="#Codeforces-Round-302-Div-2" class="headerlink" title="Codeforces Round #302 (Div. 2)"></a><a href="http://codeforces.com/contest/544" target="_blank" rel="external">Codeforces Round #302 (Div. 2)</a></h5><p>544C，1Y。二维完全背包DP。其实挺套路的，要加个滚动数组。</p>
+<p>544D，1Y。暴力BFS。注意到两个点对的最短路径若存在交集，则一定是连续的一段。暴力枚举两点即可。</p>
+<p>554E，1Y。状压DP。其实状压DP都挺套路的:①数据范围一般不超过20.②预处理加速转移.③转移时顺序无关，强制转移$lowbit$。</p>
+<p><strong>反思</strong> 注意观察题目性质，从多角度思考状态的表示。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">训练</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/08/Training-CF-Div2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-Training-DP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -577,7 +646,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <font color="red">未完成: ARC#078E/F, AGC#018B/C/D/E/F, ARC#079F</font>
+        <font color="red">未完成: ARC#078E/F, AGC#018B/C/D/E/F, ARC#079F ARC#080E/F</font>
 
 <h2 id="比赛记录"><a href="#比赛记录" class="headerlink" title="比赛记录"></a>比赛记录</h2><h4 id="2017年"><a href="#2017年" class="headerlink" title="2017年"></a>2017年</h4><table>
 <thead>
@@ -609,9 +678,9 @@
 <td style="text-align:center">261</td>
 </tr>
 <tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<td style="text-align:center">AtCoder Regular Contest 080</td>
+<td style="text-align:center">2/3/4</td>
+<td style="text-align:center">674</td>
 </tr>
 <tr>
 <td style="text-align:center"></td>
@@ -1001,15 +1070,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">训练</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">训练</a>
               </li>
             
             <div class="clearfix"></div>

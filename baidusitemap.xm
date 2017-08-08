@@ -4,6 +4,40 @@
 
     
   <url>
+    <loc>https://cyanie.github.io/2017/08/08/Training-CF-Div2/</loc>
+    <lastmod>2017-08-08T03:05:17.434Z</lastmod>
+    <data>
+        <display>
+        <title>CodeForces泛做-Div2(C,D,E)</title>
+        <pubTime>2017-08-08T00:08:08.000Z</pubTime>
+        
+        <tag>训练</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cyanie.github.io/2017/07/01/AtCoder/</loc>
+    <lastmod>2017-08-06T13:49:42.593Z</lastmod>
+    <data>
+        <display>
+        <title>AtCoder比赛记录&题解</title>
+        <pubTime>2017-07-01T14:00:00.000Z</pubTime>
+        
+        <tag>比赛</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://cyanie.github.io/2017/08/06/Training-DP/</loc>
     <lastmod>2017-08-06T01:58:47.430Z</lastmod>
     <data>
@@ -61,23 +95,6 @@
         <pubTime>2017-08-05T12:05:00.000Z</pubTime>
         
         <tag>笔记</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cyanie.github.io/2017/07/01/AtCoder/</loc>
-    <lastmod>2017-08-04T08:47:30.296Z</lastmod>
-    <data>
-        <display>
-        <title>AtCoder比赛记录&题解</title>
-        <pubTime>2017-07-01T14:00:00.000Z</pubTime>
-        
-        <tag>比赛</tag>
          
          
            
