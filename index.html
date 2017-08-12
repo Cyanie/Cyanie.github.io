@@ -172,7 +172,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/08/Training-CF-Div2/">CodeForces泛做-Div2(C,D,E)</a>
+      <a class="article-title" href="/2017/08/08/Training-CF-Div2/">CodeForces泛做第一轮</a>
     </h1>
   
 
@@ -186,17 +186,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。</p>
-<font color="red">未完成: </font>
+<font color="red">未完成: 546E 568C/D 571B/D CF573D 578D</font>
 
-<h5 id="Codeforces-Round-301-Div-2"><a href="#Codeforces-Round-301-Div-2" class="headerlink" title="Codeforces Round #301 (Div. 2)"></a><a href="http://codeforces.com/contest/540" target="_blank" rel="external">Codeforces Round #301 (Div. 2)</a></h5><p>540C，4Y。BFS判连通。注意起始点与终点重合或相邻的情况，终点经过两次，只要有两个空格与终点相邻即可。</p>
-<p>540D，1Y。概率DP。乘上转移的概率即可。</p>
-<p>540E，3Y。离散化+树状数组统计逆序对。设出现的数为${a}$，未出现的为${b}$，发现a-&gt;a，a-&gt;b，b-&gt;a有贡献，分类讨论即可。</p>
-<p><strong>反思</strong> 把所有特殊情况考虑周全，仔细分类讨论。</p>
-<h5 id="Codeforces-Round-302-Div-2"><a href="#Codeforces-Round-302-Div-2" class="headerlink" title="Codeforces Round #302 (Div. 2)"></a><a href="http://codeforces.com/contest/544" target="_blank" rel="external">Codeforces Round #302 (Div. 2)</a></h5><p>544C，1Y。二维完全背包DP。其实挺套路的，要加个滚动数组。</p>
-<p>544D，1Y。暴力BFS。注意到两个点对的最短路径若存在交集，则一定是连续的一段。暴力枚举两点即可。</p>
-<p>554E，1Y。状压DP。其实状压DP都挺套路的:①数据范围一般不超过20.②预处理加速转移.③转移时顺序无关，强制转移$lowbit$。</p>
-<p><strong>反思</strong> 注意观察题目性质，从多角度思考状态的表示。</p>
-
+<h5 id="Codeforces-Round-301-Div-2"><a href="#Codeforces-Round-301-Div-2" class="headerlink" title="Codeforces Round #301 (Div. 2)"></a><a href="http://codeforces.com/contest/540" target="_blank" rel="external">Codeforces Round #301 (Div. 2)</a></h5><p>540C,4Y。BFS判连通。注意起始点与终点重合或相邻的情况，终点经过两次，只要有两个空格与终点相邻即可。</p>
+        
+          <a class="article-more-a" href="/2017/08/08/Training-CF-Div2/#more">more >></a>
+        
       
 
       
@@ -290,11 +285,9 @@
 
 <p><a href="http://blog.csdn.net/xym_CSDN/article/details/53456447" target="_blank" rel="external">参考资料</a> <strong>说明</strong> 在OI中群论主要用于等价类计数，其中Burnside引理与Polya定理是其核心。</p>
 <h4 id="一些定义及定理"><a href="#一些定义及定理" class="headerlink" title="一些定义及定理"></a>一些定义及定理</h4><p><strong>群。</strong>群$G$是一个定义在二元组$(S,⋅)$的代数结构，$⋅$是一个二元运算符。满足<strong>封闭性</strong>(任两个元素能推到另一个元素)，结合律，消去律。存在单位元$e$，并且每个元素都有逆元。</p>
-<p><strong>置换。</strong>$(a_1,a_2,a_3,…,a_n)$即$(1,2,3,4,…,n)$的<strong>一一映射</strong>（全排列），把$i$映射到$a_i$。<strong>任意一个置换都可以写成循环的形式：</strong>$(3,5,1,4,2)=(1\ 3)(2\ 5)(4)$。 置换群，即由置换组成的群，运算是置换的连接。</p>
-<p><strong>Burnside引理。</strong>用于求置换下的<strong>等价类</strong>个数。设$G={f_1,f<em>2,…f</em>{|G|}}$是$[1,n]$的置换群。一个方案$S$在置换$f$的作用下不变，称$S$为$f$的<strong>不动点</strong>，$f<em>i$的不动点个数记为$c(i)$。于是，$$\Large ans=\frac{\sum </em>{i=1}^{|G|} c(i)}{|G|}$$。 </p>
-<p><strong>Polya定理。</strong> 如果置换$f$分解为$m(f)$个循环，每个循环的颜色都相同，若存在$k$种颜色，即有$c(i)=k^{m(f)}$。带入Burnside引理即得。</p>
-<h4 id="一些推论及技巧"><a href="#一些推论及技巧" class="headerlink" title="一些推论及技巧"></a>一些推论及技巧</h4><p>$c(i)$可以通过组合计数，DP或数论的方式求出。</p>
-
+        
+          <a class="article-more-a" href="/2017/08/05/Algorithms-Group-theory/#more">more >></a>
+        
       
 
       
@@ -355,17 +348,9 @@
         <font color="red">更多的坑待填…</font>
 
 <h4 id="prufer序列"><a href="#prufer序列" class="headerlink" title="prufer序列"></a>prufer序列</h4><p><a href="http://www.cnblogs.com/zhj5chengfeng/archive/2013/08/23/3278557.html" target="_blank" rel="external">参考资料</a> prufer序是无根树的编码表示，对于一棵$n$个节点带编号的无根树，对应唯一一串长度为$n-2$的prufer编码。</p>
-<h5 id="无根树转化为prufer序列"><a href="#无根树转化为prufer序列" class="headerlink" title="无根树转化为prufer序列"></a>无根树转化为prufer序列</h5><p>找到<strong>编号最小的叶子</strong>并删除，序列中添加与之相连的节点编号，重复执行直到只剩下$2$个节点。</p>
-<p>根据以上过程，显然有推论 <strong>一个节点的度数=其在prefer序列出现的次数+1。</strong></p>
-<h5 id="prufer序列转化为无根树"><a href="#prufer序列转化为无根树" class="headerlink" title="prufer序列转化为无根树"></a>prufer序列转化为无根树</h5><p>首先prufer序列中的出现次数+1可以得到每个节点的度。</p>
-<p>先执行$n-2​$步，选取最小标号度为1的点$u​$与Purfer序列的第$i​$个数$v​$表示的顶点相连，并将$u​$和$v​$的度减$1​$。最后再把剩下的两个度为$1​$的点连边。</p>
-<p>由此发现，<strong>一棵无根树和与一个prufer序列一一对应。</strong></p>
-<h5 id="一些推论"><a href="#一些推论" class="headerlink" title="一些推论"></a>一些推论</h5><ul>
-<li>一个无向完全图的生成树个数为$n^{n-2}$。</li>
-<li>设节点$i$的度数限制为$di$，求满足条件树的个数。对应到prufer序列，相当于$i$在序列中出现了$di-1$次，不同的排列数。即为$n!$除以每个$(di-1)!$。 </li>
-<li>对于一些没有限制度数，稍微修改一下即可。</li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2017/08/04/Algorithms-Tree-count/#more">more >></a>
+        
       
 
       
@@ -428,93 +413,9 @@
 <h5 id="AtCoder-Regular-Contest-068"><a href="#AtCoder-Regular-Contest-068" class="headerlink" title="AtCoder Regular Contest 068"></a>AtCoder Regular Contest 068</h5><blockquote>
 <p><strong>E - Snuke Line</strong> 给定$n$个区间$[l,r]$和一个数$m$。对于$d=1,2,3…,m$，求$kd(1&lt;=kd&lt;=m,k\in Z)$被多少个不同区间覆盖（对于不同的$k$，只算一次）。$1&lt;=n,m&lt;=3\times 10^5,1&lt;=l&lt;=r&lt;=m$</p>
 </blockquote>
-<p>记区间的长度为$len=r-l+1$。想到可以$O(mlogm)$暴力枚举所有的$kd$，用线段树算出它被几个区间包含。容易发现当$d&lt;len$时，有可能被多次计算。</p>
-<p>考虑当$d&lt;=len$时，则一定存在$k$使得$kd$被这个区间覆盖。于是我们记录满足$d&lt;=len$的区间个数即可。而对于$d&gt;len$的情况，至多有一个$kd$被区间覆盖，于是就可以用线段树维护。即当$d&gt;len$时加入这个区间，同时单点询问$kd$被多少个区间覆盖。复杂度$O((mlogm+n)logm)$。</p>
-<p><a href="http://arc068.contest.atcoder.jp/submissions/1421485" target="_blank" rel="external">Code</a></p>
-<p><strong>F - Solitaire</strong> 有一个双端队列，依次往首或尾插入数1到n。然后你可以从队列的首或位取出一个数，顺次相接组成一个序列。求有多少个序列的第$K$位为$1$？$1&lt;=k&lt;=n&lt;=2\times 10^3$</p>
-<p>显然，当$n$个数全部插入后，队列一定是递减到1再递增的。不难发现，得到的序列的前$K$位，一定是由两个递减序列交错得到的，且第$K$位为1。</p>
-<p>从$n$到$1$逐个考虑每一个数是否选择，且属于哪一个序列。定义$f(i,j)$ 已经得到了序列的前$i$位，其中第$i$位为$j$的方案数。将$j$加入序列1，则$f(i,j)$可由$f(i-1,k), k&gt;j$转移过来。</p>
-<p>如果将新的数加入序列2，该如何转移？<strong>可以发现，这个数一定是没选择的数中最大的数（序列2也是递减的）。</strong>则$f(i,j)$可由$f(i-1,j)$转移过来。</p>
-<p>事实上，DP的过程还有一个非法的转移。$f(K-1,1)$会转移到$f(K,1)$，不是以1作为第$K$个数。</p>
-<p>对于剩下的$n-K$个数，每次可以取头或尾。于是答案$ans=(f(K-1,1)-f(K-1,1))\times 2^{n-K-1}$。 时间复杂度$O(nK)$。</p>
-<p><a href="http://arc068.contest.atcoder.jp/submissions/1426866" target="_blank" rel="external">Code</a></p>
-<h5 id="AtCoder-Regular-Contest-069"><a href="#AtCoder-Regular-Contest-069" class="headerlink" title="AtCoder Regular Contest 069"></a>AtCoder Regular Contest 069</h5><blockquote>
-<p><strong>E - Frequency</strong> 有$n$堆石头，第$i$堆有$ai$个石头。每一次，你需要记录下石头最多的堆的序号（当石头数相同时，取最左端的），然后你可以从某堆中拿走一块石头。直到石头被全部拿走。需要使得序号组成的序列字典序最小，问1到n在序列中出现的次数。</p>
-</blockquote>
-<p>可以发现，这个序列一定是非递增的。假设现在最多的石头堆为$x$，在1到x-1中石头最多的堆为$y$。考虑贪心的过程，我们需要把x到n中，石头数大于$ay$都取到$ay$，因为这样能使得序号尽可能快地减小。离散化石头数，再从小到大考虑，用树状数组维护小于某个值的石头堆数量，以及石头数总和即可。</p>
-<p>事实上，存在排序后$O(n)$的做法。</p>
-<p><a href="http://arc069.contest.atcoder.jp/submissions/1433620" target="_blank" rel="external">Code</a></p>
-<blockquote>
-<p><strong>F - Flags</strong> 你在一条线上插$n$个$flag$，其中第$i$个$flag$可以插在$xi$或$yi$。记所有$flag$两两间的距离最小值为$d$，求$d$的最大值。</p>
-</blockquote>
-<p><strong>暂未编写</strong>。 考虑二分答案$d$。于是是否放在$xi,yi$变成了$2-SAT$判定性问题，对于$xi$和$yi$恰好放一个，距离小于$d$的位置不能同时放，构成了一些约束条件。暴力枚举所有点对，可以在$O(n^2logMAX_{x})$的时间内解决。</p>
-<p>发现许多约束条件是无用的。<strong>考虑类似线段树的分治结构来建图</strong>，对于每个点，至多与$O(logn)$个区间相连；令一方面，线段树中父子相连的边也只有$O(n)$条。单次判定的复杂度可以做到$O(nlogn)$。总的时间复杂度$O(nlognlogMAX_{x})$，可以通过此题。</p>
-<p><strong>存在$O(n(logn+logMAX_x))$的算法，暂未理解。</strong></p>
-<h5 id="AtCoder-Regular-Contest-070"><a href="#AtCoder-Regular-Contest-070" class="headerlink" title="AtCoder Regular Contest 070"></a>AtCoder Regular Contest 070</h5><blockquote>
-<p><strong>D - Need</strong> 给定$n$个数$ai$。如果存在子集满足其和大于等于$K$，则称为是好的子集。如果一个数$ai$所在的所有好集中，去除$ai$后仍是好集，则$ai$是无用的。求无用的数的个数。</p>
-</blockquote>
-<p>对于$x&lt;y$，若$y$是无用的，则$x$一定无用的，所以答案满足单调性。考虑判断$x$是否是无用的，用$bitset$维护$n-1$个数相加能组成的集合（$x$除外，可以用类似$DP$的方式求出）。</p>
-<p>显然，如果其他的数能组成$K-x$到$K-1$中的任意一个数，则$x$是有用的。时间复杂度$O(\frac {n^2logn} w)$ ，此处$w$一般为$32$或$64$。</p>
-<p><a href="http://arc070.contest.atcoder.jp/submissions/1436925" target="_blank" rel="external">Code</a></p>
-<h5 id="AtCoder-Regular-Contest-071"><a href="#AtCoder-Regular-Contest-071" class="headerlink" title="AtCoder Regular Contest 071"></a>AtCoder Regular Contest 071</h5><blockquote>
-<p><strong>E - TrBBnsformBBtion</strong> 有字符串$S,T$，仅由$A$或$B$构成。有如下操作：①选择一个字符:$A\rightarrow BB$ 或 $B\rightarrow AA$。②删除连续3个相同的字符:$AAA$或$BBB$。给定$Q$个询问，对于每个询问，回答$S[a,b]$能否变换为$T[c,d]$。$|S|,|T|,Q&lt;=10^5$</p>
-</blockquote>
-<p>想了几分钟就YY了一个结论：把A看作1，把B看作2，两个串能变换当且仅当两个区间和模3同余。然后就A掉了。首先，必要性显然，因为对于区间和模3，不论如何操作都不会改变。</p>
-<p>看了官方题解才知道如何证明充分性。首先主要到所有的操作都是可逆的：$A\rightarrow BB\rightarrow AAAA\rightarrow A$。且$A,B$可以任意地加3个或减3个。考虑将$S$和$T$中的$B$全变为$A$。如果$S,T$的$A$个个数关于3同余，则一定能变换。就证明了结论。</p>
-<p><a href="http://arc071.contest.atcoder.jp/submissions/1440206" target="_blank" rel="external">Code</a></p>
-<blockquote>
-<p><strong>F - Infinite Sequence</strong> 给定$n\ (n&lt;=10^6)$，问存在多少个无穷序列满足：1.每个数都在1到$n$之间。2.对于任意$n&lt;=i,j$，都有$a_i=a_j$。3.对于任意的$i$，若存在$i+1&lt;=j&lt;k&lt;=i+a_i$，都有$a_j=a_k$。</p>
-</blockquote>
-<p>发现只有前$n$位是有用的，考虑到动态规划更容易向前转移，定义$f(i)$为子序列$[i,n]$满足条件的个数，于是我们考虑$a_i$的值即可转移。</p>
-<ul>
-<li>发现1是一个比较特殊的数，当$a_i=1$时，$f(i)=f(i-1)$。</li>
-<li>当$a[i]\not=1,a[i+1]\not=1$时，序列为$ABBBBBB…$的形式，$f(i)=(n-1)\times (n-1)$。</li>
-<li>当$a[i]\not=1,a[i+1]=1$时，序列为$A,1,1,,..,1,B…$的形式，$f(i)=f(i-3)+f(i-4)+…+f(1)+n-i+2$。</li>
-</ul>
-<p><a href="http://arc071.contest.atcoder.jp/submissions/1440353" target="_blank" rel="external">Code</a></p>
-<h5 id="AtCoder-Regular-Contest-072"><a href="#AtCoder-Regular-Contest-072" class="headerlink" title="AtCoder Regular Contest 072"></a>AtCoder Regular Contest 072</h5><blockquote>
-<p><strong>D - Alice&amp;Brown</strong> A和B在玩一个游戏。一开始，有两堆石子分别有$X$和$Y$个。你可以从一堆中取$2i$个，然后放$i$个到另一堆。无法操作的玩家输。问先手是否存在必胜策略?$0&lt;=X,Y&lt;=10^{18}$。</p>
-</blockquote>
-<p>通过打表发现，当$|X-Y|&gt;=2$先手必胜，否则后手必胜。考虑如何证明。</p>
-<ul>
-<li>对于$(X,Y)=(0,0),(0,1),(1,0),(1,1)$，满足$|X-Y|&lt;=1$，是必败态。</li>
-</ul>
-<ul>
-<li>对于必胜态，设$|X-Y|=3k+r&gt;=2\ (r=0,1,-1,\ k&gt;=1)$ ，取$i=k$，即可转移到必败态。</li>
-<li>对于必败态，操作后$X-Y$至少改变3，一定会转移到必胜态。</li>
-</ul>
-<p><a href="http://arc072.contest.atcoder.jp/submissions/1453534" target="_blank" rel="external">Code</a></p>
-<blockquote>
-<p><strong>E - Alice in linear land</strong> 给定长度为$n$的操作序列$ai$和距离$di$。对于每个$ai$，当$|d-ai|&lt;d$时$|d-ai|$会成为新的$d$，若最终$d=0$，则称是可达的。给定$Q$个询问$qi$，问能否改变$a[qi]$，使得操作序列是不可达的？$n,Q&lt;=5\times 10^5$</p>
-</blockquote>
-<p>首先可以预处理前缀$a[1,qi-1]$操作后的$d$，记为$pre[qi-1]$。发现对于询问$qi$，只需要知道后缀$a[qi+1,n]$使得序列不可达的最小的$d=suf[qi+1]$，只要$pre[qi-1]&gt;=suf[qi+1]$就一定能做到。</p>
-<p>于是问题转化为如何就$suf[i]$。显然，$suf[n+1]=1$，而且随着$i$的减小，$suf[i]$一定是非递减的。当$ai&gt;=2\times suf[i+1]$，可以取到$suf[i]=suf[i+1]$（此时无法执行操作）；否则$suf[i]=suf[i+1]+ai$。 </p>
-<p><a href="http://arc072.contest.atcoder.jp/submissions/1455720" target="_blank" rel="external">Code</a></p>
-<blockquote>
-<p><strong>F - Dam</strong> 有一个水坝容积为$L$，一开始没有水。此后$n$天，在第$i$天早晨，会进来体积为$Vi$，温度为$Ti$的水；为了下一天水不会溢出，第$i$天傍晚需要排出一些水。对于体积$V1$，温度$T1$和体积$V2$，温度$T2$的水混合，体积为$V1+V2$，水温为$\large \frac {T1\times V1+T2\times V2}{V1+V2}$。回答$n$个询问，对于第$i$个询问，输出在第$i$天能够达到的最大水温。$n&lt;=5\times 10^5$</p>
-</blockquote>
-<p>假设混合得到的水体积为$V2$，温度为$T3$。由题目可知$T1\times V1+T2\times V2 = T3\times V3$。考虑将$(x,y)=(V,TV)$抽象为一个向量，那么，水的混合就变成了向量之和！</p>
-<p>观察这个向量，发现$T$对应的就是它的斜率！将水排出，相当于是原向量乘上&lt;1的实数！将可能的状态画在坐标系上，可以发现这一定是一个上凸包。如图。</p>
-<p><img src="\img\ARC#072F-1.PNG" alt="ARC#072F-1"></p>
-<p>而新加入一个向量后，最右端的会被删除。此时不一定还是凸包，在左端比较相邻的斜率，合并即可。</p>
-<p><img src="\img\ARC#072F-2.PNG" alt="ARC#072F-2"></p>
-<p>整个过程用双端队列维护，复杂度$O(n)$。</p>
-<h5 id="AtCoder-Regular-Contest-073"><a href="#AtCoder-Regular-Contest-073" class="headerlink" title="AtCoder Regular Contest 073"></a>AtCoder Regular Contest 073</h5><p><a href="http://arc072.contest.atcoder.jp/submissions/1455831" target="_blank" rel="external">Code</a></p>
-<blockquote>
-<p><strong>E - Ball Coloring</strong> 有$n$个包，每个包里各有两个球，权值为$xi$和$yi$。你需要将一个球涂为红色，另一个球涂为蓝色。令$Rmin$为红球中的最小权值，$Rmax,Bmin,Bmax$同样定义。求出$(Rmax-Rmin)\times (Bmax-Bmin)$的最小值。$n&lt;=2\times 10^5$</p>
-</blockquote>
-<p>假设所有权值中的最大值为$Max$，最小值$Min$。不失一般性地，有两种情况：</p>
-<p>$Rmax=Max,Bmin=Min$，此时需要最大化$Rmin$，最小化$Bmax$，于是将两个球中较大的涂为红色，较小的涂为蓝色。</p>
-<p>$Rmax=Max,Rmin=Min$（Min和Max不在同一包里），此时需要最小化$Bmax$，最大化$Bmin$，令$xi&lt;=yi$，之后按照$x$升序排序。我们说，最优方案一定是，排序后，前$k\ (1&lt;=k&lt;=n)$个的$xi$涂为红色，后$n-k$个涂为蓝色。如何证明，考虑反证法。</p>
-<p>假设第$p(p&gt;=k+2)$涂为了红色，那么$Bmin$并不会增大，而$Bmax$并不会减小，所以一定不会是更优解。于是简单证明了结论。</p>
-<p><a href="http://arc073.contest.atcoder.jp/submissions/1482509" target="_blank" rel="external">Code</a></p>
-<blockquote>
-<p><strong>F - Many Moves</strong> 在一根长度为$n$的数轴上，有两个方块，位置为$A,B$。并且在同一时刻，你能移动一块方块一个单位距离。你需要依次到达位置$xi$，求最少所需时间。$n,Q&lt;=2\times 10^5$</p>
-</blockquote>
-<p>以$xi$作为阶段，注意到上次的一个方块位置一定是在$x[i-1]$，于是不难想到$O(n^2)$的DP。$f[i,j]$表示到位置$xi$，另一个位置为$j$的最小时间。若原来位置为$x[i-1]$的到位置$xi$，即有$f[i,j]=f[i-1,j]+|x[i]-x[i-1]|$。否则即有$f[i,x[i-1]]=f[i,j]+|j-x[i-1]|$。</p>
-<p>考虑如何从优化转移的时间。对于前面的状态转移方程，事实上就是线段树的区间加。对于后面的状态转移方程，考虑维护$f[i,j]-j$和$f[i,j]+j$的值，在$[1,x[i-1]]$取$f[i,j]-j$的最值；在$[x[i-1],n]$取$f[i,j]+j$的最值即可。阶段间的转移优化到了$O(logn)$。</p>
-<p><a href="http://arc073.contest.atcoder.jp/submissions/1476079" target="_blank" rel="external">Code</a></p>
-
+        
+          <a class="article-more-a" href="/2017/07/15/Training-ARC-068-076/#more">more >></a>
+        
       
 
       
@@ -578,14 +479,6 @@
 <blockquote>
 <p>BZOJ1136：[POI2009]求序列中的最长连续子序列，其平均数大于$k$。</p>
 </blockquote>
-<p>考虑每个数都减去$k$，转化为区间和&gt;=0的最长区间。求前缀和后，若$i &gt; j$且$sum_i&gt;=sum_j$，则$j$作为左端点比$i$更优。 维护一个$i$递增$sum_i$递减的栈。枚举右端点，<strong>利用单调性</strong>二分找到小于它的节点。</p>
-<p>事实上，右端点从$n$向左枚举，小于等于它的节点都可以弹出（右端点左移后，长度只会更劣）。</p>
-<blockquote>
-<p>HDU5726：[多校2016]对于给定序列$A$，和$Q$组询问$(l,r)$。输出$gcd(al,al+1,…,ar)$ 和所有满足$gcd(al,al+1,…,ar)=gcd(al0,al0+1,…,ar0)$ 的$(l0,r0)$的个数。</p>
-</blockquote>
-<p>$gcd$有一个很神奇的性质，<strong>不断对某个数取$gcd$，得到不同的值最多有$log$个。</strong>考虑右端点不断向右移，维护$gcd$区间的单调栈，加入新的数后不断合并相同的数。</p>
-<p>考虑第一个问题，将所有询问挂在右端点，对于左端点排序，之后在单调栈里扫一遍就好了。</p>
-<p>考虑第二个问题，用一个$map$存所有出现的$gcd$个数。单调栈同时保存所在下标，单调栈扫一遍，下标作差就是贡献。</p>
         
           <a class="article-more-a" href="/2017/07/02/2017.7-Training/#more">more >></a>
         
@@ -703,30 +596,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h5 id="AtCoder-Regular-Contest-077"><a href="#AtCoder-Regular-Contest-077" class="headerlink" title="AtCoder Regular Contest 077"></a>AtCoder Regular Contest 077</h5><blockquote>
-<p><strong>D - 11</strong> 给定$n$和长度为$n+1$的子序列，每个数都在$[1,n]$，且恰有一个数出现两次。对于$k=1,2,…,n+1$，求出长度为$k$的互异子序列个数。$n&lt;=10^5$</p>
-</blockquote>
-<p>首先找出相同的两个数$x$的位置$l,r$，可以发现剩下的数都是等价的。对于每个$k$，分类讨论计数。按照选取$x$个数，就是$C<em>{n-1}^k+2C</em>{n-1}^{k-1}+C<em>{n-1}^{k-2}$。注意到，如果在$(l,r)$内没有选数，选择$l$和选择$r$会被当作同一情况，于是答案还要减去$C</em>{u+v}^{k-1}$。</p>
-<blockquote>
-<p><strong>E - guruguru</strong> 有一盏灯具有$1,2,…,m$种亮度。遥控板可以一次操作可以将亮度加一（为$m$时，变为$1$）或跳转到固定的亮度$x$。一开始亮度为$a<em>1$，接下来$n-1$次，你需要将亮度从$a</em>{i-1}$调节到$a_i$。选取一个$x$，使得调节的总次数最小。$n,m&lt;=10^5$</p>
-</blockquote>
-<p>记$f(x_0)$为：当$x=x_0$时，需要调节的总次数。考虑亮度$s\Rightarrow t$ 对$f(x)$的贡献（假设$s&lt;t$， 其他情况同样处理）。</p>
-<ul>
-<li>对于$x&lt;=s$，$f(x)+=t-s$</li>
-<li>对于$s&lt;x&lt;=t$， $f(x)+=t-x+1$</li>
-<li>对于$t&lt;x$，$f(x)+=t-s$</li>
-</ul>
-<p>发现是区间操作，并且只有在最后查询。于是考虑差分，特别的，需要分为常数部分和系数部分。</p>
-<blockquote>
-<p><strong>F - SS</strong> 定义“双串”，由两个相同的字符串拼接而成。定义$f(S)$，在双串S后追加最少字符得到的双串。给定$S0S0$和$l,r$。求$f^{10^{100}}(S0S0)$在$[l,r]$内，26个字母分别出现的个数。$|S|&lt;=2*10^5,l,r&lt;=10^{18}$</p>
-</blockquote>
-<p><strong><em>有待更深入理解。</em></strong>用KMP预处理Next[]，可以的到S0的最短相同前后缀T，设$f(S0S0)=STST$。通过画图发现，若$|T|$是$|S|$的因数，那么S就是由一些T拼成的，$f(STST)=STTSTT$。否则，$f(STST)=STSTST$。设$g(S)g(S)=f(SS)$ ，能得到$g^{i+2}(S)=g^{i+1}(S)+g^i(S)$（显然，对于$i$无限大时也满足第一种情况）。考虑求出前缀的贡献，按照类似fib数列的递推方式计算即可。</p>
-<h5 id="AtCoder-Regular-Contest-078"><a href="#AtCoder-Regular-Contest-078" class="headerlink" title="AtCoder Regular Contest 078"></a>AtCoder Regular Contest 078</h5><blockquote>
-<p><strong>D - Fennec VS. Snuke</strong> 有一棵有$n$个节点的树，A和B在树上玩涂色游戏。一开始，$1$号节点被涂上黑色，$n$号节点被涂上白色，其他节点没有被涂色。A和B轮流进行操作，不能继续操作的玩家输。对于A，能选择一个与被涂黑节点相邻的节点（未涂色）涂上黑色。B是对称的操作。</p>
-</blockquote>
-<p>对于每个玩家，首要考虑的圈占尽可能多的地盘。于是一定先在$1\rightarrow n$的路径上涂色，直到相遇。剩下未涂色的节点谁多，谁就获胜。一般地，我们可以转化为以$1$为根的有根树，找到路径$1\rightarrow n$的中点$p$，比较$size(p)$与$n-size(p)$的大小即可。</p>
-<h5 id="AtCoder-Grand-Contest-018"><a href="#AtCoder-Grand-Contest-018" class="headerlink" title="AtCoder Grand Contest 018"></a>AtCoder Grand Contest 018</h5><p>我太弱了，根本不会做啊啊啊啊。。。。</p>
-<h5 id="AtCoder-Regular-Contest-079"><a href="#AtCoder-Regular-Contest-079" class="headerlink" title="AtCoder Regular Contest 079"></a>AtCoder Regular Contest 079</h5>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2>
+        
+          <a class="article-more-a" href="/2017/07/01/AtCoder/#more">more >></a>
+        
       
 
       
@@ -784,7 +657,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <font color="red">未完成: 818G, 822E/F, 828D/E/F, 835E/F, 837D/F/G</font>
+        <font color="red">未完成: 818G, 822E/F, 828D/E/F, 835E/F, 837D/F/G, 838C/D/F, </font>
 
 <h2 id="比赛记录"><a href="#比赛记录" class="headerlink" title="比赛记录"></a>比赛记录</h2><h4 id="2017年"><a href="#2017年" class="headerlink" title="2017年"></a>2017年</h4><table>
 <thead>
@@ -821,9 +694,9 @@
 <td style="text-align:center">77</td>
 </tr>
 <tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<td style="text-align:center">IndiaHacks 2nd Elimination 2017</td>
+<td style="text-align:center">2/3/6</td>
+<td style="text-align:center">27</td>
 </tr>
 <tr>
 <td style="text-align:center"></td>
@@ -841,8 +714,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h5 id="Educational-Codeforces-Round-24"><a href="#Educational-Codeforces-Round-24" class="headerlink" title="Educational Codeforces Round 24"></a>Educational Codeforces Round 24</h5><p>D:【题意】给定n个数${c1,c2…}$和A，用$cntX(i)$表示${c1,c2,…,ci}$中等于X的数。询问是否存在B，使得对于任意i，都有$cntB(i)&gt;=cntA(i)$。</p>
-<p>【题解】考虑一个个枚举B，首先判定$cntB(n)$是否不小于$cntA(n)$ 。发现答案的条件等价于：一个个比较A和B所在的位置，对于所有第i次出现的A，都满足第i个出现的B在前面。假设A的个数为m，则每次判断为$O(m)$，而满足前提的B的个数为$O(n/m)$ ，复杂度$O(n)$ 。</p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2>
         
           <a class="article-more-a" href="/2017/07/01/CodeForces/#more">more >></a>
         
@@ -909,9 +781,9 @@
 <p>初二PJ侥幸385。<del>20+人并列，一定是题目太水了</del></p>
 <p>ZJOI2017，一试30分，二试70分。<del>伪装成神犇？</del></p>
 <p>现在初三，正在为TG和ZJOI2018而努力，一起加油吧~</p>
-<p><strong>UPD 2017.7.25</strong> BZOJ 100AC 纪念。</p>
-<p><img src="\img\BZOJ-100.PNG" alt="BZOJ-100AC"></p>
-
+        
+          <a class="article-more-a" href="/2017/07/01/Hello-World!/#more">more >></a>
+        
       
 
       
@@ -1070,7 +942,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">训练</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1078,7 +950,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">训练</a>
               </li>
             
             <div class="clearfix"></div>

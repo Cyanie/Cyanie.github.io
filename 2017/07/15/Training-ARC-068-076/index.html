@@ -18,7 +18,7 @@
 <meta property="og:description" content="未完成: ARC#069F, ARC#070E/F, ARC#074F  AtCoder Regular Contest 068 E - Snuke Line 给定$n$个区间$[l,r]$和一个数$m$。对于$d=1,2,3…,m$，求$kd(1&amp;lt;=kd&amp;lt;=m,k\in Z)$被多少个不同区间覆盖（对于不同的$k$，只算一次）。$1&amp;lt;=n,m&amp;lt;=3\times 10^5,">
 <meta property="og:image" content="https://cyanie.github.io/img/ARC#072F-1.PNG">
 <meta property="og:image" content="https://cyanie.github.io/img/ARC#072F-2.PNG">
-<meta property="og:updated_time" content="2017-08-05T14:22:22.959Z">
+<meta property="og:updated_time" content="2017-08-12T08:51:07.751Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AtCoder泛做-ARC#068~076">
 <meta name="twitter:description" content="未完成: ARC#069F, ARC#070E/F, ARC#074F  AtCoder Regular Contest 068 E - Snuke Line 给定$n$个区间$[l,r]$和一个数$m$。对于$d=1,2,3…,m$，求$kd(1&amp;lt;=kd&amp;lt;=m,k\in Z)$被多少个不同区间覆盖（对于不同的$k$，只算一次）。$1&amp;lt;=n,m&amp;lt;=3\times 10^5,">
@@ -193,6 +193,7 @@
 <h5 id="AtCoder-Regular-Contest-068"><a href="#AtCoder-Regular-Contest-068" class="headerlink" title="AtCoder Regular Contest 068"></a>AtCoder Regular Contest 068</h5><blockquote>
 <p><strong>E - Snuke Line</strong> 给定$n$个区间$[l,r]$和一个数$m$。对于$d=1,2,3…,m$，求$kd(1&lt;=kd&lt;=m,k\in Z)$被多少个不同区间覆盖（对于不同的$k$，只算一次）。$1&lt;=n,m&lt;=3\times 10^5,1&lt;=l&lt;=r&lt;=m$</p>
 </blockquote>
+<a id="more"></a>
 <p>记区间的长度为$len=r-l+1$。想到可以$O(mlogm)$暴力枚举所有的$kd$，用线段树算出它被几个区间包含。容易发现当$d&lt;len$时，有可能被多次计算。</p>
 <p>考虑当$d&lt;=len$时，则一定存在$k$使得$kd$被这个区间覆盖。于是我们记录满足$d&lt;=len$的区间个数即可。而对于$d&gt;len$的情况，至多有一个$kd$被区间覆盖，于是就可以用线段树维护。即当$d&gt;len$时加入这个区间，同时单点询问$kd$被多少个区间覆盖。复杂度$O((mlogm+n)logm)$。</p>
 <p><a href="http://arc068.contest.atcoder.jp/submissions/1421485" target="_blank" rel="external">Code</a></p>
@@ -510,7 +511,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">训练</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -518,7 +519,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">训练</a>
               </li>
             
             <div class="clearfix"></div>

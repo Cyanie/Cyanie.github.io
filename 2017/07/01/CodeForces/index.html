@@ -9,17 +9,17 @@
   <link rel="dns-prefetch" href="https://cyanie.github.io">
   <title>CodeForces比赛记录&amp;题解 | Cyani&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="未完成: 818G, 822E/F, 828D/E/F, 835E/F, 837D/F/G  比赛记录2017年   比赛名称 AC/提交/总数 Rank     Educational Codeforces Round 24 4/5/7 144   (虚拟)Codeforces Round #422 (Div. 2) 4/4/6 111   Codeforces Round #423 (Div.">
+  <meta name="description" content="未完成: 818G, 822E/F, 828D/E/F, 835E/F, 837D/F/G, 838C/D/F,   比赛记录2017年   比赛名称 AC/提交/总数 Rank     Educational Codeforces Round 24 4/5/7 144   (虚拟)Codeforces Round #422 (Div. 2) 4/4/6 111   Codeforces Roun">
 <meta name="keywords" content="比赛">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CodeForces比赛记录&amp;题解">
 <meta property="og:url" content="https://cyanie.github.io/2017/07/01/CodeForces/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
-<meta property="og:description" content="未完成: 818G, 822E/F, 828D/E/F, 835E/F, 837D/F/G  比赛记录2017年   比赛名称 AC/提交/总数 Rank     Educational Codeforces Round 24 4/5/7 144   (虚拟)Codeforces Round #422 (Div. 2) 4/4/6 111   Codeforces Round #423 (Div.">
-<meta property="og:updated_time" content="2017-08-04T08:45:11.489Z">
+<meta property="og:description" content="未完成: 818G, 822E/F, 828D/E/F, 835E/F, 837D/F/G, 838C/D/F,   比赛记录2017年   比赛名称 AC/提交/总数 Rank     Educational Codeforces Round 24 4/5/7 144   (虚拟)Codeforces Round #422 (Div. 2) 4/4/6 111   Codeforces Roun">
+<meta property="og:updated_time" content="2017-08-12T08:50:50.494Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CodeForces比赛记录&amp;题解">
-<meta name="twitter:description" content="未完成: 818G, 822E/F, 828D/E/F, 835E/F, 837D/F/G  比赛记录2017年   比赛名称 AC/提交/总数 Rank     Educational Codeforces Round 24 4/5/7 144   (虚拟)Codeforces Round #422 (Div. 2) 4/4/6 111   Codeforces Round #423 (Div.">
+<meta name="twitter:description" content="未完成: 818G, 822E/F, 828D/E/F, 835E/F, 837D/F/G, 838C/D/F,   比赛记录2017年   比赛名称 AC/提交/总数 Rank     Educational Codeforces Round 24 4/5/7 144   (虚拟)Codeforces Round #422 (Div. 2) 4/4/6 111   Codeforces Roun">
   
     <link rel="alternative" href="/atom.xml" title="Cyani&#39;s Blog" type="application/atom+xml">
   
@@ -185,7 +185,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <font color="red">未完成: 818G, 822E/F, 828D/E/F, 835E/F, 837D/F/G</font>
+        <font color="red">未完成: 818G, 822E/F, 828D/E/F, 835E/F, 837D/F/G, 838C/D/F, </font>
 
 <h2 id="比赛记录"><a href="#比赛记录" class="headerlink" title="比赛记录"></a>比赛记录</h2><h4 id="2017年"><a href="#2017年" class="headerlink" title="2017年"></a>2017年</h4><table>
 <thead>
@@ -222,9 +222,9 @@
 <td style="text-align:center">77</td>
 </tr>
 <tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<td style="text-align:center">IndiaHacks 2nd Elimination 2017</td>
+<td style="text-align:center">2/3/6</td>
+<td style="text-align:center">27</td>
 </tr>
 <tr>
 <td style="text-align:center"></td>
@@ -242,9 +242,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h5 id="Educational-Codeforces-Round-24"><a href="#Educational-Codeforces-Round-24" class="headerlink" title="Educational Codeforces Round 24"></a>Educational Codeforces Round 24</h5><p>D:【题意】给定n个数${c1,c2…}$和A，用$cntX(i)$表示${c1,c2,…,ci}$中等于X的数。询问是否存在B，使得对于任意i，都有$cntB(i)&gt;=cntA(i)$。</p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><a id="more"></a>
+<h5 id="Educational-Codeforces-Round-24"><a href="#Educational-Codeforces-Round-24" class="headerlink" title="Educational Codeforces Round 24"></a>Educational Codeforces Round 24</h5><p>D:【题意】给定n个数${c1,c2…}$和A，用$cntX(i)$表示${c1,c2,…,ci}$中等于X的数。询问是否存在B，使得对于任意i，都有$cntB(i)&gt;=cntA(i)$。</p>
 <p>【题解】考虑一个个枚举B，首先判定$cntB(n)$是否不小于$cntA(n)$ 。发现答案的条件等价于：一个个比较A和B所在的位置，对于所有第i次出现的A，都满足第i个出现的B在前面。假设A的个数为m，则每次判断为$O(m)$，而满足前提的B的个数为$O(n/m)$ ，复杂度$O(n)$ 。</p>
-<a id="more"></a>
+<!--more-->
 <p>E:【题意】给定n个数${a1,a2…}$和k，问存在多少有序数对$(x,y)$满足：删除前x个数和后y个数，剩下数的乘积是k的倍数。</p>
 <p>【题解】将k质因数分解（最多有10个不同的质因子），只要每个质因子的个数达到k拥有的就可以了。直接暴力枚举左端区间，发现右区间有单调性，直接维护一个滑动窗口就好了（比赛时写了二分233…）。</p>
 <p>F:【题意】<strong>很好玩的题。</strong> 有q组询问，每组询问给出数n。问n个节点最多能连多少条边，使得桥的数量不少于总边数的一半。</p>
@@ -483,7 +484,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">训练</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -491,7 +492,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">训练</a>
               </li>
             
             <div class="clearfix"></div>
