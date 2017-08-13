@@ -5,13 +5,30 @@
     
   <url>
     <loc>https://cyanie.github.io/2017/08/08/Training-CF-Div2/</loc>
-    <lastmod>2017-08-12T08:51:15.338Z</lastmod>
+    <lastmod>2017-08-13T07:11:42.465Z</lastmod>
     <data>
         <display>
         <title>CodeForces泛做第一轮</title>
         <pubTime>2017-08-08T00:08:08.000Z</pubTime>
         
         <tag>训练</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cyanie.github.io/2017/07/01/CodeForces/</loc>
+    <lastmod>2017-08-13T01:07:44.621Z</lastmod>
+    <data>
+        <display>
+        <title>CodeForces比赛记录&题解</title>
+        <pubTime>2017-07-01T02:00:00.000Z</pubTime>
+        
+        <tag>比赛</tag>
          
          
            
@@ -46,23 +63,6 @@
         <pubTime>2017-06-30T16:00:00.000Z</pubTime>
         
         <tag>随笔</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cyanie.github.io/2017/07/01/CodeForces/</loc>
-    <lastmod>2017-08-12T08:50:50.494Z</lastmod>
-    <data>
-        <display>
-        <title>CodeForces比赛记录&题解</title>
-        <pubTime>2017-07-01T02:00:00.000Z</pubTime>
-        
-        <tag>比赛</tag>
          
          
            
