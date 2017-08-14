@@ -4,6 +4,57 @@
 
     
   <url>
+    <loc>https://cyanie.github.io/2017/08/13/Algorithms-Generation-function/</loc>
+    <lastmod>2017-08-14T01:16:11.393Z</lastmod>
+    <data>
+        <display>
+        <title>组合数学-生成函数的应用</title>
+        <pubTime>2017-08-13T12:05:00.000Z</pubTime>
+        
+        <tag>笔记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cyanie.github.io/2017/08/05/Algorithms-Group-theory/</loc>
+    <lastmod>2017-08-14T01:15:58.173Z</lastmod>
+    <data>
+        <display>
+        <title>组合数学-Burnside引理与Polya定理</title>
+        <pubTime>2017-08-05T12:05:00.000Z</pubTime>
+        
+        <tag>笔记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cyanie.github.io/2017/08/04/Algorithms-Tree-count/</loc>
+    <lastmod>2017-08-14T01:13:43.198Z</lastmod>
+    <data>
+        <display>
+        <title>图论-prufer序列与矩阵树定理</title>
+        <pubTime>2017-08-04T10:00:00.000Z</pubTime>
+        
+        <tag>笔记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://cyanie.github.io/2017/07/01/CodeForces/</loc>
     <lastmod>2017-08-13T15:23:46.009Z</lastmod>
     <data>
