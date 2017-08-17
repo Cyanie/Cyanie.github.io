@@ -16,13 +16,13 @@
 <meta property="og:url" content="https://cyanie.github.io/2017/07/15/Training-ARC-068-076/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
 <meta property="og:description" content="未完成: ARC#069F, ARC#070E/F, ARC#074F  AtCoder Regular Contest 068 E - Snuke Line 给定$n$个区间$[l,r]$和一个数$m$。对于$d=1,2,3…,m$，求$kd(1&amp;lt;=kd&amp;lt;=m,k\in Z)$被多少个不同区间覆盖（对于不同的$k$，只算一次）。$1&amp;lt;=n,m&amp;lt;=3\times 10^5,">
-<meta property="og:image" content="https://cyanie.github.io/img/ARC#072F-1.PNG">
-<meta property="og:image" content="https://cyanie.github.io/img/ARC#072F-2.PNG">
-<meta property="og:updated_time" content="2017-08-12T08:51:07.751Z">
+<meta property="og:image" content="https://cyanie.github.io/img/ARC072F-1.PNG">
+<meta property="og:image" content="https://cyanie.github.io/img/ARC072F-1.PNG">
+<meta property="og:updated_time" content="2017-08-17T08:01:25.613Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AtCoder泛做-ARC#068~076">
 <meta name="twitter:description" content="未完成: ARC#069F, ARC#070E/F, ARC#074F  AtCoder Regular Contest 068 E - Snuke Line 给定$n$个区间$[l,r]$和一个数$m$。对于$d=1,2,3…,m$，求$kd(1&amp;lt;=kd&amp;lt;=m,k\in Z)$被多少个不同区间覆盖（对于不同的$k$，只算一次）。$1&amp;lt;=n,m&amp;lt;=3\times 10^5,">
-<meta name="twitter:image" content="https://cyanie.github.io/img/ARC#072F-1.PNG">
+<meta name="twitter:image" content="https://cyanie.github.io/img/ARC072F-1.PNG">
   
     <link rel="alternative" href="/atom.xml" title="Cyani&#39;s Blog" type="application/atom+xml">
   
@@ -261,9 +261,9 @@
 </blockquote>
 <p>假设混合得到的水体积为$V2$，温度为$T3$。由题目可知$T1\times V1+T2\times V2 = T3\times V3$。考虑将$(x,y)=(V,TV)$抽象为一个向量，那么，水的混合就变成了向量之和！</p>
 <p>观察这个向量，发现$T$对应的就是它的斜率！将水排出，相当于是原向量乘上&lt;1的实数！将可能的状态画在坐标系上，可以发现这一定是一个上凸包。如图。</p>
-<p><img src="\img\ARC#072F-1.PNG" alt="ARC#072F-1"></p>
+<p><img src="\img\ARC072F-1.PNG" alt="ARC072F-1"></p>
 <p>而新加入一个向量后，最右端的会被删除。此时不一定还是凸包，在左端比较相邻的斜率，合并即可。</p>
-<p><img src="\img\ARC#072F-2.PNG" alt="ARC#072F-2"></p>
+<p><img src="\img\ARC072F-1.PNG" alt="ARC072F-2"></p>
 <p>整个过程用双端队列维护，复杂度$O(n)$。</p>
 <h5 id="AtCoder-Regular-Contest-073"><a href="#AtCoder-Regular-Contest-073" class="headerlink" title="AtCoder Regular Contest 073"></a>AtCoder Regular Contest 073</h5><p><a href="http://arc072.contest.atcoder.jp/submissions/1455831" target="_blank" rel="external">Code</a></p>
 <blockquote>
@@ -280,6 +280,24 @@
 <p>以$xi$作为阶段，注意到上次的一个方块位置一定是在$x[i-1]$，于是不难想到$O(n^2)$的DP。$f[i,j]$表示到位置$xi$，另一个位置为$j$的最小时间。若原来位置为$x[i-1]$的到位置$xi$，即有$f[i,j]=f[i-1,j]+|x[i]-x[i-1]|$。否则即有$f[i,x[i-1]]=f[i,j]+|j-x[i-1]|$。</p>
 <p>考虑如何从优化转移的时间。对于前面的状态转移方程，事实上就是线段树的区间加。对于后面的状态转移方程，考虑维护$f[i,j]-j$和$f[i,j]+j$的值，在$[1,x[i-1]]$取$f[i,j]-j$的最值；在$[x[i-1],n]$取$f[i,j]+j$的最值即可。阶段间的转移优化到了$O(logn)$。</p>
 <p><a href="http://arc073.contest.atcoder.jp/submissions/1476079" target="_blank" rel="external">Code</a></p>
+<h5 id="AtCoder-Regular-Contest-074"><a href="#AtCoder-Regular-Contest-074" class="headerlink" title="AtCoder Regular Contest 074"></a>AtCoder Regular Contest 074</h5><blockquote>
+<p><strong>D - 3N Numbers</strong> 给定$3n$个数$A$，你需要删除其中的$n$个数，使得剩下$2n$个数$A’$中前$n$个数之和-后n个数之和之差最大。求最大值。$n&lt;=10^5$</p>
+</blockquote>
+<p>发现对于删除后$A’$的第$n$个数一定是在原来$A$的$[n,2n]$，考虑暴力枚举$A’[n]$的取值，剩下的贪心地选取。整个过程用堆维护。</p>
+<p><a href="http://arc074.contest.atcoder.jp/submissions/1481200" target="_blank" rel="external">Code</a></p>
+<blockquote>
+<p><strong>E - RGB Sequence</strong> 您需要构造一个长度为$n$， 由R,G,B构成的序列，满足以下$m$个限制。对于限制$i$，满足$[li,ri]$间不同的颜色种数恰好为$xi$。求满足条件的序列数。$n,m&lt;=300$</p>
+</blockquote>
+<p>考虑到如果存在不满足的情况，一定是DP过程中最后的R,G,B发生冲突。于是考虑状态$f[R][G][B]$表示$R,G,B$最后的位置，发现当前位置$p=max{R,G,B}$。考虑暴力转移，转以后判断是否冲突即可。</p>
+<p><a href="http://arc074.contest.atcoder.jp/submissions/1482395" target="_blank" rel="external">Code</a></p>
+<h5 id="AtCoder-Regular-Contest-075"><a href="#AtCoder-Regular-Contest-075" class="headerlink" title="AtCoder Regular Contest 075"></a>AtCoder Regular Contest 075</h5><blockquote>
+<p><strong>D - Widespread</strong> 有$n$只怪兽，第$i$只怪兽初始血量$hi$。每次可以选定一只怪兽攻击，造成$A$点血量的伤害。同时其他怪兽受到$B$点血量的伤害。求最少的攻击次数。$n&lt;=100000$</p>
+</blockquote>
+<p>考虑二分答案次数$T$。当某只怪物的血量$hi&lt;=BT$时，不需要主动攻击。否则需要$\large \lceil \frac {hi-BT} {A-B}\rceil$次主动攻击，判断主动攻击次数之和是否不超过$T$次即可。</p>
+<blockquote>
+<p> <strong>F - Mirrored</strong> 对于一个正整数$n$，记$rev(n)$为$n$的倒置，例如$rev(123)=321,rev(4000)=4$。给定$D$，求存在多少$n$满足$rev(n)=n+D$。$D&lt;=10^9$</p>
+</blockquote>
+<p>以5位数为例，$\overline{edcba}-\overline{abcde}=9999(e-a)+990(d-b)$ 考虑到如果$D$不是9的倍数，一定无解，否则我们考虑现将$D$除以9。然后DFS，发现$(e-a)\ mod\ 10$可以确定，同样可以逐位确定剩余的位，最后乘法原理确定总方案数即可。注意奇偶分类。</p>
 
       
 
@@ -511,15 +529,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">比赛</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">训练</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
