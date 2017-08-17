@@ -16,7 +16,7 @@
 <meta property="og:url" content="https://cyanie.github.io/2017/07/01/CodeForces/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
 <meta property="og:description" content="未完成: 818G, 822E/F, 828D/E/F, 835E/F, 837D/F/G, 838C/D/F, 839E, 834C/D/E 831F  比赛记录2017年   比赛名称 AC/提交/总数 Rank     Educational Codeforces Round 24 4/5/7 144   (虚拟) Codeforces Round #422 (Div. 2) 4/4/6 1">
-<meta property="og:updated_time" content="2017-08-14T07:02:06.559Z">
+<meta property="og:updated_time" content="2017-08-17T08:04:24.289Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CodeForces比赛记录&amp;题解">
 <meta name="twitter:description" content="未完成: 818G, 822E/F, 828D/E/F, 835E/F, 837D/F/G, 838C/D/F, 839E, 834C/D/E 831F  比赛记录2017年   比赛名称 AC/提交/总数 Rank     Educational Codeforces Round 24 4/5/7 144   (虚拟) Codeforces Round #422 (Div. 2) 4/4/6 1">
@@ -247,8 +247,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><a id="more"></a>
-<h5 id="Educational-Codeforces-Round-24"><a href="#Educational-Codeforces-Round-24" class="headerlink" title="Educational Codeforces Round 24"></a>Educational Codeforces Round 24</h5><p>D:【题意】给定n个数${c1,c2…}$和A，用$cntX(i)$表示${c1,c2,…,ci}$中等于X的数。询问是否存在B，使得对于任意i，都有$cntB(i)&gt;=cntA(i)$。</p>
+<a id="more"></a>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h5 id="Educational-Codeforces-Round-24"><a href="#Educational-Codeforces-Round-24" class="headerlink" title="Educational Codeforces Round 24"></a>Educational Codeforces Round 24</h5><p>D:【题意】给定n个数${c1,c2…}$和A，用$cntX(i)$表示${c1,c2,…,ci}$中等于X的数。询问是否存在B，使得对于任意i，都有$cntB(i)&gt;=cntA(i)$。</p>
 <p>【题解】考虑一个个枚举B，首先判定$cntB(n)$是否不小于$cntA(n)$ 。发现答案的条件等价于：一个个比较A和B所在的位置，对于所有第i次出现的A，都满足第i个出现的B在前面。假设A的个数为m，则每次判断为$O(m)$，而满足前提的B的个数为$O(n/m)$ ，复杂度$O(n)$ 。</p>
 <!--more-->
 <p>E:【题意】给定n个数${a1,a2…}$和k，问存在多少有序数对$(x,y)$满足：删除前x个数和后y个数，剩下数的乘积是k的倍数。</p>
@@ -489,11 +489,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">比赛</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">比赛</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">

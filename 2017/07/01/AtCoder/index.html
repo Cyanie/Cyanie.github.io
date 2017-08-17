@@ -16,7 +16,7 @@
 <meta property="og:url" content="https://cyanie.github.io/2017/07/01/AtCoder/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
 <meta property="og:description" content="未完成: ARC#078E/F, AGC#018B/C/D/E/F, ARC#079F ARC#080E/F  比赛记录2017年   比赛名称 AC/提交/总数 Rank     AtCoder Regular Contest 077 2/3/4 144   AtCoder Regular Contest 078 2/2/4 477   AtCoder Grand Contest 018 1/2">
-<meta property="og:updated_time" content="2017-08-12T08:50:42.626Z">
+<meta property="og:updated_time" content="2017-08-17T08:04:33.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AtCoder比赛记录&amp;题解">
 <meta name="twitter:description" content="未完成: ARC#078E/F, AGC#018B/C/D/E/F, ARC#079F ARC#080E/F  比赛记录2017年   比赛名称 AC/提交/总数 Rank     AtCoder Regular Contest 077 2/3/4 144   AtCoder Regular Contest 078 2/2/4 477   AtCoder Grand Contest 018 1/2">
@@ -242,8 +242,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><a id="more"></a>
-<h5 id="AtCoder-Regular-Contest-077"><a href="#AtCoder-Regular-Contest-077" class="headerlink" title="AtCoder Regular Contest 077"></a>AtCoder Regular Contest 077</h5><blockquote>
+<a id="more"></a>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h5 id="AtCoder-Regular-Contest-077"><a href="#AtCoder-Regular-Contest-077" class="headerlink" title="AtCoder Regular Contest 077"></a>AtCoder Regular Contest 077</h5><blockquote>
 <p><strong>D - 11</strong> 给定$n$和长度为$n+1$的子序列，每个数都在$[1,n]$，且恰有一个数出现两次。对于$k=1,2,…,n+1$，求出长度为$k$的互异子序列个数。$n&lt;=10^5$</p>
 </blockquote>
 <p>首先找出相同的两个数$x$的位置$l,r$，可以发现剩下的数都是等价的。对于每个$k$，分类讨论计数。按照选取$x$个数，就是$C<em>{n-1}^k+2C</em>{n-1}^{k-1}+C<em>{n-1}^{k-2}$。注意到，如果在$(l,r)$内没有选数，选择$l$和选择$r$会被当作同一情况，于是答案还要减去$C</em>{u+v}^{k-1}$。</p>
@@ -497,11 +497,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">比赛</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">比赛</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">

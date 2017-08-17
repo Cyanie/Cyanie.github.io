@@ -9,17 +9,17 @@
   <link rel="dns-prefetch" href="https://cyanie.github.io">
   <title>2017年7月NOIP集训总结 | Cyani&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="暑假终于到了，蒟蒻$Cyani$也要开始刷题啦~ 暑假的训练时光是宝贵的，是算法和思维快速提高的时期，在这里总结下收获。  7.2-基础数据结构单调栈&amp;amp;单调队列单调栈应用： 求出一个数左/右第一个比这个数大/小的数。  BZOJ1136：[POI2009]求序列中的最长连续子序列，其平均数大于$k$。">
+  <meta name="description" content="暑假终于到了，蒟蒻$Cyani$也要开始刷题啦~ 暑假的训练时光是宝贵的，是算法和思维快速提高的时期，在这里总结下收获。">
 <meta name="keywords" content="集训">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2017年7月NOIP集训总结">
 <meta property="og:url" content="https://cyanie.github.io/2017/07/02/2017.7-Training/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
-<meta property="og:description" content="暑假终于到了，蒟蒻$Cyani$也要开始刷题啦~ 暑假的训练时光是宝贵的，是算法和思维快速提高的时期，在这里总结下收获。  7.2-基础数据结构单调栈&amp;amp;单调队列单调栈应用： 求出一个数左/右第一个比这个数大/小的数。  BZOJ1136：[POI2009]求序列中的最长连续子序列，其平均数大于$k$。">
-<meta property="og:updated_time" content="2017-08-12T08:50:13.552Z">
+<meta property="og:description" content="暑假终于到了，蒟蒻$Cyani$也要开始刷题啦~ 暑假的训练时光是宝贵的，是算法和思维快速提高的时期，在这里总结下收获。">
+<meta property="og:updated_time" content="2017-08-17T08:05:09.695Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2017年7月NOIP集训总结">
-<meta name="twitter:description" content="暑假终于到了，蒟蒻$Cyani$也要开始刷题啦~ 暑假的训练时光是宝贵的，是算法和思维快速提高的时期，在这里总结下收获。  7.2-基础数据结构单调栈&amp;amp;单调队列单调栈应用： 求出一个数左/右第一个比这个数大/小的数。  BZOJ1136：[POI2009]求序列中的最长连续子序列，其平均数大于$k$。">
+<meta name="twitter:description" content="暑假终于到了，蒟蒻$Cyani$也要开始刷题啦~ 暑假的训练时光是宝贵的，是算法和思维快速提高的时期，在这里总结下收获。">
   
     <link rel="alternative" href="/atom.xml" title="Cyani&#39;s Blog" type="application/atom+xml">
   
@@ -187,11 +187,11 @@
       
         <p>暑假终于到了，蒟蒻$Cyani$也要开始刷题啦~</p>
 <p>暑假的训练时光是宝贵的，是算法和思维快速提高的时期，在这里总结下收获。 </p>
+<a id="more"></a>
 <h2 id="7-2-基础数据结构"><a href="#7-2-基础数据结构" class="headerlink" title="7.2-基础数据结构"></a>7.2-基础数据结构</h2><h4 id="单调栈-amp-单调队列"><a href="#单调栈-amp-单调队列" class="headerlink" title="单调栈&amp;单调队列"></a>单调栈&amp;单调队列</h4><p><strong><em>单调栈应用：</em></strong> 求出一个数左/右第一个比这个数大/小的数。</p>
 <blockquote>
 <p>BZOJ1136：[POI2009]求序列中的最长连续子序列，其平均数大于$k$。</p>
 </blockquote>
-<a id="more"></a>
 <p>考虑每个数都减去$k$，转化为区间和&gt;=0的最长区间。求前缀和后，若$i &gt; j$且$sum_i&gt;=sum_j$，则$j$作为左端点比$i$更优。 维护一个$i$递增$sum_i$递减的栈。枚举右端点，<strong>利用单调性</strong>二分找到小于它的节点。</p>
 <p>事实上，右端点从$n$向左枚举，小于等于它的节点都可以弹出（右端点左移后，长度只会更劣）。</p>
 <blockquote>
@@ -643,11 +643,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">比赛</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">比赛</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
