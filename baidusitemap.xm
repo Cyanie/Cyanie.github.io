@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://cyanie.github.io/2017/08/08/Training-CF-Div2/</loc>
+    <lastmod>2017-08-18T14:30:03.986Z</lastmod>
+    <data>
+        <display>
+        <title>CodeForces泛做第一轮</title>
+        <pubTime>2017-08-08T00:08:08.000Z</pubTime>
+        
+        <tag>训练</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://cyanie.github.io/2017/07/01/Hello-World!/</loc>
     <lastmod>2017-08-17T08:06:31.295Z</lastmod>
     <data>
@@ -97,23 +114,6 @@
         <pubTime>2017-07-01T02:00:00.000Z</pubTime>
         
         <tag>比赛</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cyanie.github.io/2017/08/08/Training-CF-Div2/</loc>
-    <lastmod>2017-08-17T08:04:01.556Z</lastmod>
-    <data>
-        <display>
-        <title>CodeForces泛做第一轮</title>
-        <pubTime>2017-08-08T00:08:08.000Z</pubTime>
-        
-        <tag>训练</tag>
          
          
            

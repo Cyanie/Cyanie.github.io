@@ -16,7 +16,7 @@
 <meta property="og:url" content="https://cyanie.github.io/2017/08/08/Training-CF-Div2/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
 <meta property="og:description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树)">
-<meta property="og:updated_time" content="2017-08-17T08:04:01.556Z">
+<meta property="og:updated_time" content="2017-08-18T14:30:03.986Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CodeForces泛做第一轮">
 <meta name="twitter:description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树)">
@@ -260,7 +260,36 @@
 <p>605C,3A。题意：有$n$项工作，第$i$项工作每天可以带来$ai$的经验，$bi$的钱。问最少几天可以得到$p$的经验和$q$的钱。工作天数可以是小数，每次只能进行一种工作。</p>
 <p><strong>二分答案，凸包。</strong>首先考虑二分答案$T$。如何$O(1)$来check？我们将$(ai,bi)$看成坐标系上的一个点$Pi$，由于工作时间可以是小数，通过线性变换，$Pi,Pj$可以变换为线段$PiPj$上的点。所以可以先求出凸包，然后二分答案判断即可。</p>
 <p>605D,1A。题意：玩家有两个属性$x,y$，有$n$个魔法。对于第$i$个魔法，用$(ai,bi,ci,di)$描述。当$ai&lt;=x, bi&lt;=y$时，玩家能使用这个魔法。之后玩家的属性$x=ci, y=di$。求施展第n个魔法最少需要多少次。输出方案，答案不唯一。</p>
-<p><strong>线段树（树状数组）+set，BFS。</strong>由于需要求出最小的步数，所以需要用到BFS。考虑到达了点$(x,y)$，我们可以到达在它左下角的点$(x’,y’)$，所以就需要用一个数据结构求出。<del>树套树显然可以，不会写。</del>考虑线段树（树状数组）套set。</p>
+<p><strong>线段树（树状数组）+set，BFS。</strong>由于需要求出最小的步数，所以需要用到BFS。考虑到达了点$(x,y)$，我们可以到达在它左下角的点$(x’,y’)$，所以就需要用一个数据结构求出。<del>树套树显然可以，不会写。</del>考虑线段树（树状数组）套set，访问过后暴力删除。考虑其时间复杂度。由于每一个点最多在$O(logn)$个$set$中出现，单次操作复杂度$O(logn)$，所以总的时间复杂度$O(n\times logn \times logn)$，不会超时。</p>
+<h5 id="Codeforces-Round-336-Div-1"><a href="#Codeforces-Round-336-Div-1" class="headerlink" title="Codeforces Round #336 (Div. 1)"></a><a href="http://codeforces.com/contest/607" target="_blank" rel="external">Codeforces Round #336 (Div. 1)</a></h5><p>607A,4A。题意：有$n$个点，点有位置和能量，$i$个点被选择，那么在$i$左边它这个能量的位置内的所有点都不能选择，如果现在从右到左依次选择点。现在可以在最右边放置一个点，能量和距离随意，问各种情况下最小摧毁的点的个数。$N&lt;=100000,ai&lt;=1000000$</p>
+<p><strong>DP。</strong>考虑到点的坐标范围较小，令$f[i]$表示到位置$i$时，最多能放的点。于是$f[i]=max(f[i-1],f[i-d[i]-1]+1)$。</p>
+<p>607B,1A。题意：长度为$n$的字符串，每次消去一段连续的回文串，剩下的两端重新拼接成一个新的串，问最少需要消去多少次。$n&lt;=500$</p>
+<p><strong>区间DP。</strong>令$f[i][j]$表示区间$[i,j]$需要消去的最少次数。发现有两种决策：一种是从$f[i][k]+f[k+1][j]$转移过来，将$[i,j]$划分为两个更小的子段；还有一种是从$f[i+1][j-1]$转移，因为中间肯定存在其他回文串，所以不用$+1$。</p>
+<p>607C,3A。题意：有两个独立的坑道，由“NSWE”表示。两个球在各自坑道的起点。之后对两个球做相同的操作，上下左右。保证两个小球保持一致的动作，其中一个撞墙的话不用管。问能不能保证两个小球都能从起点到达终点。到达终点后，还有可能因为操作而退出。</p>
+<p><strong>脑洞，HASH。</strong>考虑依次让两个球分别到达终点，可以猜测一个结论，无法到达当且仅当第一个球达终点后，第二个球需要到达终点的步骤，恰好使得第一个球退出（证明有些困难）。于是可以改变第一个球轨道的方向，就变成字符串匹配的问题。</p>
+<h5 id="Good-Bye-2015"><a href="#Good-Bye-2015" class="headerlink" title="Good Bye 2015"></a><a href="http://codeforces.com/contest/611" target="_blank" rel="external">Good Bye 2015</a></h5><p>611C,1A。题意：有一个$n\times m$的网格，‘#’不能摆。有$Q$个询问，每个询问$(r1,c1,r2,c2)$求出这个子矩形内可以有多少种方式放一个$1\times 2$的骨牌。$n,m&lt;=500,Q&lt;=100000$</p>
+<p><strong>DP，容斥。</strong>注意到，对于一个询问，我们可以将其拆成4个前缀询问。而这个前缀询问可以预处理，令$f[i][j]$表示$[1,1]$到$[i,j]$骨牌的摆放方式。$f[i][j]=f[i-1][j]+f[i][j-1]-f[i-1][j-1]-[i,j]$能放的骨牌数。对于查询，我们只需要再次容斥，暴力删除边界的答案即可。复杂度$O(n^3+nQ)$。</p>
+<p>611D,1A。题意：把一个长为$n$的数字串拆成多个串，要求这些串的数值递增的，并且没有前缀0，问有多少种分法。$n&lt;=5000$</p>
+<p><strong>DP，LCP。</strong>定义状态$f[i][j]$表示$[1,i]$中划分了最后$j$个的方案数。发现状态难以优化，考虑从加速转移入手。假设前一段划分的长度为$k$，注意到当$k&lt;=j-1$时，显然能够转移，即$f[i][j]=\sum _{k=1} ^{j-1} f[i-j][k]$，这一部分可以前缀和优化。还有可能是从$f[i-j][j]$转移到$f[i][j]$，就需要比较$[i-2j+1,i-j],[i-j+1,i]$的大小。由于长度相等，实际上就是在比较字典序。而比较字典序有一个常用的方法，可以求出以$i,j$开头的最长公共前缀，记为$lcp(i,j)$，这样预处理后就可以$O(1)$转移了。</p>
+<h5 id="Codeforces-Round-339-Div-1"><a href="#Codeforces-Round-339-Div-1" class="headerlink" title="Codeforces Round #339 (Div. 1)"></a><a href="http://codeforces.com/contest/613" target="_blank" rel="external">Codeforces Round #339 (Div. 1)</a></h5><p>613A,1A。题意：有个$n$边形，给定了所有点的坐标。有一个点$P(x,y)$。这个$n$边形会绕着点$P$旋转。求这个多边形扫过的面积。</p>
+<p><strong>计算几何。</strong>发现我们只需要求出点到多边形的最近和最远距离，对于最远距离，一定是在某个点上，而对于最近距离，还有可能在边上。发现一定是做垂线最优，利用三角形面积公式和叉积即可，但垂足一定要在多边形上，用点积判断是否是钝角即可。</p>
+<p>613C,5A。题意：有$n$种颜色的珠子，每个珠子有$A[i]$个，要把这些珠子串成一个环，你可以在其中一些地方断开，如果断开后是回文，$Ans+1$，问最大$Ans$。</p>
+<p><strong>脑洞，GCD，构造。</strong>首先特判$n=1$的情况，就是$A[1]$。注意到，若存在两种以上的珠子数目为奇数，则一定无法构成回文串。</p>
+<p>不难发现我们可以划分为$gcd$段，考虑$gcd$的奇偶性。若$gcd$为偶数，在每一段内，我们可以任意放置，之后的每一段，间隔着倒置即可，$Ans=gcd$。若$gcd$为奇数，由于不存在两个以上奇数，所以每一段内恰有一个奇数，我们只需要把这个奇数放在中间，两边对称放置即可。</p>
+<h5 id="Wunder-Fund-Round-2016-Div-1-Div-2-combined"><a href="#Wunder-Fund-Round-2016-Div-1-Div-2-combined" class="headerlink" title="Wunder Fund Round 2016 (Div. 1 + Div. 2 combined)"></a><a href="http://codeforces.com/contest/618" target="_blank" rel="external">Wunder Fund Round 2016 (Div. 1 + Div. 2 combined)</a></h5><p>618C,2A。题意：给定$n$个点$(xi,yi)$。求一个三角形$ABC$。满足其他的点都在三角形以外。输出任意一个三角形三个点的下标。$n&lt;=100000$</p>
+<p><strong>乱搞，计算几何。</strong>考虑按照$x$轴排序，任意三个点形成的区域一定不包含其他点。只要并满足三点不共线即可。</p>
+<p>CF618E,2A。题意：给定$x$正半轴上的$n$段线段。有$m$个操作，操作1是给定$x$，然后把第X段延长$y$。操作2是把某一个段按照原先的左端点旋转α°。每次操作询问原先最右边的端点的位置。$n,Q&lt;=100000$。</p>
+<p><strong>线段树，计算几何，矩阵。</strong>有很多方法可以解决此题。考虑使用线段树求解，考虑维护线段另一端到这端的相对位移。对于操作一，只需要求出原长，然后新的$(x’,y’)$可以通过比例求出。需要注意的是操作二，对于某一点$(x,y)$绕原点$O$逆时针旋转$a$的弧长，有如下公式<del>（窝不会证）。</del></p>
+<p>$$x’=x\cdot \cos\alpha - y\cdot \sin\alpha$$ </p>
+<p>$$y’=x\cdot \sin \alpha + y \cdot \cos \alpha$$</p>
+<p>事实上，我们需要旋转$[x,n]$所有线段，这样就能解决了。</p>
+<p>还有一种方法使用<strong>矩阵</strong>。维护区间的转移矩阵即可。</p>
+<p>CF618F,1A。题意：给定两个多重集$A,B$，每个数$\in [1,n]$。在$A$中选取一个含$Ka$个元素的非空子集。在$B$中也是如此（有$Kb$个元素）。要求使得两个子集之和相等。$n&lt;=100000$。</p>
+<p><strong>构造，抽屉原理。</strong><del>如果不存在范围的限制，这是一个NP问题？</del>考虑构造，首先我们按照元素大小升序排一遍序，分别求出其前缀和$SA[i],SB[i]$，下标为$[0,n]$共$n+1$个。不失一般性，我们令$SA[n]&gt;=SB[n]$。考虑$i$从$0$扫到$n$，每一次求出$SB[j]&lt;=SA[i]$最大的$j$。不难发现$0&lt;=SA[i]-SB[j]&lt;=n-1$，而总共$i$有$n+1$种。所以，根据抽屉原理，一定存在两个不同的$i,i’$使得$SA[i]-SB[j]=SA[i’]-SB[j’]$。移项得$SA[i]-SA[i’]=SB[j]-SB[j’]$，于是在$A$中取$[i’+1,i]$，在$B$中取$[j’+1,j]$就是一组解。</p>
+<h5 id="AIM-Tech-Round-Div-1"><a href="#AIM-Tech-Round-Div-1" class="headerlink" title="AIM Tech Round (Div. 1)"></a><a href="http://codeforces.com/contest/623" target="_blank" rel="external">AIM Tech Round (Div. 1)</a></h5><p>CF623A,4A。一个由$a,b,c$组成的字符串，可以这样生成一张图，当$s[i]$与$s[j]$不是一个$a$一个$c$时，$i$与$j$连一条边。给定生成的图，求是否存在字符串能生成这张图。$n&lt;=500$</p>
+<p><strong>二分图染色。</strong>考虑到其反图，一定是由$a,c$组成的，且相邻的边不同。对于不在反图中的点，考虑改为$b$。这样似乎就好了？事实上，若原来的图中存在一条边，在新生成的字符串中为$a,c$，答案是不符的。</p>
+<p>CF623B,2A。有一个数列，可以删除其中一段，删一个代价为$a$。也可以选择对其中一些数进行增加或者减少1，每次代价为$b$，问最后使得所有的$gcd$比1大，最小代价是多少。</p>
+<p><strong>gcd相关，动态规划。</strong>注意到，由于并不能删光全部的，而且删除的是连续一段，所以$a1,an$中必定存在一个剩余，于是对$a_1-1$，$a_1$，$a_1+1$，$a_n-1$，$a_n$，$a_n+1$操作找到其质因数，用DP求出都变为这个质因数倍数的最小代价。状态定义可参考CF603A。</p>
 
       
 
@@ -596,7 +625,11 @@ MathJax.Hub.Queue(function() {
             </li>
           
             <li class="search-li">
-              <a href="https://emoairx.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>陈奇之大佬-EMOAIRX</a>
+              <a href="https://szoorz.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>srO-CQZ-Orz</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://emoairx.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>EMOAIRX</a>
             </li>
           
             <li class="search-li">
