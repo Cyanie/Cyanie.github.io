@@ -7,19 +7,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://cyanie.github.io">
-  <title>CodeForces泛做第一轮 | Cyani&#39;s Blog</title>
+  <title>Cyani&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D">
-<meta name="keywords" content="训练">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CodeForces泛做第一轮">
-<meta property="og:url" content="https://cyanie.github.io/2017/08/08/Training-CF-Div2/index.html">
+  <meta name="description" content="This Cyani&apos;s Bolg.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cyani&#39;s Blog">
+<meta property="og:url" content="https://cyanie.github.io/page/2/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
-<meta property="og:description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D">
-<meta property="og:updated_time" content="2017-08-19T14:00:53.633Z">
+<meta property="og:description" content="This Cyani&apos;s Bolg.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CodeForces泛做第一轮">
-<meta name="twitter:description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D">
+<meta name="twitter:title" content="Cyani&#39;s Blog">
+<meta name="twitter:description" content="This Cyani&apos;s Bolg.">
   
     <link rel="alternative" href="/atom.xml" title="Cyani&#39;s Blog" type="application/atom+xml">
   
@@ -165,294 +163,37 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Training-CF-Div2" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-Hello-World!" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      CodeForces泛做第一轮
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/01/Hello-World!/">Hello World!</a>
     </h1>
   
 
         
-        <a href="/2017/08/08/Training-CF-Div2/" class="archive-article-date">
-  	<time datetime="2017-08-08T00:08:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-08</time>
+        <a href="/2017/07/01/Hello-World!/" class="archive-article-date">
+  	<time datetime="2017-06-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。</p>
-<font color="red">未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D</font>
-
-<a id="more"></a>
-<h5 id="Codeforces-Round-301-Div-2"><a href="#Codeforces-Round-301-Div-2" class="headerlink" title="Codeforces Round #301 (Div. 2)"></a><a href="http://codeforces.com/contest/540" target="_blank" rel="external">Codeforces Round #301 (Div. 2)</a></h5><p>540C,4Y。<strong>BFS判连通。</strong>注意起始点与终点重合或相邻的情况，终点经过两次，只要有两个空格与终点相邻即可。</p>
-<p>540D,1Y。<strong>概率DP。</strong>乘上转移的概率即可。 </p>
-<p>540E,3Y。<strong>离散化+树状数组统计逆序对。</strong>设出现的数为${a}$，未出现的为${b}$，发现a-&gt;a，a-&gt;b，b-&gt;a有贡献，分类讨论即可。</p>
-<p><strong>反思</strong> 把所有特殊情况考虑周全，仔细分类讨论。</p>
-<h5 id="Codeforces-Round-302-Div-2"><a href="#Codeforces-Round-302-Div-2" class="headerlink" title="Codeforces Round #302 (Div. 2)"></a><a href="http://codeforces.com/contest/544" target="_blank" rel="external">Codeforces Round #302 (Div. 2)</a></h5><p>544C,1Y。<strong>二维完全背包DP。</strong>其实挺套路的，要加个滚动数组。</p>
-<p>544D,1Y。<strong>暴力BFS。</strong>注意到两个点对的最短路径若存在交集，则一定是连续的一段。暴力枚举两点即可。</p>
-<p>554E,1Y。<strong>状压DP。</strong>其实状压DP都挺套路的:①数据范围一般不超过20.②预处理加速转移.③转移时顺序无关，强制转移$lowbit$。</p>
-<p><strong>反思</strong> 注意观察题目性质，从多角度思考状态的表示。</p>
-<h5 id="Codeforces-Round-303-Div-2"><a href="#Codeforces-Round-303-Div-2" class="headerlink" title="Codeforces Round #303 (Div. 2)"></a><a href="http://codeforces.com/contest/545" target="_blank" rel="external">Codeforces Round #303 (Div. 2)</a></h5><p>545C,4Y。<strong>贪心。</strong>注意到能往左倒就往左倒，否则能往右倒就往右倒，并不会使答案变差。注意$n=1$的情形。</p>
-<p>545D,2Y。<strong>贪心。</strong>发现一定是$t$升序最优，对于一定不会满意的人，显然跳过放在最后最优。</p>
-<p>545E,1Y。<strong>最短路DAG+DAG的最小树形图。</strong>由于数据范围过大，最小树形图并不能用朱刘算法来做。考虑是一个DAG，类似Kruskal依次加入权最小的边，保证弱连通块的入度为1.<del>正确性不难感受到。</del></p>
-<h5 id="Codeforces-Round-304-Div-2"><a href="#Codeforces-Round-304-Div-2" class="headerlink" title="Codeforces Round #304 (Div. 2)"></a><a href="http://codeforces.com/contest/546" target="_blank" rel="external">Codeforces Round #304 (Div. 2)</a></h5><p>546C,1Y。<strong>暴力。</strong></p>
-<p>546D,1Y。<strong>欧拉筛。</strong>考虑类似求积性函数的方式，可以推出每个数的素因子个数。</p>
-<h5 id="Codeforces-Round-305-Div-2"><a href="#Codeforces-Round-305-Div-2" class="headerlink" title="Codeforces Round #305 (Div. 2)"></a><a href="http://codeforces.com/contest/548" target="_blank" rel="external">Codeforces Round #305 (Div. 2)</a></h5><p>548C,7Y。<strong>暴力求循环节+扩欧。</strong>坑点较多，注意分类讨论。</p>
-<p>548D,1Y。<strong>单调栈或线段树。</strong></p>
-<p>548E,1Y。<strong>数论，容斥。</strong>考虑到一个数的素因子个数很少，直接暴力搜索容斥。</p>
-<h5 id="Codeforces-Round-309-Div-1"><a href="#Codeforces-Round-309-Div-1" class="headerlink" title="Codeforces Round #309 (Div. 1)"></a><a href="http://codeforces.com/contest/553" target="_blank" rel="external">Codeforces Round #309 (Div. 1)</a></h5><p>553D,3Y。<strong>贪心。</strong>考虑现将所有的可以的点放入集合，每次取出权值最小的，更新周围点的权值。因为只有取出最小值，最小权才有可能变大。过程用堆维护即可。</p>
-<h5 id="Codeforces-Round-310-Div-1"><a href="#Codeforces-Round-310-Div-1" class="headerlink" title="Codeforces Round #310 (Div. 1)"></a><a href="http://codeforces.com/contest/555" target="_blank" rel="external">Codeforces Round #310 (Div. 1)</a></h5><p>555D,2Y。<strong>贪心+堆。</strong>将问题转化为：给定一些数轴上的点，和一些线段，每个线段要匹配一个点。于是按照左端点不断加入线段，用堆维护右端最小的即可。</p>
-<h5 id="Codeforces-Round-Pi-Div-2"><a href="#Codeforces-Round-Pi-Div-2" class="headerlink" title="Codeforces Round #Pi (Div. 2)"></a><a href="http://codeforces.com/contest/567" target="_blank" rel="external">Codeforces Round #Pi (Div. 2)</a></h5><p>567E,1Y。<strong>最短路。</strong>首先求出最短路，反向建图后的最短路。注意到如果所有最短路都经过某一条边，那么相当于前驱最短路条数乘后继最短路条数等于总的最短路条数。如某一条边是最短路上的边，减一就可以满足条件。否则可以继续讨论。</p>
-<p>567F,1Y。<strong>动态规划。</strong>注意到需要构造的序列是单峰的，所以考虑从小到大逐个加入两端。对于限制，DP到较大位置时判断即可。</p>
-<p><strong>反思</strong> 深入挖掘单调性(单峰亦同)寻找，寻找DP的阶段。</p>
-<h5 id="Codeforces-Round-315-Div-1"><a href="#Codeforces-Round-315-Div-1" class="headerlink" title="Codeforces Round #315 (Div. 1)"></a><a href="http://codeforces.com/contest/568" target="_blank" rel="external">Codeforces Round #315 (Div. 1)</a></h5><p>568B,1Y。<strong>第二类斯特林数。</strong>注意到$n$等价关系能够对于到$n$完全图。于是答案即为，选取一些点(不能是全部)，划分为几个非空集合的方案数。假设选$i$个点，划分为$j$个集合，答案即为$C(n,i)\times S(i,j)$。其中$S(i,j)$是第二类斯特林数，可以$O(n^2)$递推。</p>
-<p><strong>反思</strong> 从二元关系联系到图。</p>
-<h5 id="Codeforces-Round-317-AimFund-Thanks-Round-Div-1"><a href="#Codeforces-Round-317-AimFund-Thanks-Round-Div-1" class="headerlink" title="Codeforces Round #317 [AimFund Thanks-Round] (Div. 1)"></a><a href="http://codeforces.com/contest/571" target="_blank" rel="external">Codeforces Round #317 [AimFund Thanks-Round] (Div. 1)</a></h5><p>571A,2Y。<strong>正难则反+组合计数。</strong>有一个结论，将一个长度为$n$的序列划分为$3$个(可空)子序列，方案数为$\large \frac {(n+1)(n+2)} {2}$ 。加上不合法的方案，总方案即为$\large \sum \frac {(n+1)(n+2)} {2}$。考虑减去不合法的情况，假设$a,b,c$伸长量分别为$x,y,z$，假设$a+x$最大。当$a+x&gt;=b+c+y+z$时不符，可以得到$b+c-a&lt;=x&lt;=l$，且$0&lt;=y+z&lt;=min(a+x-b-c,l-x)$，于是$y,z$的方案同样可以由上面的结论算出。</p>
-<p>571B,6Y。<strong>同余分组+贪心+动态规划。</strong>考虑分为$K$组，所有$a\equiv b\pmod K$分为一组。设$d=n/ K$发现，前$n\ mod\ K$组都有$d+1$个数，后$n-n\ mod\ K$组都有$d$个数。排序后即可DP。</p>
-<h5 id="Codeforces-Round-318-RussianCodeCup-Thanks-Round-Div-1"><a href="#Codeforces-Round-318-RussianCodeCup-Thanks-Round-Div-1" class="headerlink" title="Codeforces Round #318 [RussianCodeCup Thanks-Round] (Div. 1)"></a><a href="http://codeforces.com/contest/573" target="_blank" rel="external">Codeforces Round #318 [RussianCodeCup Thanks-Round] (Div. 1)</a></h5><p>573A,5Y。<strong>暴力。</strong>考虑将所有数的素因子2,3都去除，判断是否相同。</p>
-<h5 id="Codeforces-Round-319-Div-1"><a href="#Codeforces-Round-319-Div-1" class="headerlink" title="Codeforces Round #319 (Div. 1)"></a><a href="http://codeforces.com/contest/576" target="_blank" rel="external">Codeforces Round #319 (Div. 1)</a></h5><p>576B,1A。<strong>构造。</strong>首先将置换分解为若干个循环，注意到一个性质，长度为$x$的置换能连上长度$kx$的置换，只有长度为$2$的置换能自己连自己。且能作为根的只有长度为1或2的置换，分类讨论即可。</p>
-<p>576C,1A。<strong>构造。</strong>考虑按$x$轴划分为$T$个区间，每个区间平均有$n/T$个，可以来回移动，最坏情况下有$T\times[10^9+(n/T)\times(10^9/T)]=10^9(T+n/T)$的移动距离，显然取$T=\sqrt n=10^3$最优。</p>
-<p>576D,1A。<strong>矩阵快速幂+floyd。</strong>考虑到$m$很小，可以逐个加边，用矩乘维护连通性，同时用floyd求连通后的最短路。矩阵乘法次数过多，会超时。但由于矩阵维护的是01信息，所以可以用$bitset$优化。</p>
-<h5 id="Codeforces-Round-320-Div-1-Bayan-Thanks-Round"><a href="#Codeforces-Round-320-Div-1-Bayan-Thanks-Round" class="headerlink" title="Codeforces Round #320 (Div. 1) [Bayan Thanks-Round]"></a><a href="http://codeforces.com/contest/578" target="_blank" rel="external">Codeforces Round #320 (Div. 1) [Bayan Thanks-Round]</a></h5><p>578A,1Y。<strong>公式。</strong>发现$a&lt;b$时无解，由于$x$要尽可能小，所以点一定都是在所有三角的右侧。根据$a/b$就可以算出属于第$t$个三角形。于是$\large x=\frac {a+b}{2t}$即可。</p>
-<p>578B,1Y。<strong>贪心，暴力。</strong>考虑到$k$次操作一定是都乘在同一个数上最优，求出前缀和后缀$or$值即可。</p>
-<p>578C,3Y。<strong>三分，贪心。</strong>考虑到答案是关于$x$的单峰函数（显然？），于是三分即可。可以同$O(n)$的贪心求出最大字段和。</p>
-<h5 id="Codeforces-Round-321-Div-2"><a href="#Codeforces-Round-321-Div-2" class="headerlink" title="Codeforces Round #321 (Div. 2)"></a><a href="http://codeforces.com/contest/580" target="_blank" rel="external">Codeforces Round #321 (Div. 2)</a></h5><p>580E,3Y。<strong>HASH+线段树。</strong>发现[l,r]是周期为d的串等价于$S[l,r-d]=S[l+d-r]$，于是考虑维护区间的HASH值即可。</p>
-<h5 id="Codeforces-Round-323-Div-1"><a href="#Codeforces-Round-323-Div-1" class="headerlink" title="Codeforces Round #323 (Div. 1)"></a><a href="http://codeforces.com/contest/582" target="_blank" rel="external">Codeforces Round #323 (Div. 1)</a></h5><p>582A,2Y。<strong>暴力+map。</strong>考虑每次取出最大的数$x$，一定是$a$中的元素，再将$x$与之前取出的$gcd$暴力删除即可。</p>
-<p>582B,1Y。<strong>LIS变形。</strong>考虑保留出现次数最多的元素$x$，首先取出长度为$n^2$的段，求出$LIS$，发现$x$一定可以找到某个位置插入，所以还要加上$x(T-n)$。</p>
-<p>583C,2Y。<strong>数论。</strong>对于好数组的元素$a[i]$有， $\forall k\in N, a[i]=a[i+kn],a[i]&gt;=a[i+ks]$ 。即$\forall k \in N,a[i]&gt;=a[i+k\times gcd(s,n)]$。也就是说a[i]是这些a[]中的最大值。考虑枚举$d=gcd(s,n)$。求出$f[i]$表示以$i$结尾最长满足条件的长度，以及$cnt[i]$即$gcd(n,j\times d) = d\ (j&lt;=i)$的的个数。以$i$结尾，对答案的贡献即为$cnt[f[i]/d]$。复杂度$O(n的因子数\times n)$。</p>
-<h5 id="Codeforces-Round-325-Div-1"><a href="#Codeforces-Round-325-Div-1" class="headerlink" title="Codeforces Round #325 (Div. 1)"></a><a href="http://codeforces.com/contest/585" target="_blank" rel="external">Codeforces Round #325 (Div. 1)</a></h5><p>585A,1Y。<strong>模拟。</strong>用一个优先队列直接模拟即可。</p>
-<p>585C,3Y。<strong>GCD。</strong>引入<a href="https://en.wikipedia.org/wiki/Stern%E2%80%93Brocot_tree" target="_blank" rel="external">Stern–Brocot tree</a>，将苹果数看作分子，橘子数看作分子，每次操作可以把$\large (\frac a b,\frac c d)$变为$\large (\frac{a+c} {b+d}, \frac c d)$或$\large (\frac a b, \frac {c+a} {b+d})$。也就是它们的和在$Stern-Brocot\ tree$上向左或向右移动。由于得到的分数一定是互质的，所以当$gcd(x,y)\not = 1$时，没有答案。当$x&gt;y$时，会向左子树移动$\large \frac x y$次，之后$x\ mod\ y$会成为新的$x$。整个过程和求$gcd$类似，复杂度$O(log(x+y))$。</p>
-<h5 id="Codeforces-Round-326-Div-1"><a href="#Codeforces-Round-326-Div-1" class="headerlink" title="Codeforces Round #326 (Div. 1)"></a><a href="http://codeforces.com/contest/587" target="_blank" rel="external">Codeforces Round #326 (Div. 1)</a></h5><p>587A,2Y。<strong>贪心。</strong>考虑逐个处理从小到大的$wi$，如果$wi=k$有偶数个，一定能组成$\frac k 2$个$wi+1$，反之，能组成$\frac {k-1} 2$个$wi+1$并需要用掉一个。</p>
-<p>587B,4Y。<strong>DP。</strong>考虑将序列复制$k$次得到长度为$nk$的序列，然后DP加前缀和优化求出第$i$块第$j$结尾的方案数。多余的部分($T-nk$)答案等同于第$k$块。</p>
-<p>587C,3Y。<strong>树上倍增。</strong>考虑到树上路径的问题，且不存在修改，考虑使用树上倍增。$g[i][j]$表示节点$i$到他的$2^j$的祖先，路径上最靠前的10个人被编号(注意去重)。合并的方式类似于归并排序。复杂度$O(10\times nlogn)$。</p>
-<h5 id="Codeforces-Round-327-Div-1"><a href="#Codeforces-Round-327-Div-1" class="headerlink" title="Codeforces Round #327 (Div. 1)"></a><a href="http://codeforces.com/contest/590" target="_blank" rel="external">Codeforces Round #327 (Div. 1)</a></h5><blockquote>
-<p>590A,4Y。题意：给定一个长为$n\ (n&lt;=5\times 10^5)$的01串，每次对于$2&lt;=i&lt;=n-1$，的$ai$会变成$a[i-1],ai,a[i+1]$的中位数。问经过多少次会变成一个稳定的串(即不会发生改变)。</p>
-</blockquote>
-<p><strong>构造。</strong>考虑长度为2或以上的0/1段一定是不变的，于是我们可以将中间的串单独提取出来，不难发现，由于不存在连续的串，一定是010101….(或101010….)这样的。最终的结果由两端决定。</p>
-<blockquote>
-<p>590B,1Y。题意：要从$(x1,y1)$到$(x2,y2)$。一开始风速为$(vx,vy)$，$t$秒后$(wx,wy)$。速度不超过$Vmax$，求最少到终点的时间。保证风速小于你的速度，风速和你的速度都是向量。</p>
-</blockquote>
-<p><strong>二分答案。</strong>显然二分答案啊。事实上，可以看作空气是不动的，而目标点是逆风移动，对于答案$T$，只要新的距离$d&lt;=Vmax\times T$即可。注意按照$T,t$的大小关系分类。</p>
-<blockquote>
-<p>590C,5Y。题意：给定一个$N\times M$的矩阵，这个矩阵里有’1’, ‘2’, ‘3’, ‘.’, ‘#’，可以把’.’改成桥，使得所有1,2,3四联通，问最少把多少个’.’改变，如果不能输出-1。其中’1’,’2’,’3’本身是连续的。$N,M&lt;=1000$</p>
-</blockquote>
-<p><strong>BFS+分类讨论。</strong> 考虑到答案只存在于两种情况。一种是三个连通块都会聚到一点。还有一种是两个连通块连向同一个连通块。于是BFS求出123到所有格子的最短距离即可。</p>
-<blockquote>
-<p>590D,2Y。题意：给定$n$个数，最多相邻交换$s$次，求前$K$个数能达到的最小值。</p>
-</blockquote>
-<p><strong>动态规划。</strong>注意到一个性质，当$\large s&gt;=\frac {n(n-1)} 2$时，一定能取到$n$个数中最小的$K$个。定义状态$f[i][j]$表示固定前$i$个位置，交换$j$次能得到的最小的和。然后，为了取消后效性，依次考虑我们从1到n位置上的数。状态$f[i][j]$能转移到状态$f[i+1][j+k-(i-1)]$，$k$代表放在$i+1$位位置的数。</p>
-<h5 id="Codeforces-Round-330-Div-1"><a href="#Codeforces-Round-330-Div-1" class="headerlink" title="Codeforces Round #330 (Div. 1)"></a><a href="http://codeforces.com/contest/594" target="_blank" rel="external">Codeforces Round #330 (Div. 1)</a></h5><p>594A,1Y。<strong>博弈，贪心。</strong>注意到后手一定会去掉最外层的$\large \frac {n-2} 2$个点，排序后扫描即可。</p>
-<p>594C,2Y。<strong>暴力，贪心。</strong>显然我们只需要删除最左/上/右/下的点即可。考虑按$x,y$分别排序。因为$k$不大，所以我们暴力枚举两端取了多少，之后上下同样处理。注意长宽都至少是1。</p>
-<blockquote>
-<p>594D,1Y。题意：给定$n$个数，有$Q$个询问，每个询问要求您回答$\large \varphi(\prod \limits ^{r} _{i=l} a[i])$的值。$n,Q&lt;=2\times 10^5$</p>
-</blockquote>
-<p><strong>离线，线段树，数论。</strong>考虑到$n,Q$的范围过大，我们考虑离线。</p>
-<p>根据欧拉函数$\varphi$的定义，$\large \varphi(n) = n\times \frac {p_1-1} {p_1} \times \frac {p_2-1} {p_2}\times …$，我们只需要求出区间内有那些质因数一颗。考虑按照询问的左端点排序，扫描过程中维护区间$[l,n]$，对于区间$[l,n]$内的每一个质因子，我们只需要在线段树内保留最靠前的一个，因为后面对答案没有影响。</p>
-<p>删除$[l]$时，我们只要对于$a[l]$的每个质因子找出它后面的第一个质因子，在线段树上更新即可。复杂度$O(a\times loga+Q\times logn\times loga)$。</p>
-<h5 id="Codeforces-Round-333-Div-1"><a href="#Codeforces-Round-333-Div-1" class="headerlink" title="Codeforces Round #333 (Div. 1)"></a><a href="http://codeforces.com/contest/601" target="_blank" rel="external">Codeforces Round #333 (Div. 1)</a></h5><p>601A,3Y。<strong>最短路。</strong>注意到由于是一个完全图，所以一定存在某一种交通工具可以直达，剩下一个交通工具floyd即可。</p>
-<blockquote>
-<p>601B,1Y。题意：给定$n$个数字$h[1..n]$。定义$\large L(h)=max \lceil \frac {|h[j]-h[i]|} {j-i} \rceil$给定$Q$个询问，每个询问给定$li,ri$求$[li,ri]$所有子序列的$L(h)$之和。</p>
-</blockquote>
-<p><strong>单调栈。</strong>可以将$(i,h[i])$看作平面直角坐标系上的点。发现定义的就是两点间斜率的最大值。考虑不管这些点是凸或者凹的，斜率的最大值一定是由相邻的两个点产生的。于是，我们只需要用单调栈求出每个$h[i]$的作用域即可。</p>
-<blockquote>
-<p>601C,3Y。题意：有$n$场比赛，每一场比赛都有$m$人参与。每场比赛的得分都是这个人的排名（没有相等的）总分是$n$场比赛的分数之和。总排名定义为：总分严格小于他的人数+1。已知小K在n场比赛中的排名。所有人的水平相同，求小K的期望总排名。</p>
-</blockquote>
-<p><strong>期望DP。</strong>考虑到直接求出小K的排名过于困难，按照定义，只要求出总分严格小于他的期望人数。于是就想到，用$f[i][j]$表示$i$场比赛之后总分为$j$的期望人数。故有$\large f[i][j]=\sum \frac{f[i-1][j-k]} {m-1} \ (1&lt;=k&lt;=m, k\not = a[i])$观察式子，考虑到可以前缀和优化转移。</p>
-<h5 id="Codeforces-Round-334-Div-1"><a href="#Codeforces-Round-334-Div-1" class="headerlink" title="Codeforces Round #334 (Div. 1)"></a><a href="http://codeforces.com/contest/603" target="_blank" rel="external">Codeforces Round #334 (Div. 1)</a></h5><p>603A,1A。<strong>贪心，DP</strong>。观察到，一个位置对答案产生了贡献，当且仅当这个位置的数与前面一个数不同。又由于只能翻转连续一段，所以DP时定义三种状态即可。</p>
-<p>603C,3A。<strong>博弈论+SG函数。</strong>考虑引入SG函数，当$i$为奇数时，$SG[i]=mex{ SG[i-1]}$。当$i$为偶数时，能够进行第二种操作，$SG[i]=mex{SG[i-1], SG[i/2]\ xor\ SG[i/2]… }$，共有$k$个SG[i/2]的异或和，注意到这只和$k$的奇偶性有关。</p>
-<p>考虑寻找规律。当$k$为奇数时，由于$SG[i]=mex{ SG[i-1], 0}$，所以之后的$SG[i]$一定是0/1间隔出现的。当$k$为偶数时，$SG[i]=mex{ SG[i-1], SG[i/2]}$，并且注意到$i$为奇数时，$SG[i]=0$，所以只要$log\ a[i]$次递归调用即可。</p>
-<h5 id="Codeforces-Round-335-Div-1"><a href="#Codeforces-Round-335-Div-1" class="headerlink" title="Codeforces Round #335 (Div. 1)"></a><a href="http://codeforces.com/contest/605" target="_blank" rel="external">Codeforces Round #335 (Div. 1)</a></h5><blockquote>
-<p>605A,1A。题意：给定$n$的一个排列，每次可以把一个数放到开头或末尾，求变为升序的最少步骤。</p>
-</blockquote>
-<p><strong>贪心。</strong>考虑那一段是可以不用变化的，发现就是数字连续上升的最长字段（例如,..,1,2,..,3,..,4,…）于是$O(n)$扫一遍即可。</p>
-<blockquote>
-<p>605B,1A。题意：有一个$n$个点，$m$条边的图，然后$m$条边中有$n-1$条边构成了最小生成树，然后边权与是否作为MST的边告诉你，要构造出这个图。</p>
-</blockquote>
-<p><strong>最小生成树的性质，贪心。</strong>考虑首先构造出他的最小生成树，再往上面加边。考虑到最小生成树的边不能被新加入的边$(u,v)$代替，所以需要$u,v$之间的路径的边尽可能少，所以可以强制$root=1$剩下的$n-1$个点直接连到$root$。将最小生成树的边与其他边按照边权排序。</p>
-<p>每加入一条MST的边，可以与前面的节点产生一些新的点对，由于边权是升序的所以之后的其他边一定不会产生冲突。注意我们只需要保留最小的$m$条即可。</p>
-<blockquote>
-<p>605C,3A。题意：有$n$项工作，第$i$项工作每天可以带来$ai$的经验，$bi$的钱。问最少几天可以得到$p$的经验和$q$的钱。工作天数可以是小数，每次只能进行一种工作。</p>
-</blockquote>
-<p><strong>二分答案，凸包。</strong>首先考虑二分答案$T$。如何$O(1)$来check？我们将$(ai,bi)$看成坐标系上的一个点$Pi$，由于工作时间可以是小数，通过线性变换，$Pi,Pj$可以变换为线段$PiPj$上的点。所以可以先求出凸包，然后二分答案判断即可。</p>
-<blockquote>
-<p>605D,1A。题意：玩家有两个属性$x,y$，有$n$个魔法。对于第$i$个魔法，用$(ai,bi,ci,di)$描述。当$ai&lt;=x, bi&lt;=y$时，玩家能使用这个魔法。之后玩家的属性$x=ci, y=di$。求施展第n个魔法最少需要多少次。输出方案，答案不唯一。</p>
-</blockquote>
-<p><strong>线段树（树状数组）+set，BFS。</strong>由于需要求出最小的步数，所以需要用到BFS。考虑到达了点$(x,y)$，我们可以到达在它左下角的点$(x’,y’)$，所以就需要用一个数据结构求出。<del>树套树显然可以，不会写。</del>考虑线段树（树状数组）套set，访问过后暴力删除。考虑其时间复杂度。由于每一个点最多在$O(logn)$个$set$中出现，单次操作复杂度$O(logn)$，所以总的时间复杂度$O(n\times logn \times logn)$，不会超时。</p>
-<h5 id="Codeforces-Round-336-Div-1"><a href="#Codeforces-Round-336-Div-1" class="headerlink" title="Codeforces Round #336 (Div. 1)"></a><a href="http://codeforces.com/contest/607" target="_blank" rel="external">Codeforces Round #336 (Div. 1)</a></h5><blockquote>
-<p>607A,4A。题意：有$n$个点，点有位置和能量，$i$个点被选择，那么在$i$左边它这个能量的位置内的所有点都不能选择，如果现在从右到左依次选择点。现在可以在最右边放置一个点，能量和距离随意，问各种情况下最小摧毁的点的个数。$N&lt;=100000,ai&lt;=1000000$</p>
-</blockquote>
-<p><strong>DP。</strong>考虑到点的坐标范围较小，令$f[i]$表示到位置$i$时，最多能放的点。于是$f[i]=max(f[i-1],f[i-d[i]-1]+1)$。</p>
-<blockquote>
-<p>607B,1A。题意：长度为$n$的字符串，每次消去一段连续的回文串，剩下的两端重新拼接成一个新的串，问最少需要消去多少次。$n&lt;=500$</p>
-</blockquote>
-<p><strong>区间DP。</strong>令$f[i][j]$表示区间$[i,j]$需要消去的最少次数。发现有两种决策：一种是从$f[i][k]+f[k+1][j]$转移过来，将$[i,j]$划分为两个更小的子段；还有一种是从$f[i+1][j-1]$转移，因为中间肯定存在其他回文串，所以不用$+1$。</p>
-<blockquote>
-<p>607C,3A。题意：有两个独立的坑道，由“NSWE”表示。两个球在各自坑道的起点。之后对两个球做相同的操作，上下左右。保证两个小球保持一致的动作，其中一个撞墙的话不用管。问能不能保证两个小球都能从起点到达终点。到达终点后，还有可能因为操作而退出。</p>
-</blockquote>
-<p><strong>脑洞，HASH。</strong>考虑依次让两个球分别到达终点，可以猜测一个结论，无法到达当且仅当第一个球达终点后，第二个球需要到达终点的步骤，恰好使得第一个球退出（证明有些困难）。于是可以改变第一个球轨道的方向，就变成字符串匹配的问题。</p>
-<h5 id="Good-Bye-2015"><a href="#Good-Bye-2015" class="headerlink" title="Good Bye 2015"></a><a href="http://codeforces.com/contest/611" target="_blank" rel="external">Good Bye 2015</a></h5><blockquote>
-<p>611C,1A。题意：有一个$n\times m$的网格，‘#’不能摆。有$Q$个询问，每个询问$(r1,c1,r2,c2)$求出这个子矩形内可以有多少种方式放一个$1\times 2$的骨牌。$n,m&lt;=500,Q&lt;=100000$</p>
-</blockquote>
-<p><strong>DP，容斥。</strong>注意到，对于一个询问，我们可以将其拆成4个前缀询问。而这个前缀询问可以预处理，令$f[i][j]$表示$[1,1]$到$[i,j]$骨牌的摆放方式。$f[i][j]=f[i-1][j]+f[i][j-1]-f[i-1][j-1]-[i,j]$能放的骨牌数。对于查询，我们只需要再次容斥，暴力删除边界的答案即可。复杂度$O(n^3+nQ)$。</p>
-<blockquote>
-<p>611D,1A。题意：把一个长为$n$的数字串拆成多个串，要求这些串的数值递增的，并且没有前缀0，问有多少种分法。$n&lt;=5000$</p>
-</blockquote>
-<p><strong>DP，LCP。</strong>定义状态$f[i][j]$表示$[1,i]$中划分了最后$j$个的方案数。发现状态难以优化，考虑从加速转移入手。假设前一段划分的长度为$k$，注意到当$k&lt;=j-1$时，显然能够转移，即$f[i][j]=\sum _{k=1} ^{j-1} f[i-j][k]$，这一部分可以前缀和优化。还有可能是从$f[i-j][j]$转移到$f[i][j]$，就需要比较$[i-2j+1,i-j],[i-j+1,i]$的大小。由于长度相等，实际上就是在比较字典序。而比较字典序有一个常用的方法，可以求出以$i,j$开头的最长公共前缀，记为$lcp(i,j)$，这样预处理后就可以$O(1)$转移了。</p>
-<h5 id="Codeforces-Round-339-Div-1"><a href="#Codeforces-Round-339-Div-1" class="headerlink" title="Codeforces Round #339 (Div. 1)"></a><a href="http://codeforces.com/contest/613" target="_blank" rel="external">Codeforces Round #339 (Div. 1)</a></h5><blockquote>
-<p>613A,1A。题意：有个$n$边形，给定了所有点的坐标。有一个点$P(x,y)$。这个$n$边形会绕着点$P$旋转。求这个多边形扫过的面积。</p>
-</blockquote>
-<p><strong>计算几何。</strong>发现我们只需要求出点到多边形的最近和最远距离，对于最远距离，一定是在某个点上，而对于最近距离，还有可能在边上。发现一定是做垂线最优，利用三角形面积公式和叉积即可，但垂足一定要在多边形上，用点积判断是否是钝角即可。</p>
-<blockquote>
-<p>613C,5A。题意：有$n$种颜色的珠子，每个珠子有$A[i]$个，要把这些珠子串成一个环，你可以在其中一些地方断开，如果断开后是回文，$Ans+1$，问最大$Ans$。</p>
-</blockquote>
-<p><strong>脑洞，GCD，构造。</strong>首先特判$n=1$的情况，就是$A[1]$。注意到，若存在两种以上的珠子数目为奇数，则一定无法构成回文串。</p>
-<p>不难发现我们可以划分为$gcd$段，考虑$gcd$的奇偶性。若$gcd$为偶数，在每一段内，我们可以任意放置，之后的每一段，间隔着倒置即可，$Ans=gcd$。若$gcd$为奇数，由于不存在两个以上奇数，所以每一段内恰有一个奇数，我们只需要把这个奇数放在中间，两边对称放置即可。</p>
-<h5 id="Wunder-Fund-Round-2016-Div-1-Div-2-combined"><a href="#Wunder-Fund-Round-2016-Div-1-Div-2-combined" class="headerlink" title="Wunder Fund Round 2016 (Div. 1 + Div. 2 combined)"></a><a href="http://codeforces.com/contest/618" target="_blank" rel="external">Wunder Fund Round 2016 (Div. 1 + Div. 2 combined)</a></h5><blockquote>
-<p>618C,2A。题意：给定$n$个点$(xi,yi)$。求一个三角形$ABC$。满足其他的点都在三角形以外。输出任意一个三角形三个点的下标。$n&lt;=100000$</p>
-</blockquote>
-<p><strong>乱搞，计算几何。</strong>考虑按照$x$轴排序，任意三个点形成的区域一定不包含其他点。只要并满足三点不共线即可。</p>
-<blockquote>
-<p>CF618E,2A。题意：给定$x$正半轴上的$n$段线段。有$m$个操作，操作1是给定$x$，然后把第X段延长$y$。操作2是把某&gt;一个段按照原先的左端点旋转α°。每次操作询问原先最右边的端点的位置。$n,Q&lt;=100000$。</p>
-</blockquote>
-<p><strong>线段树，计算几何，矩阵。</strong>有很多方法可以解决此题。考虑使用线段树求解，考虑维护线段另一端到这端的相对位移。对于操作一，只需要求出原长，然后新的$(x’,y’)$可以通过比例求出。需要注意的是操作二，对于某一点$(x,y)$绕原点$O$逆时针旋转$a$的弧长，有如下公式<del>（窝不会证）。</del></p>
-<p>$$x’=x\cdot \cos\alpha - y\cdot \sin\alpha$$ </p>
-<p>$$y’=x\cdot \sin \alpha + y \cdot \cos \alpha$$</p>
-<p>事实上，我们需要旋转$[x,n]$所有线段，这样就能解决了。</p>
-<p>还有一种方法使用<strong>矩阵</strong>。维护区间的转移矩阵即可。</p>
-<blockquote>
-<p>CF618F,1A。题意：给定两个多重集$A,B$，每个数$\in [1,n]$。在$A$中选取一个含$Ka$个元素的非空子集。在$B$中也是如此（有$Kb$个元素）。要求使得两个子集之和相等。$n&lt;=100000$。</p>
-</blockquote>
-<p><strong>构造，抽屉原理。</strong><del>如果不存在范围的限制，这是一个NP问题？</del>考虑构造，首先我们按照元素大小升序排一遍序，分别求出其前缀和$SA[i],SB[i]$，下标为$[0,n]$共$n+1$个。不失一般性，我们令$SA[n]&gt;=SB[n]$。考虑$i$从$0$扫到$n$，每一次求出$SB[j]&lt;=SA[i]$最大的$j$。不难发现$0&lt;=SA[i]-SB[j]&lt;=n-1$，而总共$i$有$n+1$种。所以，根据抽屉原理，一定存在两个不同的$i,i’$使得$SA[i]-SB[j]=SA[i’]-SB[j’]$。移项得，</p>
-<p>$$SA[i]-SA[i’]=SB[j]-SB[j’]$$</p>
-<p>于是在$A$中取$[i’+1,i]$，在$B$中取$[j’+1,j]$就是一组解。</p>
-<h5 id="AIM-Tech-Round-Div-1"><a href="#AIM-Tech-Round-Div-1" class="headerlink" title="AIM Tech Round (Div. 1)"></a><a href="http://codeforces.com/contest/623" target="_blank" rel="external">AIM Tech Round (Div. 1)</a></h5><blockquote>
-<p>CF623A,4A。一个由$a,b,c$组成的字符串，可以这样生成一张图，当$s[i]$与$s[j]$不是一个$a$一个$c$时，$i$与$j$连一条边。给定生成的图，求是否存在字符串能生成这张图。$n&lt;=500$</p>
-</blockquote>
-<p><strong>二分图染色。</strong>考虑到其反图，一定是由$a,c$组成的，且相邻的边不同。对于不在反图中的点，考虑改为$b$。这样似乎就好了？事实上，若原来的图中存在一条边，在新生成的字符串中为$a,c$，答案是不符的。</p>
-<blockquote>
-<p>CF623B,2A。有一个数列，可以删除其中一段，删一个代价为$a$。也可以选择对其中一些数进行增加或者减少1，每次代价为$b$，问最后使得所有的$gcd$比1大，最小代价是多少。</p>
-</blockquote>
-<p><strong>gcd相关，动态规划。</strong>注意到，由于并不能删光全部的，而且删除的是连续一段，所以$a1,an$中必定存在一个剩余，于是对$a_1-1$，$a_1$，$a_1+1$，$a_n-1$，$a_n$，$a_n+1$操作找到其质因数，用DP求出都变为这个质因数倍数的最小代价。状态定义可参考CF603A。</p>
-<blockquote>
-<p>CF623C,10A。平面上有$n$个点$(xi,yi)$。每个点可以变成$(xi,0)$，或$(0,yi)$。所有的点变换之后，两点最大距离的平方的最小值是多少。$n&lt;=100000$</p>
-</blockquote>
-<p><strong>二分答案。</strong>细节非常多的一题，需要注意的地方很多。首先按照$x$排序，求出前缀后缀的$y$最大最小值。二分答案$ans$，考虑如何通过$O(n)$扫描判断可行性。答案会有三部分影响，一是$x$轴之间的，取决于$x$轴上的最高最低点，二是$y$轴上的，同样如此，三是$x,y$之间的，取决于$x$和$y$的绝对值最大值。</p>
-<p>我们需要从左往右，从右往左各进行一次扫描。假设$l$是选取最左端在$x$轴上的，显然我们一定是选择连续的一段最优，且右侧的不对答案产生影响，$r$处是满足$|x[l]| &gt;= |x[r]|$最右侧的点，对于每对$(l,r)$还要进行判断。显然$l,r$都是单调移动的，所以整体判断的复杂度是$O(n)$。注意到，移动过程中可能出现一些非法情况，需要通过缩小范围解决。具体参见代码。</p>
-<blockquote>
-<p>CF623D,1A。题意：给定$n(≤100)$个人，每轮随机猜一个人，每个人被猜中的概率为$pi\%,\sum pi\%=1$，游戏结束当且仅当每个人被猜中一次或以上。问在最优策略下，期望结束轮数是多少。</p>
-</blockquote>
-<p><strong>贪心，DP，神题。</strong><del>以下抄自<a href="http://blog.csdn.net/jasonvictoryan/article/details/51160518" target="_blank" rel="external">dalao的博客</a>。</del>设$f[i][j]$表示第$i$轮结束之后，第$j$个人<strong>被抓过</strong>的概率。设$g[i]$表示第$i$轮结束之后，<strong>所有人</strong>都被抓过的概率。 首先，考虑到$g[i] = \prod ^{n} _{j=1} f[i][j]$ ，答案即为</p>
-<p>$$Ans = \sum ^{+∞} _{i=1} i\times(g[i]−g[i−1])$$</p>
-<p>于是最优策略即为，尽量使得$i$较小时，$g[i]−g[i−1]$较大。注意到$f[i][j]$和$f[i−1][j]$的关系。 </p>
-<ul>
-<li>第$i$轮不选$j$，$f[i][j]=f[i−1][j]$</li>
-<li>第$i$轮选$j$，$f[i][j] = f[i−1][j] + (1−f[i−1][j]) \times pj$</li>
-</ul>
-<p>所以，$\large g[i] = g[i−1] \times \frac {f[i][j]} {f[i−1][j]}$ 。只要求$\large \frac {f[i][j]} {f[i-1][j]} $最大即可，这个可以枚举。其实$3 \times 10^5$轮过后答案就不会再有大于$10 ^{−6}$的误差了。<del>误差分析窝不会。</del></p>
-<h5 id="8VC-Venture-Cup-2016-Final-Round-Div-1-Edition"><a href="#8VC-Venture-Cup-2016-Final-Round-Div-1-Edition" class="headerlink" title="8VC Venture Cup 2016 - Final Round (Div. 1 Edition)"></a><a href="http://codeforces.com/contest/634" target="_blank" rel="external">8VC Venture Cup 2016 - Final Round (Div. 1 Edition)</a></h5><blockquote>
-<p>CF634A,1A。有$n$个岛屿，1连2,2连3,…..n-1连n,n连1。初始有n-1个岛屿上有雕像，只有一个岛屿没有。若两个岛屿相邻且一个无雕像、一个有雕像。则可以将雕像移到无雕像的岛屿。给定初状态和末状态，问可不可以达到。$n&lt;=200000$</p>
-</blockquote>
-<p><strong>暴力。</strong>发现空的岛屿可以忽略，对于剩下的岛屿，只要初末状态循环同构即可。可以强制将雕像1放在岛屿1。</p>
-<blockquote>
-<p>CF634B,1A。给定$S$和$X$，问有多少对$(a,b)$满足$a+b=S, a \oplus b = X$。</p>
-</blockquote>
-<p><strong>位运算的性质。</strong>注意到异或是没有进位的加法，两个二进制位$a,b$发生进位，$a=b=1$。所以有，</p>
-<p>$$a + b = a \oplus b + a\ \&amp;\ b $$</p>
-<p>也就是说，我们可以求出$a\ \&amp;\ b$的值。逐个考虑$a\oplus b$的每个二进制位。若某一位为0，此时只要令$x=y=x\ \&amp;\ y$恰好仅有一种方案。若某一位为1，则$x,y$一定是一个1，一个0。当且仅当$x\ \&amp;\ y=0$时存在两种情况，否则无解。注意，题目中要求的是正整数，所以$S=X$时，答案需要减2。</p>
-<blockquote>
-<p>CF634C,1A。题意：工厂每天产出$a$件商品，设备需要维修，维修前每天产出$b$件商品，维修需要$k$天。这$k$天没有产出。给出一些订单的日期和数量以及一些查询，每次查询给出一个维修开始日期$p$，表示第$p$天开始维修在$n$天内最多可以接多少单（商品数量），注意订单只能当天完成。$n,Q&lt;=200000$</p>
-</blockquote>
-<p><strong>树状数组。</strong>考虑建立两个树状数组，一个是维修之前，一个是维修之后，能最多完成的商品数量。只要不超过上限即可。</p>
-<h5 id="Codeforces-Round-345-Div-1"><a href="#Codeforces-Round-345-Div-1" class="headerlink" title="Codeforces Round #345 (Div. 1)"></a><a href="http://codeforces.com/contest/650" target="_blank" rel="external">Codeforces Round #345 (Div. 1)</a></h5><blockquote>
-<p>CF650A,2A。题意：给定$n$个点，求存在多少点对，满足它们的欧几里德距离等于曼哈顿距离。可能包含相同的点。</p>
-</blockquote>
-<p><strong>容斥原理。</strong>注意到仅有当两个点在同一行或列时，满足条件。所以只需要求出每一行或列的个数即可。相同位置的点会计算多次，减去即可。</p>
-<blockquote>
-<p>CF650B,1A。题意：有$n$张图片，有$T$时间。每次可以往左者往右翻阅，1的左边是$n$。然后，每张图片有2种阅读方式，一种是w，一种是h，其中w的照片需要花费$b$的时间翻转然后变成h，花费1的时间看。问最多能看多少照片。</p>
-</blockquote>
-<p><strong>滑动窗口。</strong>因为存在环，所以首先考虑倍长。可以看照片一定是一段区间，所以维护左右指针，单调移动即可。</p>
-<blockquote>
-<p>CF650C,3A。题意：给定一个$n \times m$的表格，您需要压缩它，压缩后仍是$n \times m$的表格。需要保证压缩前后，同一行，同一列，它们的相对大小关系不变（小于还是小于，等于还是等于）。求压缩后表格最大数的最小值。压缩前后的表格上的数都是正数。$nm&lt;=10^6$</p>
-</blockquote>
-<p><strong>贪心，并查集。</strong>依次考虑从小到大的所有数。对于一个数$a[i][j]$它需要大于第$i$行和第$j$列所有已经加入的数，对于所有相等的$a[i][j]$，因为在同一行或列时必须相等，可以使用并查集将所有点连起来，找到这些点至少需要的新的值。</p>
-<blockquote>
-<p>CF650D,1A。题意：给定一个长度为$n$的数列，和$m$个询问，每个询问给出$Ai,Bi$表示把第$Ai$个数改成$Bi$之后，这个数列的最长上升子序列（严格大于,询问相互独立）。$n,m&lt;=400000$</p>
-</blockquote>
-<p><strong>LIS，树状数组，离线。</strong>考虑离线，对于一个询问，可以发现答案由两部分。<strong>一是改为$Bi$后，经过$i$的LIS</strong>，这个只需要从前到后，从后到前各扫描一遍即可。<strong>二是不经过$i$的LIS。</strong>如果$i$不一定是原序列LIS一定经过的数，则该部分的答案为LIS，否则为LIS-1。</p>
-<p>考虑如何判断一个位置是否一定是LIS要经过的。如果满足$pre[i]+suf[i]=LIS+1$，存在LIS经过$i$。如果还满足$pre[i]=pre[j]\ (i\not = j),pre[j]+suf[j]=LIS+1$则说明$i,j$是可以互换的，则不是LIS一定经过的数。</p>
-<h5 id="CROC-2016-Elimination-Round"><a href="#CROC-2016-Elimination-Round" class="headerlink" title="CROC 2016 - Elimination Round"></a><a href="http://codeforces.com/contest/645" target="_blank" rel="external">CROC 2016 - Elimination Round</a></h5><blockquote>
-<p>CF645C,1A。题意：有一个有$n$个房间的酒店，FJ带上了他的$k$头cow。有一些房间是空闲的，FJ要订$k+1$间房间，使得FJ到最远的奶牛距离最小。$n&lt;=100000$</p>
-</blockquote>
-<p><strong>二分答案。</strong>考虑枚举FJ所在的位置，二分答案$d$。只需要满足区间内空的房间数大于等于$k+1$即可。只需要预处理前缀和。</p>
-<blockquote>
-<p>CF645D,1A。题意：有一个有向图，如果不构成唯一的拓扑排序，输出$-1$，否则输出最小的$k$，使得前$k$条边就能满足唯一的拓扑排序。</p>
-</blockquote>
-<p><strong>二分答案，拓扑排序。</strong>发现显然答案具有单调性，考虑二分答案$k$。只要有向图的最长链为$k$，就存在唯一的拓扑序。</p>
-<blockquote>
-<p>CF645E,2A。题意：给定$n,k$，和一个字符串$t$，要在$t$后面加上n个不超过’a’+k-1的字母。问不同的子序列最多能有多少。$n,|t|&lt;=1000000,k&lt;=26$</p>
-</blockquote>
-<p><strong>动态规划好题，单调性。</strong>考虑如何求一个给定字符串的不同子序列个数。其实，难点就在于如何避免重复计数。定义$f[i][j]$表示前$i$个字符串中取出，且结尾字符为$j$的方案数。两种情况：</p>
-<ul>
-<li>$$\forall str[i] \not = j, f[i][j] = f[i-1][j]$$</li>
-<li>$$\exists str[i] = j, f[i][j] = \sum _{t=1} ^{k} f[i-1][t]+1$$</li>
-</ul>
-<p>如何理解第二种转移？事实上就是在前$i-1$个的基础上，强制增加了$str[i]$，加一指的是单个的$str[i]$，不难发现，对于每一个$i$，都不存在重复计数的情况。通过维护$sum = \sum f[i][j]$可以在$O(n)$的时间内求出所有的$f[]$。</p>
-<p>如何才能使得新增$n$个字符后最优，还是从状态转移方程入手。要使得$sum$尽可能地大，就要使得$f[][j]$最小，因为这样增加的值最大。可是这里是取过模的，如何比较大小？注意到$f[i][str[i]]$是随着$i$单调递增的，所以我们只需要维护所有字符上一次出现的位置即可。 </p>
-<h5 id="IndiaHacks-2016-Online-Edition-Div-1-Div-2"><a href="#IndiaHacks-2016-Online-Edition-Div-1-Div-2" class="headerlink" title="IndiaHacks 2016 - Online Edition (Div. 1 + Div. 2)"></a><a href="http://codeforces.com/contest/653" target="_blank" rel="external">IndiaHacks 2016 - Online Edition (Div. 1 + Div. 2)</a></h5><blockquote>
-<p>CF653E,2A。题意：有$n$个点，$m$条不是树的边，其中节点1的度数为$k$。问能不能构成这样一棵树。</p>
-</blockquote>
-<p><strong>set优化BFS。</strong>考虑从2到n的点构成的连通块。发现存在三种情况会无解：</p>
-<ul>
-<li>1连出去的边少于$k$；</li>
-<li>存在连通块，不能和1相连；</li>
-<li>存在多于$k$个连通块，一定有连通块无法连接。</li>
-</ul>
-<p>如何求出所有连通块？朴素的BFS由于需要寻找出边，复杂度$O(n)$。考虑到有很多点已经访问过，所以用set维护未访问的点，记为$list$。如果是无法连接的点，则需要跳过，为什么这样复杂度仍是对的？注意到，这种情况只会出现$O(m)$次，所以总的时间复杂度$O((n+m)\times \log n)$。</p>
-<h5 id="VK-Cup-2016-Round-1"><a href="#VK-Cup-2016-Round-1" class="headerlink" title="VK Cup 2016 - Round 1"></a><a href="http://codeforces.com/contest/639" target="_blank" rel="external">VK Cup 2016 - Round 1</a></h5><blockquote>
-<p>CF639B,4A。给定$n,d,h$，请构造一颗有$n$个节点的树，满足其高度为$h$，深度为$d$。</p>
-</blockquote>
-<p><strong>构造。</strong>首先判断无解的情况，如果满足$d&gt;=2h$，或$d=2$且$n \not = 2$，则一定无解。首先构造长为$h$的链，再构造长为$d-h$的链，剩下的都连到1即可。注意要特判$d=h$的情况。</p>
-<blockquote>
-<p>CF639C,1A。定义一个合法的$n$次多项式$f(x)$，满足最高项系数$a[n]\not=0$，所有系数$ai$都是整数，且绝对值不超过$K$。现在给您一个合法的$n$次多项式$P(x)$，但$P(2)\not=0$。您需要改变其中一个系数，得到一个$n$次多项式$Q(x)$。满足$Q(2)=0$。求方案数。$n&lt;=200000$</p>
-</blockquote>
-<p><strong>贪心，脑洞。</strong>考虑从低位到高位上传系数，使得系数$ai$变为$1,-1,0$，只有$an$不满足。不难发现，如果我们需要更改系数$ai$，若$\exists j&lt;i,a[j] \not = 0$则无法通过改变$ai$使得满足答案，记最大能够满足的为$flag$。</p>
-<p>从高位向低位扫描，每一次维护更高项的等价系数$sum=sum \times2 + a’[i]$，也就是说高位的数字之和等于$sum \times 2^i$。若$i&lt;=flag$可以尝试将原来的$a[i]$改为$a[i]-sum$，若其绝对值不大于$K$，是满足条件的。注意最高项的新系数不能为0。</p>
-<blockquote>
-<p>CF639D,2A。有$n$个人，每个人都有自己的贡献$ti$（任意整数）可以花费$b$，使得某个人的贡献$+5$。花费$a$，使得某个人的贡献$+1$。求至少使得k个人的贡献相等，最少需要的花费。$1&lt;=k&lt;=n&lt;=200000$</p>
-</blockquote>
-<p><strong>模意义下分类，贪心，优先队列。</strong>首先考虑$5c$和$b$的关系，当$5c&lt;b$是显然令$b=5c$可以更优。由于两种操作的代价不同，所以无法简单地通过两个指针来解决。</p>
-<p>考虑按最终答案模$5$的值$=d$来分类，首先我们要修改所有的数使得所有的数模$5=d$，记这一部分花费为$x$。我们还要选择一个最大的$a[r]$，修改其他的$k-1$为$a[r]$。贡献如何计算，即为$\large \sum(x + \frac {(a[r] - a[i])b} {5})$。于是将这个括号拆开，拆出一部分与$a[r]$无关的，用堆维护最小的$k$个即可。</p>
-<h5 id="Codeforces-Round-347-Div-1"><a href="#Codeforces-Round-347-Div-1" class="headerlink" title="Codeforces Round #347 (Div. 1)"></a><a href="http://codeforces.com/contest/663" target="_blank" rel="external">Codeforces Round #347 (Div. 1)</a></h5><blockquote>
-<p>663A,2A。给定一些形如$?+?-?+?+?=n,?-?-?+?=n$的表达式，最后一个数字为n，在前面填$[1,n]$的数，问是否满足条件的等式，可能输出“Possible“并给出一组解。$n&lt;=1000000$</p>
-</blockquote>
-<p><strong>构造。</strong>考虑怎样的等式能够满足条件，记增加的数的个数为$A$，减少的为$B$。若$A-nB&lt;=n&lt;=nA-B$则一定有解。于是每次一确定一个数，此时两边消掉这个数，得到新的$N$，同时$A$或$B$减一，只要新的$N$仍满足这个条件即可。</p>
-<blockquote>
-<p>663B,1A。有一个$n$个点，$m$条边的无向图。开始每条边的颜色都是给定的，玩家选择一个顶点，把相邻的边的颜色反转一下，问使得所有边颜色相同。最少反转几下，输出那些反转的顶点。只有两种颜色。$n,m&lt;=30000$</p>
-</blockquote>
-<p><strong>并查集。</strong>不失一般性，考虑将所有边的颜色改为蓝色。然后每一个点有选，或不选两种状态。逐个考虑每一条边，若这条边是红色的，则两个点的状态不同，否则这两个点的状态相同。</p>
-<p>于是可以维护两个并查集即可。如何要保证最小？对于每一个连通块，一定被分为两个集合，只需要取其中较小的即可。<strong>注意将所有边改为红色也要尝试，因为对应并查集的合并方式不同。</strong></p>
-<blockquote>
-<p>CF663E,2A。有一个$n\times m$的表格，包含0或1。每一次可以选择一行，或一列翻转(0&lt;-&gt;1)。求一些操作后，1的个数的最小值。$n&lt;=20,m&lt;=100000$</p>
-</blockquote>
-<p><strong>快速沃尔什变换。</strong>考虑$O(2^n\times m \times n)$的暴力，枚举每一行的状态，然后$O(nm)$统计。事实上，统计可以优化到$O(m)$，假设第$i$列的状态为$a[i]$，行的状态为$s$，于是第$j$列的个数即为$\min(|a[j] \oplus s|,n-|a[j]\oplus s|)$。</p>
-<p>$$\large Ans[s] = \sum _{i=1} ^m \min(|a[j] \oplus s|, n-|a[j] \oplus s|)$$</p>
-<p>记</p>
-<p>$$\large v[i] = \min(|i|, n-|i|)$$</p>
-<p>那么</p>
-<p>$$\large Ans[s] = \sum _{i=1} ^m v[s\oplus a[i]]$$</p>
-<p>令</p>
-<p>$$\large cnt[x]为a[i]=x的个数$$</p>
-<p>得到</p>
-<p>$$\large Ans[s] = \sum _{i=0} ^{2^n-1} cnt[i] \times v[s \oplus i]$$</p>
-<p>发现就是异或卷积的形式：</p>
-<p>$$\large C = \sum _{j \oplus k = i} A[j] \times B[k]$$</p>
-<p>就可以用$FWT$啦。具体FWT的总结以后填吧QAQ。</p>
-
+        <p>博主是ZJSX某蒟蒻。</p>
+<p><del>小学连续三年水了市里的一等，感觉什么都没学。</del></p>
+<p>初一PJ差10分一等，还是我太弱了</p>
+<p>初二PJ侥幸385。<del>20+人并列，一定是题目太水了</del></p>
+<p>ZJOI2017，一试30分，二试70分。<del>伪装成神犇？</del></p>
+<p>现在初三，正在为TG和ZJOI2018而努力，一起加油吧~</p>
+        
+          <a class="article-more-a" href="/2017/07/01/Hello-World!/#more">more >></a>
+        
       
 
       
@@ -465,7 +206,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">训练</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -474,94 +215,26 @@
       
 
       
-
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/01/Hello-World!/">展开全文 >></a>
+        </p>
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://cyanie.github.io/2017/08/08/Training-CF-Div2/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-  
-<nav id="article-nav">
-  
-    <a href="/2017/08/13/Algorithms-Generation-function/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          组合数学-生成函数的应用
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/08/06/Training-DP/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 
 
 
   
-   
   
-
-  
-
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -584,8 +257,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

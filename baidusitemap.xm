@@ -5,13 +5,30 @@
     
   <url>
     <loc>https://cyanie.github.io/2017/08/08/Training-CF-Div2/</loc>
-    <lastmod>2017-08-19T05:56:51.712Z</lastmod>
+    <lastmod>2017-08-19T14:00:53.633Z</lastmod>
     <data>
         <display>
         <title>CodeForces泛做第一轮</title>
         <pubTime>2017-08-08T00:08:08.000Z</pubTime>
         
         <tag>训练</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cyanie.github.io/2017/08/04/Algorithms-FWT/</loc>
+    <lastmod>2017-08-19T10:20:21.809Z</lastmod>
+    <data>
+        <display>
+        <title>FWT(快速沃尔什变换)学习笔记</title>
+        <pubTime>2017-08-04T10:00:00.000Z</pubTime>
+        
+        <tag>笔记</tag>
          
          
            
