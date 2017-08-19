@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://cyanie.github.io/2017/08/08/Training-CF-Div2/</loc>
-    <lastmod>2017-08-18T14:30:03.986Z</lastmod>
+    <lastmod>2017-08-19T05:56:51.712Z</lastmod>
     <data>
         <display>
         <title>CodeForces泛做第一轮</title>
