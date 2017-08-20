@@ -4,7 +4,58 @@
 
     
   <url>
-    <loc>https://cyanie.github.io/2017/07/01/233/AtCoder/</loc>
+    <loc>https://cyanie.github.io/2017/07/01/CodeForces/</loc>
+    <lastmod>2017-08-20T14:00:51.659Z</lastmod>
+    <data>
+        <display>
+        <title>CodeForces比赛记录&题解</title>
+        <pubTime>2017-07-01T02:00:00.000Z</pubTime>
+        
+        <tag>比赛</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cyanie.github.io/2017/07/15/Training-ARC-068-076/</loc>
+    <lastmod>2017-08-20T14:00:32.806Z</lastmod>
+    <data>
+        <display>
+        <title>AtCoder泛做-ARC#068~076</title>
+        <pubTime>2017-07-14T16:00:00.000Z</pubTime>
+        
+        <tag>训练</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cyanie.github.io/2017/08/08/Training-CF-Div2/</loc>
+    <lastmod>2017-08-20T14:00:15.529Z</lastmod>
+    <data>
+        <display>
+        <title>CodeForces泛做第一轮</title>
+        <pubTime>2017-08-08T00:08:08.000Z</pubTime>
+        
+        <tag>训练</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cyanie.github.io/2017/07/01/AtCoder/</loc>
     <lastmod>2017-08-20T13:51:21.889Z</lastmod>
     <data>
         <display>
@@ -21,24 +72,7 @@
 
     
   <url>
-    <loc>https://cyanie.github.io/2017/08/08/Training-CF-Div2/</loc>
-    <lastmod>2017-08-20T11:57:27.674Z</lastmod>
-    <data>
-        <display>
-        <title>CodeForces泛做第一轮</title>
-        <pubTime>2017-08-08T00:08:08.000Z</pubTime>
-        
-        <tag>训练</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cyanie.github.io/2017/08/04/233/Algorithms-FWT/</loc>
+    <loc>https://cyanie.github.io/2017/08/04/Algorithms-FWT/</loc>
     <lastmod>2017-08-19T23:50:51.346Z</lastmod>
     <data>
         <display>
@@ -55,7 +89,7 @@
 
     
   <url>
-    <loc>https://cyanie.github.io/2017/07/01/233/Hello-World!/</loc>
+    <loc>https://cyanie.github.io/2017/07/01/Hello-World!/</loc>
     <lastmod>2017-08-17T08:06:31.295Z</lastmod>
     <data>
         <display>
@@ -72,7 +106,7 @@
 
     
   <url>
-    <loc>https://cyanie.github.io/2017/07/02/233/2017.7-Training/</loc>
+    <loc>https://cyanie.github.io/2017/07/02/2017.7-Training/</loc>
     <lastmod>2017-08-17T08:05:09.695Z</lastmod>
     <data>
         <display>
@@ -89,7 +123,7 @@
 
     
   <url>
-    <loc>https://cyanie.github.io/2017/08/13/233/Algorithms-Generation-function/</loc>
+    <loc>https://cyanie.github.io/2017/08/13/Algorithms-Generation-function/</loc>
     <lastmod>2017-08-17T08:04:56.405Z</lastmod>
     <data>
         <display>
@@ -106,7 +140,7 @@
 
     
   <url>
-    <loc>https://cyanie.github.io/2017/08/05/233/Algorithms-Group-theory/</loc>
+    <loc>https://cyanie.github.io/2017/08/05/Algorithms-Group-theory/</loc>
     <lastmod>2017-08-17T08:04:49.367Z</lastmod>
     <data>
         <display>
@@ -123,41 +157,7 @@
 
     
   <url>
-    <loc>https://cyanie.github.io/2017/07/01/233/CodeForces/</loc>
-    <lastmod>2017-08-17T08:04:24.289Z</lastmod>
-    <data>
-        <display>
-        <title>CodeForces比赛记录&题解</title>
-        <pubTime>2017-07-01T02:00:00.000Z</pubTime>
-        
-        <tag>比赛</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cyanie.github.io/2017/07/15/233/Training-ARC-068-076/</loc>
-    <lastmod>2017-08-17T08:03:50.852Z</lastmod>
-    <data>
-        <display>
-        <title>AtCoder泛做-ARC#068~076</title>
-        <pubTime>2017-07-14T16:00:00.000Z</pubTime>
-        
-        <tag>训练</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cyanie.github.io/2017/08/04/233/Algorithms-Tree-count/</loc>
+    <loc>https://cyanie.github.io/2017/08/04/Algorithms-Tree-count/</loc>
     <lastmod>2017-08-14T01:13:43.198Z</lastmod>
     <data>
         <display>
@@ -174,7 +174,7 @@
 
     
   <url>
-    <loc>https://cyanie.github.io/2017/08/06/233/Training-DP/</loc>
+    <loc>https://cyanie.github.io/2017/08/06/Training-DP/</loc>
     <lastmod>2017-08-06T01:58:47.430Z</lastmod>
     <data>
         <display>

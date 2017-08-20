@@ -7,19 +7,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://cyanie.github.io">
-  <title>组合数学-生成函数的应用 | Cyani&#39;s Blog</title>
+  <title>FWT(快速沃尔什变换)学习笔记 | Cyani&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="母函数是解决计数问题强有力的工具。在OI中也时有出现，不学就跟不上时代了啊。">
+  <meta name="description" content="更多的坑待填…  前置技能对于一个长度$n=2^k$的向量$A$，定义$A0$为这个数组的前$2^{k−1}$项，$A1$为这个数组的后$2^{k−1}$项，$A=(A0,A1)$。  $$A \pm B = {A[0] \pm B[0], A[1] \pm B[1], A[2] \pm B[2],…, A[n-1] \pm B[n-1] }$$ $$A \times B = {A[0] \tim">
 <meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="组合数学-生成函数的应用">
-<meta property="og:url" content="https://cyanie.github.io/2017/08/13/233/Algorithms-Generation-function/index.html">
+<meta property="og:title" content="FWT(快速沃尔什变换)学习笔记">
+<meta property="og:url" content="https://cyanie.github.io/2017/08/04/Algorithms-FWT/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
-<meta property="og:description" content="母函数是解决计数问题强有力的工具。在OI中也时有出现，不学就跟不上时代了啊。">
-<meta property="og:updated_time" content="2017-08-17T08:04:56.405Z">
+<meta property="og:description" content="更多的坑待填…  前置技能对于一个长度$n=2^k$的向量$A$，定义$A0$为这个数组的前$2^{k−1}$项，$A1$为这个数组的后$2^{k−1}$项，$A=(A0,A1)$。  $$A \pm B = {A[0] \pm B[0], A[1] \pm B[1], A[2] \pm B[2],…, A[n-1] \pm B[n-1] }$$ $$A \times B = {A[0] \tim">
+<meta property="og:updated_time" content="2017-08-19T23:50:51.346Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="组合数学-生成函数的应用">
-<meta name="twitter:description" content="母函数是解决计数问题强有力的工具。在OI中也时有出现，不学就跟不上时代了啊。">
+<meta name="twitter:title" content="FWT(快速沃尔什变换)学习笔记">
+<meta name="twitter:description" content="更多的坑待填…  前置技能对于一个长度$n=2^k$的向量$A$，定义$A0$为这个数组的前$2^{k−1}$项，$A1$为这个数组的后$2^{k−1}$项，$A=(A0,A1)$。  $$A \pm B = {A[0] \pm B[0], A[1] \pm B[1], A[2] \pm B[2],…, A[n-1] \pm B[n-1] }$$ $$A \times B = {A[0] \tim">
   
     <link rel="alternative" href="/atom.xml" title="Cyani&#39;s Blog" type="application/atom+xml">
   
@@ -165,31 +165,35 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-233/Algorithms-Generation-function" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Algorithms-FWT" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      组合数学-生成函数的应用
+      FWT(快速沃尔什变换)学习笔记
     </h1>
   
 
         
-        <a href="/2017/08/13/233/Algorithms-Generation-function/" class="archive-article-date">
-  	<time datetime="2017-08-13T12:05:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-13</time>
+        <a href="/2017/08/04/Algorithms-FWT/" class="archive-article-date">
+  	<time datetime="2017-08-04T10:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>母函数是解决计数问题强有力的工具。在OI中也时有出现，<del>不学就跟不上时代了啊</del>。</p>
-<a id="more"></a>
-<h3 id="前置技能"><a href="#前置技能" class="headerlink" title="前置技能"></a>前置技能</h3><h5 id="常见幂级数展开"><a href="#常见幂级数展开" class="headerlink" title="常见幂级数展开"></a>常见幂级数展开</h5><p>$$(1-ax)^{-1} = 1+ax+a^2x^2+a^3x^3+…$$</p>
-<p>$$(1-x)^2=1+2x+3x^2+4x^3+…$$</p>
-<h5 id="部分分式"><a href="#部分分式" class="headerlink" title="部分分式"></a>部分分式</h5><p>运用待定系数发将分式分解为若干个分式的和。</p>
+        <font color="red">更多的坑待填…</font>
+
+<h4 id="前置技能"><a href="#前置技能" class="headerlink" title="前置技能"></a>前置技能</h4><p>对于一个长度$n=2^k$的向量$A$，定义$A0$为这个数组的前$2^{k−1}$项，$A1$为这个数组的后$2^{k−1}$项，$A=(A0,A1)$。 </p>
+<p>$$A \pm B = {A[0] \pm B[0], A[1] \pm B[1], A[2] \pm B[2],…, A[n-1] \pm B[n-1] }$$</p>
+<p>$$A \times B = {A[0] \times B[0], A[1] \times B[1], A[2] \times B[2], …, A[n-1] \times B[n-1] }$$</p>
+<p>$$A \oplus B = { \sum <em>{i \oplus j = 0} A[i] \times B[j], \sum </em>{i \oplus j = 1} A[i] \times B[j]…, \sum _{i \oplus j = n-1} A[i] \times B[j]}$$</p>
+<h4 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h4><p>快速沃尔什变换(Fast Walsh-Hadamard Transform)，用于解决一类特殊的卷积。</p>
+<p>$$\large C[i] = \sum _{j \oplus k = i} A[j] \times B[k]$$</p>
+<p>其中$\oplus$可以是任意位运算，$xor, ans, or$。</p>
 
       
 
@@ -259,7 +263,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://cyanie.github.io/2017/08/13/233/Algorithms-Generation-function/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://cyanie.github.io/2017/08/04/Algorithms-FWT/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -273,9 +277,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2017/08/05/Algorithms-Group-theory/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          组合数学-Burnside引理与Polya定理
+        
+      </div>
+    </a>
   
-    <a href="/2017/08/08/Training-CF-Div2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CodeForces泛做第一轮</div>
+  
+    <a href="/2017/08/04/Algorithms-Tree-count/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">图论-prufer序列与矩阵树定理</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -404,7 +417,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">训练</a>
+                <a href="javascript:void(0)" class="js-tag color3">集训</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -412,15 +425,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">比赛</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">集训</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">训练</a>
               </li>
             
             <div class="clearfix"></div>

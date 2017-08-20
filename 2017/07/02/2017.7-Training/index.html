@@ -7,19 +7,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://cyanie.github.io">
-  <title>FWT(快速沃尔什变换)学习笔记 | Cyani&#39;s Blog</title>
+  <title>2017年7月NOIP集训总结 | Cyani&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="更多的坑待填…  前置技能对于一个长度$n=2^k$的向量$A$，定义$A0$为这个数组的前$2^{k−1}$项，$A1$为这个数组的后$2^{k−1}$项，$A=(A0,A1)$。  $$A \pm B = {A[0] \pm B[0], A[1] \pm B[1], A[2] \pm B[2],…, A[n-1] \pm B[n-1] }$$ $$A \times B = {A[0] \tim">
-<meta name="keywords" content="笔记">
+  <meta name="description" content="暑假终于到了，蒟蒻$Cyani$也要开始刷题啦~ 暑假的训练时光是宝贵的，是算法和思维快速提高的时期，在这里总结下收获。">
+<meta name="keywords" content="集训">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FWT(快速沃尔什变换)学习笔记">
-<meta property="og:url" content="https://cyanie.github.io/2017/08/04/233/Algorithms-FWT/index.html">
+<meta property="og:title" content="2017年7月NOIP集训总结">
+<meta property="og:url" content="https://cyanie.github.io/2017/07/02/2017.7-Training/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
-<meta property="og:description" content="更多的坑待填…  前置技能对于一个长度$n=2^k$的向量$A$，定义$A0$为这个数组的前$2^{k−1}$项，$A1$为这个数组的后$2^{k−1}$项，$A=(A0,A1)$。  $$A \pm B = {A[0] \pm B[0], A[1] \pm B[1], A[2] \pm B[2],…, A[n-1] \pm B[n-1] }$$ $$A \times B = {A[0] \tim">
-<meta property="og:updated_time" content="2017-08-19T23:50:51.346Z">
+<meta property="og:description" content="暑假终于到了，蒟蒻$Cyani$也要开始刷题啦~ 暑假的训练时光是宝贵的，是算法和思维快速提高的时期，在这里总结下收获。">
+<meta property="og:updated_time" content="2017-08-17T08:05:09.695Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FWT(快速沃尔什变换)学习笔记">
-<meta name="twitter:description" content="更多的坑待填…  前置技能对于一个长度$n=2^k$的向量$A$，定义$A0$为这个数组的前$2^{k−1}$项，$A1$为这个数组的后$2^{k−1}$项，$A=(A0,A1)$。  $$A \pm B = {A[0] \pm B[0], A[1] \pm B[1], A[2] \pm B[2],…, A[n-1] \pm B[n-1] }$$ $$A \times B = {A[0] \tim">
+<meta name="twitter:title" content="2017年7月NOIP集训总结">
+<meta name="twitter:description" content="暑假终于到了，蒟蒻$Cyani$也要开始刷题啦~ 暑假的训练时光是宝贵的，是算法和思维快速提高的时期，在这里总结下收获。">
   
     <link rel="alternative" href="/atom.xml" title="Cyani&#39;s Blog" type="application/atom+xml">
   
@@ -165,35 +165,253 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-233/Algorithms-FWT" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2017.7-Training" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      FWT(快速沃尔什变换)学习笔记
+      2017年7月NOIP集训总结
     </h1>
   
 
         
-        <a href="/2017/08/04/233/Algorithms-FWT/" class="archive-article-date">
-  	<time datetime="2017-08-04T10:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-04</time>
+        <a href="/2017/07/02/2017.7-Training/" class="archive-article-date">
+  	<time datetime="2017-07-02T12:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <font color="red">更多的坑待填…</font>
-
-<h4 id="前置技能"><a href="#前置技能" class="headerlink" title="前置技能"></a>前置技能</h4><p>对于一个长度$n=2^k$的向量$A$，定义$A0$为这个数组的前$2^{k−1}$项，$A1$为这个数组的后$2^{k−1}$项，$A=(A0,A1)$。 </p>
-<p>$$A \pm B = {A[0] \pm B[0], A[1] \pm B[1], A[2] \pm B[2],…, A[n-1] \pm B[n-1] }$$</p>
-<p>$$A \times B = {A[0] \times B[0], A[1] \times B[1], A[2] \times B[2], …, A[n-1] \times B[n-1] }$$</p>
-<p>$$A \oplus B = { \sum <em>{i \oplus j = 0} A[i] \times B[j], \sum </em>{i \oplus j = 1} A[i] \times B[j]…, \sum _{i \oplus j = n-1} A[i] \times B[j]}$$</p>
-<h4 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h4><p>快速沃尔什变换(Fast Walsh-Hadamard Transform)，用于解决一类特殊的卷积。</p>
-<p>$$\large C[i] = \sum _{j \oplus k = i} A[j] \times B[k]$$</p>
-<p>其中$\oplus$可以是任意位运算，$xor, ans, or$。</p>
+        <p>暑假终于到了，蒟蒻$Cyani$也要开始刷题啦~</p>
+<p>暑假的训练时光是宝贵的，是算法和思维快速提高的时期，在这里总结下收获。 </p>
+<a id="more"></a>
+<h2 id="7-2-基础数据结构"><a href="#7-2-基础数据结构" class="headerlink" title="7.2-基础数据结构"></a>7.2-基础数据结构</h2><h4 id="单调栈-amp-单调队列"><a href="#单调栈-amp-单调队列" class="headerlink" title="单调栈&amp;单调队列"></a>单调栈&amp;单调队列</h4><p><strong><em>单调栈应用：</em></strong> 求出一个数左/右第一个比这个数大/小的数。</p>
+<blockquote>
+<p>BZOJ1136：[POI2009]求序列中的最长连续子序列，其平均数大于$k$。</p>
+</blockquote>
+<p>考虑每个数都减去$k$，转化为区间和&gt;=0的最长区间。求前缀和后，若$i &gt; j$且$sum_i&gt;=sum_j$，则$j$作为左端点比$i$更优。 维护一个$i$递增$sum_i$递减的栈。枚举右端点，<strong>利用单调性</strong>二分找到小于它的节点。</p>
+<p>事实上，右端点从$n$向左枚举，小于等于它的节点都可以弹出（右端点左移后，长度只会更劣）。</p>
+<blockquote>
+<p>HDU5726：[多校2016]对于给定序列$A$，和$Q$组询问$(l,r)$。输出$gcd(al,al+1,…,ar)$ 和所有满足$gcd(al,al+1,…,ar)=gcd(al0,al0+1,…,ar0)$ 的$(l0,r0)$的个数。</p>
+</blockquote>
+<p>$gcd$有一个很神奇的性质，<strong>不断对某个数取$gcd$，得到不同的值最多有$log$个。</strong>考虑右端点不断向右移，维护$gcd$区间的单调栈，加入新的数后不断合并相同的数。</p>
+<p>考虑第一个问题，将所有询问挂在右端点，对于左端点排序，之后在单调栈里扫一遍就好了。</p>
+<p>考虑第二个问题，用一个$map$存所有出现的$gcd$个数。单调栈同时保存所在下标，单调栈扫一遍，下标作差就是贡献。</p>
+<blockquote>
+<p>51Nod1962：给出两个数组A，B，求$Σ︀max(Ai,Ai+1, …,Aj)==max(Bi , Bi+1, …,Bj)(1&lt;=i&lt;=j&lt;=n)$的值。</p>
+</blockquote>
+<p><strong><em>暂未AC。</em></strong>向右移动一个端点时，前一次的答案可以利用。维护单调栈时，也维护区间即可。</p>
+<p><strong><em>单调队列应用:</em></strong> 维护DP决策点，删除不可能的决策。</p>
+<blockquote>
+<p>CF524F：给出一个仅由’(‘和‘)’构成的字符串，现在可以加入一个字符，或者将末尾的字符移到最前面。求一个长度最短的合法括号序列，如果有多个输出长度最短的且字典序最小。</p>
+</blockquote>
+<p><strong><em>暂未完全理解。</em></strong>这题的正解是后缀数组或者HASH+二分，复杂度$O(nlogn)$，然而我并不会。然后zyy大神犇用单调队列，(si hu)复杂度$O(n)$就过去了，做法还是很神的。首先答案一定是原长加上两种括号的差值，（这个是一定能完成的，并且’(‘加在最前面，’)’加在最后面）。那么我们可以将串倍长，计算每个长度为n的区间是否将会缩成一种括号。</p>
+<p>考虑计算那些为位置可以作为左端点，如果说一个括号序列是可以匹配的，当且仅当“所有位置的前缀’(‘数量大于’)’的数量“。维护’)’与’(‘差值的前缀和单调递减，每次可以找到’)’减去’(‘最大的右端点，若这个值大于要加上的左括号的数量，则这个位置开始是不符的。$O(n)$内就能算出每个位置是否能作为左端点。</p>
+<p>接下来就是些很神奇(sang xing bing kuang)的操作，比较以这些左端点所在的区间的字典序，乱搞一下就行了？复杂度又似乎$O(n^2)$？反正没搞懂。。</p>
+<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><p>这一部分考的主要是KMP的灵活应用和对$Nex$t数组的理解（如经典的把匹配位置作为状态的DP）。</p>
+<blockquote>
+<p>CF631D：给出两个串$A$,$B$，问$B$在$A$中出现了多少次。字符串由$n$个二元组$(li,ci)$拼接而成，每个二元组代表$li$个字符$ci$。</p>
+</blockquote>
+<p>考虑去除$B$前后的二元组，中间的用KMP匹配，两边的再特殊判断。特判只有一个或两个二元组的的情况。</p>
+<h4 id="Hash"><a href="#Hash" class="headerlink" title="Hash"></a>Hash</h4><p>原来我对哈希的理解仅在”一堆数加起来模个质数”的层面。。</p>
+<ol>
+<li><strong>把所有数据都$xor$起来</strong>，这种方法适用于<strong><em>数据不需要维持相对顺序</em></strong>的时候。</li>
+<li><strong>转化成一个$seed$进制下的数模一个质数的值</strong>，是可以<strong><em>支持询问一个区间的值，拼接若干区间，以及插入，删除，修改之后的全局询问。</em></strong></li>
+</ol>
+<blockquote>
+<p>CF7D：定义一个串是$k$回文的，当且仅当这个串是回文的，且其长为$⌊n/2⌋$的前后缀都是$k − 1$回文的，任意串都是$0$回文的。判断这个串的每个前缀的最大回文数.</p>
+</blockquote>
+<p>考虑直接DP。如果$[1,i]$是回文的就有$f<em>i=f</em>{i/2}$，否则为0。考虑维护左端和右端的HASH值，用<strong>第二种方式</strong>可在两端插入和删除，判断是否相等即可。</p>
+<blockquote>
+<p>CF452F：给定一个$n$的置换$A$，问是否存在一个三元等差子序列。</p>
+</blockquote>
+<p>哈希+线段树。对于中间的数$x$，若不存在$x-k$和$x+k$构成了等差数列，则$x-k$和$x+k$一定在都在$x$之前或之后。于是维护以出现的数，若出现的数关于$x$不对称，一定存在一个等差数列。用线段树正反各维护HASH的值，判断是否相等即可。用第二种HASH方式。</p>
+<h4 id="差分"><a href="#差分" class="headerlink" title="差分"></a>差分</h4><p>这是NOIP喜欢考的小技巧。</p>
+<ol>
+<li><strong>序列差分</strong>，将区间加变成单点加减，只能做到<strong><em>离线</em></strong>。</li>
+<li><strong>树上差分</strong>，一般和LCA结合。在u,v处打标记，在LCA处消除标记，求其子树的标记和即可。对于一些树上路径问题，可以用差分代替树链剖分。</li>
+</ol>
+<blockquote>
+<p>BZOJ3043：给定数列A，每次可将区间+1或-1。至少多少次使得所有数相同，在此条件下最终的数列有多少种。</p>
+</blockquote>
+<p>将所有数差分，可将题目中的区间加减变为单点加减。考虑差分的性质：若要操作$[l,r]$，当$r$不为$n$时，在$l$处打$+1/-1$标记，在$r+1$处打$-1/+1$；仅当$r=n$时，在$l$处打$+1/-1$。于是求出差分数组正数的和$x$，负数的和的绝对值$y$。然后$x,y$互相抵消，多余的自己抵消或和第一个抵消。操作次数为$max(x,y)$，结果数为$abs(x-y)+1$。</p>
+<p><em>树上差分的经典题：</em>[NOIP2015]D1T3运输计划，[JLOI2014]松鼠的新家</p>
+<h3 id="7-3-树相关1"><a href="#7-3-树相关1" class="headerlink" title="7.3-树相关1"></a>7.3-树相关1</h3><h4 id="倍增"><a href="#倍增" class="headerlink" title="倍增"></a>倍增</h4><p>倍增也是noip的常考点，往往可以优化为$log$或去掉一个$log$。</p>
+<ol>
+<li>假设现在有问题$f(N)$，如果我们可以通过$f(A)$和$f(B)$快速求出$f(A+B)$，则我们就可以倍增。二进制拆分为$log$个答案，再合并就是最终答案。e.g.快速幂，多项式乘法(FFT?)，RMQ求区间最值，<strong>树上节点的祖先</strong>。</li>
+<li>优化二分。对于一些具有单调性的问题，我们可以二分答案，再用倍增求，复杂度$O(lognlogn)$ 。事实上可以用倍增优化二分，复杂度降到$O(logn)$ 。<ul>
+<li>假设二分的区间是$[0,n]$，设$m=log(n)$。</li>
+<li>设答案$ans$一开始为0，先检验$ans+2^m$是否满足条件，如果满足则让$ans+=2^m$。</li>
+<li>之后让$m–$，一直做到$m=0$为止。</li>
+<li>正确性显然，相当于二进制逐位确定最终的$ans$。</li>
+</ul>
+</li>
+<li>利用倍增估计二分的界限，来优化一些奇怪的二分？</li>
+</ol>
+<blockquote>
+<p>HDU4343：给定$n$个区间，有$m$次询问，每次问最多可以从n个区间中选出多少$[L,R]$的子区间，使得他们互不相交。</p>
+</blockquote>
+<p><strong>首先去除包含其它区间的区间（显然选择更小的区间更优），所以左端点和右端点都是递增。</strong>考虑贪心的过程，每次要选择左端点&gt;=当前右端点，且最靠左的区间。预处理所有区间的后继，然后算出倍增数组。对于每个询问，找到区间内最靠左的区间，倍增找到最靠右的区间，每次询问复杂度$O(logn)%$。</p>
+<blockquote>
+<p>HDU6031：给定一棵$n$个点的有根树，有$Q$次询问，每次询问给出一个集合$A$和集合$B$，你需要从$A$中选出一个数$x$，从$B$中选出一个数$y$，使得$lca(x,y)$的深度最大。</p>
+</blockquote>
+<p>二分答案的深度$s$，求出$A$中点的深度为$s$的祖先和$B$中点的深度为$s$的祖先。用$map$判断两个集合是否有交即可。</p>
+<h4 id="DFS序"><a href="#DFS序" class="headerlink" title="DFS序"></a>DFS序</h4><p>把对子树维护的问题转成对区间维护的问题，记录DFS进入和出去的时间。$y$在$x$的子树中的充要条件是：$in[x]&lt;=in[y]&lt;=out[y]&lt;=out[x]$。</p>
+<p>转化为区间维护问题后，用树状数组或线段树维护即可。一般难度不大。</p>
+<h4 id="树的路径相关"><a href="#树的路径相关" class="headerlink" title="树的路径相关"></a>树的路径相关</h4><ul>
+<li>将路径拆分为x到$LCA$，和$LCA$到y的两条链。</li>
+<li>定义一个点的重量是去掉它之后树的最大的联通块的大小。我们将一棵树中重量最小的点称为重心。一棵树最多只有两个重心。</li>
+<li>判断无根树同构：取重心作为根，从而变成有根树，然后就可以用树hash来判断是否同构了。</li>
+<li>点分治：重心的重量一定小于等于$n/2$，所以可以用来分治。</li>
+<li>定义一棵树中最长的路径为树的直径。树的直径并不唯一，但是直径的中点都是一样的。</li>
+<li>任选一个点$S$，找到离他最远的点$X$。找到离$X$最远的点$Y$。那么$(X,Y)$就是一条直径。</li>
+<li>直径合并：对于两棵树$T,S$，任取他们的直径$(Ta,Tb)$，$(Sa,Sb)$。假设现在有一条边连接了$T$和$S$，构成了新的树$M$，那么$(Ta,Tb,Sa,Sb)$这四个点中一定能选出两个点$u,v$，使得$(u,v)$是$M$的一条直径。</li>
+<li>对于一些要你在树上选两个点的题，可以先打表看看，很大概率是选在直径上最优。</li>
+</ul>
+<h4 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h4><ol>
+<li>路径压缩：与树的形态无关，尽量将儿子节点挂到根节点上，均摊复杂度$O(α(n))$，单次可能被卡到$O(n)$！</li>
+<li>按秩合并：与树的形态有关，记一下每棵有根树的子树大小，每次合并时让小的成为大的的儿子。树高一定是$O(logn)$。复杂度证明：从一个点x出发，每次往上爬，子树大小至少翻一倍。所以最多爬$O(logn)$次。</li>
+</ol>
+<blockquote>
+<p>CF468B：给定$a,b$和$n$个整数。每个整数属于集合$A$或$B$。如果$x$属于集合$A$，那么$a-x$也属于集合$A$；如果$x$属于集合$B$，那么$b-x$也属于集合$B$。判断是否冲突</p>
+</blockquote>
+<p>考虑其逆否命题，$a-x\notin A\Rightarrow x\notin A$ ，可以确定某些整数能否属于集合$A$，集合$B$同样处理。同时将$x$与$a-x$合并，或上1表示能在集合$A$，或上2表示能在集合$B$。最后判断同一个并查集里的是否有冲突即可。</p>
+<h3 id="7-5-膜你赛1"><a href="#7-5-膜你赛1" class="headerlink" title="7.5-膜你赛1"></a>7.5-膜你赛1</h3><p>题目很赞，数据略水，还是很滋瓷的。T1暴力A掉，T2写出正解，T3正解写挂。。全场Rank5？？</p>
+<h4 id="A-分块"><a href="#A-分块" class="headerlink" title="A:分块"></a>A:分块</h4><blockquote>
+<p>给定序列$a1,a2,…,an$和$Q$个询问。对于询问$(q,p)$求出所有满足$i=p(mod\ q)$的$ai$之和。$n,Q&lt;=100000$ </p>
+</blockquote>
+<p>暴力对于数据随机，均摊复杂度可以达到$O(nlogn)$（调和级数）。</p>
+<p>发现暴力速度的瓶颈在于$q$较小的情况。考虑设置一个阀值$k$。</p>
+<p>对于$q&gt;=k$的情况，直接$O(n/k)$就可以暴力算出答案。</p>
+<p>对于$q&lt;k$的情况，$O(kn)$就可以预处理答案。</p>
+<p>复杂度$O(kn+n^2/k)$，显然取$k=\sqrt n$最优。</p>
+<h4 id="B-函数相关？脑洞题"><a href="#B-函数相关？脑洞题" class="headerlink" title="B:函数相关？脑洞题"></a>B:函数相关？脑洞题</h4><blockquote>
+<p>给定一个$n$行$m$列的矩阵（所有的元素都在模$K$意义下操作），可以有以下操作：修改某一行，使得这行所有的数累加1；列也是类似操作。求出最少要操作几次，使得矩阵全为0（保证存在解）。$n,m&lt;=1000$</p>
+</blockquote>
+<p>假设第$i$行的操作次数为$xi$，第$j$列的操作次数为$yj$。显然$0&lt;=xi,yj&lt;K$。</p>
+<p>不难发现当第一行的操作次数（记为$x$）确定后，所有行和列的操作次数都能确定，且都是关于$x$的线性函数。</p>
+<p>所以操作次数$ans=f(x)$是关于$x$的分段函数，每一段都是一次函数。</p>
+<p>发现一次函数的最值一定是在端点处取到，而端点取到的情况是某个$xi$或$yj$等于$K-1$或$0$。</p>
+<p>带入$x$，直接$O(n)$就能算出$f(x)$，于是复杂度为$O(n^2)$。</p>
+<h4 id="C-数据结构"><a href="#C-数据结构" class="headerlink" title="C:数据结构"></a>C:数据结构</h4><blockquote>
+<p>有$𝑛$个墙，第$𝑖$个墙的高度为$𝑎𝑖$，给你$𝑄$个操作。$𝑃$，询问当前墙的状态下最多能存储多少水。<br>$𝑈(𝑥,𝑣)$，令第$x$个墙的高度增加$v$。$n,Q&lt;=100000$</p>
+</blockquote>
+<p>考虑暴力的做法。<strong>为了方便计算，我们需要把砖块当作“水”，同时维护砖块的个数。</strong>显然我们一定可以找到最高且最靠右的墙（记为$P$），<em>而左边水的高度是单调不减的，右边水的高度是单调不增的。</em></p>
+<p>直接$O(1)$维护墙的高度。对于每一个询问，从$1$扫描到$P$，维护前缀最大值，每个位置水的高度都是前缀最大值；同理从$n$扫描到$P+1$即可。需要减去砖块的个数。</p>
+<p>标程的做法：以$P$左侧为例。用$set$维护高度递增的墙。当$x$高度增加需要更新后，弹出在$x$右侧且比它低的墙，在此同时，维护水的个数即可。注意到$P$位置是可以改变的，需要特殊处理。由于进入$set$的元素个数为$O(n)$，并且$set$单次操作时间为$O(logn)$。复杂度$O(nlogn)$。</p>
+<p>我的做法：用线段树维护。当$x$的高度增加需要更新后，区间更新$[x,P]$的最大值。即仅当$ax&gt;ai(x&lt;=i&lt;=P)$后，才会更新$ai$的值。似乎需要$O(n)$？</p>
+<p>事实上，由于单调性的存在，对于每个线段树区间$[l,r]$，维护左端高度$lh$，右端高度$rh$。当更新的高度$h&lt;=min(lh,rh)$时，显然不用更新；当$h&gt;=max(lh,rh)$时，直接更新整段区间；否则继续划分区间。于是最后更新的区间只有$O(logn)$段，单次询问复杂度也为$O(logn)$。</p>
+<p>与标算一样，也需要考虑$P​$改变后对答案的影响（要修改到新的$[P,P’]​$或$[P’,P]​$），我就是因为没有判断$P​$与$P’​$的位置关系，导致爆0…QAQ…</p>
+<p>相比标算，虽然更为麻烦，但是却能够支持区间查询。</p>
+<h3 id="7-6-动态规划及贪心"><a href="#7-6-动态规划及贪心" class="headerlink" title="7.6-动态规划及贪心"></a>7.6-动态规划及贪心</h3><p>作为NOIP必考的DP，难度普遍偏高，需要我们多多总结模型和一些优化的方法。</p>
+<h4 id="动态规划的要素，优化方法"><a href="#动态规划的要素，优化方法" class="headerlink" title="动态规划的要素，优化方法"></a>动态规划的要素，优化方法</h4><p><strong>阶段</strong>  可划分，无后效性 ，背包、区间、树形，<strong>倍增</strong>，<strong>正序 - 逆序。</strong></p>
+<p><strong>状态</strong>  状态数少，<strong>状态的“线性相关”</strong>，二进制压缩，舍弃无用状态。</p>
+<p><strong>权值</strong>  能比较，字典序，<strong>前缀和（最大值）</strong>，可行性-&gt;判定性。</p>
+<p><strong>转移</strong>  效率要有保证 ，决策单调，斜率优化，<strong>数据结构</strong></p>
+<h3 id="7-7-树状数据结构"><a href="#7-7-树状数据结构" class="headerlink" title="7.7-树状数据结构"></a>7.7-树状数据结构</h3><h4 id="二叉堆"><a href="#二叉堆" class="headerlink" title="二叉堆"></a>二叉堆</h4><blockquote>
+<p>UOJ130：求$K$叉哈夫曼树的最小权，和权值最小时树的最小高度。</p>
+</blockquote>
+<p>直接用堆维护哈夫曼树的叶子节点和，每次取出最小的$K$个子树，合并即可。由于要求高度最小，每次挑高度最小的合并。</p>
+<blockquote>
+<p>51Nod1380：有$n$个排成环的数，每次可以选择一个数，同时删除这个数两边的数，直到所有数全部取完。问取出的数的和最大为多少。$n&lt;=100000$</p>
+</blockquote>
+<p>很赞的题目。用堆维护最大值，选取最大值后删除两边的值。发现这样不一定是最优的，需要能够“撤销”操作。<strong>考虑将最大值位置的值修改为左右两边的和减去中间的数重新入堆</strong>。当再次选到这个位置上时，就会撤销原来的操作，加上了新的值。<strong><em>当多次选到这个位置上时，会撤销之前的撤销操作，不难发现，每次选择的个数刚好加一。</em></strong>于是入$n/3$次堆就可以直接跳出了。</p>
+<p>注意到需要标记每个元素是否被删除。直接用一个$bool$数组维护的话，需要每次找左端和右端的数，复杂度可能退化到$O(n^2)$。于是用双向链表维护一下就行了。</p>
+<blockquote>
+<p>有一长为$N$的序列$A$， 给出$L,R$，计算所有长度在$[L, R]$的区间的和中，最小的$m$个数之和。</p>
+</blockquote>
+<p>显然先计算出前缀和。考虑在堆加入三元组$(l,r,i)$，表示右端点为$i$，左端点为$[l,r]$的某个数，时区间的最大和。每次挑出$[l,r]$中$s[j-1]$最小的$j$，之后再在堆中加入$(l,j-1,i)$以及$(j+1,r,i)$。需要求出区间最值，用ST表实现即可。</p>
+<h4 id="树状数组"><a href="#树状数组" class="headerlink" title="树状数组"></a>树状数组</h4><ul>
+<li>常数较小，支持单点修改，维护前缀信息。</li>
+<li><strong>对于$C[i]$，维护的是$[i-lowbit(i)+1,i]$的信息。</strong></li>
+<li>容易扩展到高维的情形。</li>
+<li><strong>通过差分处理，可以进行区间修改。</strong></li>
+<li>因为$lowbit(x)=lowbit(-x)$，把数组投影到$[-n,-1]$，所以加减的顺序改变后，事实上求的是树状数组后缀和。</li>
+</ul>
+<blockquote>
+<p>51Nod1461：给定$n$个数$li$，删除$li$需要$di$的能量。假设剩下$k$个数，如果最大$li$的数量超过$⌊n/2⌋$，那么这$k$个数是稳定的。求使得剩下的数稳定所需要的最小能量。$n&lt;=100000$</p>
+</blockquote>
+<p>考虑按照$li$递增排序，每次处理一段相同的$li$（假设有$m$个）。于是我们就要从比$li$小的$lj$中挑选$m-1$个$di$最大的数。离散化$di$，就可以用树状数组维护最大的前缀和。可是如何找到第$m-1$大的数。考虑另外开一个树状数组，保存前缀$di$的个数。二分答案能在$O(logn \times logn)$找出第$m-1$大值。</p>
+<p>事实上，由于树状数组优美的结构，能够很好地支持倍增。假设目前已经到了第$p$位，前缀个数为$s$个，对于逐个减小的$k$，若$s+sum[p+1,p+2^k]&lt;=m-1$，则$p$就能增加到$p+2^k$。发现$sum[p+1,p+2^k]=sum[p+2^k-lowbit(p+2^k)+1,p+2^k]=c[p+2^k]$。 </p>
+<h4 id="线段树"><a href="#线段树" class="headerlink" title="线段树"></a>线段树</h4><p>区间修改的要求：</p>
+<ul>
+<li>节点的信息是可以合并的。</li>
+<li>并且信息可以和标记合并。</li>
+<li>标记可以和标记合并。</li>
+</ul>
+<p>线段树分治结构利用。基于均摊的线段树操作实现。</p>
+<blockquote>
+<p>UOJ228：维护一个序列。支持：区间累加，区间开根，区间求和。$n,m&lt;=100000$</p>
+</blockquote>
+<p>当区间内开根后，减小的数都相同，就变成区间减操作。通过一些均摊复杂度分析，复杂度为$O(nlognloglogn)$？</p>
+<blockquote>
+<p>CF438D：维护一个序列，支持：区间取模，单点修改，区间求和。$n,m&lt;=100000$</p>
+</blockquote>
+<p>考虑到如果区间的最大值小于模数，直接可以返回。复杂度分析：每次取模后，每个数至多变为原来的一半，单点加法每次也只恢复了一个点的势能，而势能是最多减少$log$次。</p>
+<h4 id="Trie"><a href="#Trie" class="headerlink" title="Trie"></a>Trie</h4><blockquote>
+<p>Cow Xor：有一长为N的序列挑一段$[l, r]$使得$a[l]\  xor\ a[l+1]\  xor … xor\ a[r]$最大。</p>
+</blockquote>
+<p>求出其前缀异或，插入$Trie$，贪心地询问$s[i]$异或最大值。</p>
+<h3 id="7-9-膜你赛2"><a href="#7-9-膜你赛2" class="headerlink" title="7.9-膜你赛2"></a>7.9-膜你赛2</h3><p>题目很赞，很滋瓷。T1可以无视，T2写出正解，T3是50分暴力。。全场Rank2？？</p>
+<h4 id="B-数据结构"><a href="#B-数据结构" class="headerlink" title="B:数据结构"></a>B:数据结构</h4><blockquote>
+<p>给你一个长度为$𝑛$且下标从$1$开始的数列$a$。并给$𝑚$个操作。操作有两种：$1\ 𝑝\ 𝑥$，$𝑎𝑝=𝑥$。<br>$2\ 𝑎\ 𝑏$，求$Σ︀𝐹(𝑖, 𝑗)(a&lt;=i&lt;=j&lt;=b)。$其中$F(i,j)=ai\ xor\ ai+1\ xor … xor\ aj$。</p>
+<p>$n,m&lt;=10^5,0&lt;=ai,x&lt;=1000$</p>
+</blockquote>
+<p>考虑到对于每一位二进制位都是异或独立的，所以对于十个二进制位用十个线段树维护。发现区间对于答案有贡献，当且仅当区间内恰好有奇数个一。</p>
+<p>考虑维护四个值：$cnt$:区间内点的个数；$sum$:区间内恰有奇数个点的子区间个数；$L$:有奇数个1的前缀个数；$R$:有奇数个1的后缀个数。</p>
+<p>首先$cnt​$很容易维护。对于$L​$，只需要把左端的$L​$与右端的合并，如果左端$cnt​$为偶数，那么就要加上右端的$L​$否则加上区间长度减$L​$（即有偶数个1的前缀个数）。$R​$也是同样。于是我们很容易用$L​$和$R​$维护$sum​$。首先要加上左端和右端的$sum​$，再考虑跨过中心的情况，分为左奇右偶和左偶右奇相乘即可。</p>
+<h4 id="C-组合数学"><a href="#C-组合数学" class="headerlink" title="C:组合数学"></a>C:组合数学</h4><blockquote>
+<p>$A$、$B$、$C$有一叠卡，$A$有$𝑁$张，$B$有$𝑀$张，$C$有$𝐾$张。卡片上写着字母$A$，$B$或$C$，游戏从$A$开始。每个人把牌打出来，下个出牌的人的是打出的卡上的字母。如果当前玩家没有牌，那么那个玩家就赢了。求$A$能获胜的种类。</p>
+</blockquote>
+<p>事实上，我们可以把出牌的次序看作一个序列（一个持牌情况肯定对应唯一一个序列）。发现当$A$出现第$N$次后，$A$就赢了。并且此前，$B$最多出现$M$次，$C$最多出现$K$次。我们考虑枚举第$N$个$A$出现的位置，假设是$x$。首先确定前$N-1$个$A$出现的位置，为$C_{x-1}^{N-1}$。考虑到剩下的位置可一随机排放$A$,$B$或$C$，还要乘上$3^{N+M+K-x}$。于是枚举$B$的个数，可以的到算得$C$的个数。复杂度$O(N^2)$就能得到50分。</p>
+<p>考虑满分的做法。画出杨辉三角，可以发现由于$M$和$K$的个数限制，得到的是一块平行四边形区域。考虑如何维护每一行的值，如果没有限制，前一行乘2就可以得到下一行的和。发现有可能会超过平行四边形的边界，暴力减除即可。于是每一行的转移只需要$O(1)$，总的复杂度为$O(N)$。</p>
+<h3 id="7-10-图论相关"><a href="#7-10-图论相关" class="headerlink" title="7.10-图论相关"></a>7.10-图论相关</h3><p>由于Cyani太弱了，所以图论的题基本不会，只能另开一篇了。。。</p>
+<h3 id="7-12-13-NOIP模拟赛一Day1-amp-Day2"><a href="#7-12-13-NOIP模拟赛一Day1-amp-Day2" class="headerlink" title="7.12~13-NOIP模拟赛一Day1&amp;Day2"></a>7.12~13-NOIP模拟赛一Day1&amp;Day2</h3><p>两场比赛完炸，只有100+100+10+100+80+0=390分。代码能力还是不够。</p>
+<blockquote>
+<p><strong>形态形成场</strong> 给定前$k$个大写字母的替换式$Si$，会出现大写字母和数字。求字符$A$所代表的串中有多少子串满足：子串为单个字符’0’或没有前导’0’，且把子串看作十进制数后模$n$等于0。</p>
+</blockquote>
+<p>显然，我们可以按照拓扑序依次求出每个字符所代表的答案。</p>
+<p>考虑如何合并两个区间的答案。假设我们需要将$a$和$b$合并为$c$，于是我们需要求出跨过中间的数的贡献。发现即为$a$的后缀$x$，与$b$的前缀$y$所合并的数$(x\times 10^{leny}+y)\ mod\ n=0$。于是我们需要维护前缀$pre$[$i$]，与后缀$suf$[$i,j$]（ 保存$10^{leny}\ mod\ n$与$y\ mod\ n$）。为了维护前缀和后缀，还需要维护区间模$n$的值$val$与$10^{len}$模$n$的值。区间的合并类似线段树。</p>
+<blockquote>
+<p><strong>旅行商</strong> 旅行商要参加一些展销会（都在河的旁边，可以不参加），给定展销会的时间（只有一天），地点，收益，顺流和逆流行驶要一定的成本，可瞬间到达。求最大收益。</p>
+</blockquote>
+<p>若展销会不在同一天，就是简单的$O(n^2)$DP。考虑一天参加多个展销会的情况。发现参加的展销会一定是一段连续区间，于是从之前的状态转移到现在的每个展销会，再同层状态向左或向右转移。非同层状态转移$O(n^2)$，同层状态转移$O(n^2)$，总的复杂度$O(n^2)$。</p>
+<blockquote>
+<p><strong>LEBOXES</strong> 有$n$个盒子，每个盒子有$Pi$的概率为$ \$Vi$，否则为一颗钻石。有$m$个物品，每个物品需要$ \$Ai$和$Bi$个钻石。打开箱子，买下<strong>尽可能多</strong>的物品。求购买物品的期望数。$n,m&lt;=30$</p>
+</blockquote>
+<p><strong>预处理$f(i,j)$表示用至多$i$个钻石，买$j$个物品最少要花多少钱。</strong>这样就做到时间复杂度与$Ai,Vi$无关。同时观察数据范围可知，应该是<strong>折半搜索</strong>，再合并前后两段的答案。</p>
+<p>爆搜可以得到前后两端获得若干钻石的钱数和概率，可以存在vector里。假设前一段钻石数$j$，后一段钻石数$k$，<strong><em>能</em></strong>买$i$个物品。发现对于不同的$(j,k)$，对于答案的贡献是独立的，于是我们需要分别求得概率$g(j,k,i)$。考虑到随着$i$的变小，$g(j,k,i)$变大，而$g(j,k,i)-g(j,k,i+1)$才是<strong><em>最多</em></strong>买$i$个的概率。</p>
+<p>考虑如何求得$g(j,k,i)$。我们需要钱数$A(j,x)+B(k,y)&gt;=f(j+k,i)$，于是我们可以将之前的到的vector数组排序+求前缀和。于是我们只需移动指针$x$的同时，指针$y$也单调移动就行了。</p>
+<p>考虑复杂度。枚举$i,j$为$O(nm)$，而$O(\Sigma |B_k|)=O(2^{n/2})$。所以总的复杂度为$O(nm\times 2^{n/2})$。</p>
+<h3 id="7-16-17-NOIP模拟赛一Day1-amp-Day2"><a href="#7-16-17-NOIP模拟赛一Day1-amp-Day2" class="headerlink" title="7.16~17-NOIP模拟赛一Day1&amp;Day2"></a>7.16~17-NOIP模拟赛一Day1&amp;Day2</h3><p>怎么说呢，题目比之前水，所以才有100+30+100+100+100+70=500。全场Rank5？</p>
+<blockquote>
+<p><strong>压路机</strong> 在一个$n\times m$的网格中，你需要从起点到终点。给定每条边所需的时间，其中出发后，结束前，改变方向前后都需要双倍的时间。求最少时间。$n,m&lt;=100$</p>
+</blockquote>
+<p>很显然的最短路。同时加上2维状态，表示之前的方向，以及之前的道路是否已经计算两次。相当于把一个点裂成5个点。直接跑Dijkstra或SPFA即可。</p>
+<p><strong>有一个坑点</strong> 直观上认为，走回头路一定是更劣的，于是一堆人被坑成30分；没有考虑的反而A了。事实上，假设有4个点$a,b,c,d$，有边$(a,b)$长1，边$(b,c)$长1，边$(b,d)$长100。如果不考虑，一定会选择$a\rightarrow b\rightarrow c$ ，代价为202；而如果$a\rightarrow b\rightarrow c\rightarrow b\rightarrow d$， 代价仅为104。</p>
+<blockquote>
+<p><strong>长城游戏</strong> 在$n\times n$的棋盘上，有$n$个棋子。问最少移动几次，使得所有棋子在同一行或列。$n&lt;=6\times 10^5$</p>
+</blockquote>
+<p>显然，如果我们要移到同一行，我们需要移到不同的列。类似均分纸牌一样，$O(n)$扫一边即可。</p>
+<p>由于我太傻了，直接枚举都移到某一行或列，先排序，然后维护前缀和，前缀个数之类的东西。$O(n)$扫一边，比较出最优解。</p>
+<p>事实上，一定是取中位数最优（初一都知道的常识）。。有位dalao取了平均数233。。。</p>
+<blockquote>
+<p><strong>历史</strong> 有个奇怪的王国，有$n$座城市。每年，在位的国王都会修建一条路$x&lt;=&gt;y$。有时候，国王闲得无聊就会计划一次$st\rightarrow ed$的旅行，如果当前能完成这次旅行而$t$年前不能，国王就会高兴，否则会生气。并让下次旅行之前，建设的道路$x&lt;=&gt;y$错误地记为$(x+n-c)\ mod\ n&lt;=&gt;(y+n-c)\ mod\ n$。其中会发生国王的交替，初始国王的c为0，每个国王的c或许各不相同。求每次旅行计划，国王是否满意。$n,m&lt;=3\times 10^5$</p>
+</blockquote>
+<p>显然并查集，由于要查询历史信息（可持久化并查集？233），考虑离线的做法。事实上我们只要把之后的询问挂在之前的时间上，直接计算即可。</p>
+<p>考虑在线的做法。事实上就是要求两个点所在路径中，最后加边的时间。考虑到并查集的形态不能被破环，所以可以按秩合并。树高只有$O(logn)$，暴力向上爬求LCA即可。复杂度$O(nlogn)$。以上纯属口胡。。。</p>
+<h3 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h3><p>半个月的集训结束了，可以说是收获颇丰。学到了很多，复习了很多知识，但也认识到自己的很多不足。<del>这不是小学生的流水帐吗。。</del></p>
+<ul>
+<li>在模拟赛中，由于做题心切，一心想打正解，导致正解打挂甚至根本没调出来。</li>
+<li>先写暴力，再打正解，是比较稳妥的方式。</li>
+<li>时间分配也要合理，留出充足的时间检查。</li>
+<li>平时训练的时候，总是要交很多次才能A。没有很好地考虑到所有情况，小错误也比较多。</li>
+<li>没有静下心来写，导致效率偏点。</li>
+</ul>
+<p>差不多就是这些吧。以后也不会再更新了。反正继续加油~~</p>
 
       
 
@@ -207,7 +425,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">集训</a>
         		</li>
       		
 		</ul>
@@ -263,7 +481,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://cyanie.github.io/2017/08/04/233/Algorithms-FWT/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://cyanie.github.io/2017/07/02/2017.7-Training/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -277,18 +495,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/08/05/233/Algorithms-Group-theory/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/07/15/Training-ARC-068-076/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          组合数学-Burnside引理与Polya定理
+          AtCoder泛做-ARC#068~076
         
       </div>
     </a>
   
   
-    <a href="/2017/08/04/233/Algorithms-Tree-count/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">图论-prufer序列与矩阵树定理</div>
+    <a href="/2017/07/01/AtCoder/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">AtCoder比赛记录&amp;题解</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -417,7 +635,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">训练</a>
+                <a href="javascript:void(0)" class="js-tag color3">集训</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -425,15 +643,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">比赛</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">集训</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">训练</a>
               </li>
             
             <div class="clearfix"></div>

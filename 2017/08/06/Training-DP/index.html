@@ -7,19 +7,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://cyanie.github.io">
-  <title>图论-prufer序列与矩阵树定理 | Cyani&#39;s Blog</title>
+  <title>Cyani&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="更多的坑待填…  prufer序列参考资料 prufer序是无根树的编码表示，对于一棵$n$个节点带编号的无根树，对应唯一一串长度为$n-2$的prufer编码。">
-<meta name="keywords" content="笔记">
+  <meta name="description" content="This Cyani&apos;s Bolg.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="图论-prufer序列与矩阵树定理">
-<meta property="og:url" content="https://cyanie.github.io/2017/08/04/233/Algorithms-Tree-count/index.html">
+<meta property="og:title" content="Cyani&#39;s Blog">
+<meta property="og:url" content="https://cyanie.github.io/2017/08/06/Training-DP/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
-<meta property="og:description" content="更多的坑待填…  prufer序列参考资料 prufer序是无根树的编码表示，对于一棵$n$个节点带编号的无根树，对应唯一一串长度为$n-2$的prufer编码。">
-<meta property="og:updated_time" content="2017-08-14T01:13:43.198Z">
+<meta property="og:description" content="This Cyani&apos;s Bolg.">
+<meta property="og:updated_time" content="2017-08-06T01:58:47.430Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="图论-prufer序列与矩阵树定理">
-<meta name="twitter:description" content="更多的坑待填…  prufer序列参考资料 prufer序是无根树的编码表示，对于一棵$n$个节点带编号的无根树，对应唯一一串长度为$n-2$的prufer编码。">
+<meta name="twitter:title" content="Cyani&#39;s Blog">
+<meta name="twitter:description" content="This Cyani&apos;s Bolg.">
   
     <link rel="alternative" href="/atom.xml" title="Cyani&#39;s Blog" type="application/atom+xml">
   
@@ -165,41 +164,12 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-233/Algorithms-Tree-count" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Training-DP" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      图论-prufer序列与矩阵树定理
-    </h1>
-  
-
-        
-        <a href="/2017/08/04/233/Algorithms-Tree-count/" class="archive-article-date">
-  	<time datetime="2017-08-04T10:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-04</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <font color="red">更多的坑待填…</font>
-
-<h4 id="prufer序列"><a href="#prufer序列" class="headerlink" title="prufer序列"></a>prufer序列</h4><p><a href="http://www.cnblogs.com/zhj5chengfeng/archive/2013/08/23/3278557.html" target="_blank" rel="external">参考资料</a> prufer序是无根树的编码表示，对于一棵$n$个节点带编号的无根树，对应唯一一串长度为$n-2$的prufer编码。</p>
-<a id="more"></a>
-<h5 id="无根树转化为prufer序列"><a href="#无根树转化为prufer序列" class="headerlink" title="无根树转化为prufer序列"></a>无根树转化为prufer序列</h5><p>找到<strong>编号最小的叶子</strong>并删除，序列中添加与之相连的节点编号，重复执行直到只剩下$2$个节点。</p>
-<p>根据以上过程，显然有推论 <strong>一个节点的度数=其在prefer序列出现的次数+1。</strong></p>
-<h5 id="prufer序列转化为无根树"><a href="#prufer序列转化为无根树" class="headerlink" title="prufer序列转化为无根树"></a>prufer序列转化为无根树</h5><p>首先prufer序列中的出现次数+1可以得到每个节点的度。</p>
-<p>先执行$n-2​$步，选取最小标号度为1的点$u​$与Purfer序列的第$i​$个数$v​$表示的顶点相连，并将$u​$和$v​$的度减$1​$。最后再把剩下的两个度为$1​$的点连边。</p>
-<p>由此发现，<strong>一棵无根树和与一个prufer序列一一对应。</strong></p>
-<h5 id="一些推论"><a href="#一些推论" class="headerlink" title="一些推论"></a>一些推论</h5><ul>
-<li>一个无向完全图的生成树个数为$n^{n-2}$。</li>
-<li>设节点$i$的度数限制为$di$，求满足条件树的个数。对应到prufer序列，相当于$i$在序列中出现了$di-1$次，不同的排列数。即为$n!$除以每个$(di-1)!$。 </li>
-<li>对于一些没有限制度数，稍微修改一下即可。</li>
-</ul>
-
+        
       
 
       
@@ -207,17 +177,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -268,7 +227,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://cyanie.github.io/2017/08/04/233/Algorithms-Tree-count/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://cyanie.github.io/2017/08/06/Training-DP/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -282,18 +241,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/08/04/233/Algorithms-FWT/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/08/08/Training-CF-Div2/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          FWT(快速沃尔什变换)学习笔记
+          CodeForces泛做第一轮
         
       </div>
     </a>
   
   
-    <a href="/2017/07/15/233/Training-ARC-068-076/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">AtCoder泛做-ARC#068~076</div>
+    <a href="/2017/08/05/Algorithms-Group-theory/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">组合数学-Burnside引理与Polya定理</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -422,7 +381,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">训练</a>
+                <a href="javascript:void(0)" class="js-tag color3">集训</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -430,15 +389,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">比赛</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">集训</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">训练</a>
               </li>
             
             <div class="clearfix"></div>
