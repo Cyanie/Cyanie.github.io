@@ -7,19 +7,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://cyanie.github.io">
-  <title>AtCoder比赛记录&amp;题解 | Cyani&#39;s Blog</title>
+  <title>图论-prufer序列与矩阵树定理 | Cyani&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="未完成: ARC#078E/F, AGC#018B/C/D/E/F, ARC#079F ARC#080E/F  比赛记录2017年   比赛名称 AC/提交/总数 Rank     AtCoder Regular Contest 077 2/3/4 144   AtCoder Regular Contest 078 2/2/4 477   AtCoder Grand Contest 018 1/2">
-<meta name="keywords" content="比赛">
+  <meta name="description" content="更多的坑待填…  prufer序列参考资料 prufer序是无根树的编码表示，对于一棵$n$个节点带编号的无根树，对应唯一一串长度为$n-2$的prufer编码。">
+<meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AtCoder比赛记录&amp;题解">
-<meta property="og:url" content="https://cyanie.github.io/2017/07/01/AtCoder/index.html">
+<meta property="og:title" content="图论-prufer序列与矩阵树定理">
+<meta property="og:url" content="https://cyanie.github.io/2017/08/04/233/Algorithms-Tree-count/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
-<meta property="og:description" content="未完成: ARC#078E/F, AGC#018B/C/D/E/F, ARC#079F ARC#080E/F  比赛记录2017年   比赛名称 AC/提交/总数 Rank     AtCoder Regular Contest 077 2/3/4 144   AtCoder Regular Contest 078 2/2/4 477   AtCoder Grand Contest 018 1/2">
-<meta property="og:updated_time" content="2017-08-17T08:04:33.506Z">
+<meta property="og:description" content="更多的坑待填…  prufer序列参考资料 prufer序是无根树的编码表示，对于一棵$n$个节点带编号的无根树，对应唯一一串长度为$n-2$的prufer编码。">
+<meta property="og:updated_time" content="2017-08-14T01:13:43.198Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AtCoder比赛记录&amp;题解">
-<meta name="twitter:description" content="未完成: ARC#078E/F, AGC#018B/C/D/E/F, ARC#079F ARC#080E/F  比赛记录2017年   比赛名称 AC/提交/总数 Rank     AtCoder Regular Contest 077 2/3/4 144   AtCoder Regular Contest 078 2/2/4 477   AtCoder Grand Contest 018 1/2">
+<meta name="twitter:title" content="图论-prufer序列与矩阵树定理">
+<meta name="twitter:description" content="更多的坑待填…  prufer序列参考资料 prufer序是无根树的编码表示，对于一棵$n$个节点带编号的无根树，对应唯一一串长度为$n-2$的prufer编码。">
   
     <link rel="alternative" href="/atom.xml" title="Cyani&#39;s Blog" type="application/atom+xml">
   
@@ -165,108 +165,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-AtCoder" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-233/Algorithms-Tree-count" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      AtCoder比赛记录&amp;题解
+      图论-prufer序列与矩阵树定理
     </h1>
   
 
         
-        <a href="/2017/07/01/AtCoder/" class="archive-article-date">
-  	<time datetime="2017-07-01T14:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
+        <a href="/2017/08/04/233/Algorithms-Tree-count/" class="archive-article-date">
+  	<time datetime="2017-08-04T10:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <font color="red">未完成: ARC#078E/F, AGC#018B/C/D/E/F, ARC#079F ARC#080E/F</font>
+        <font color="red">更多的坑待填…</font>
 
-<h2 id="比赛记录"><a href="#比赛记录" class="headerlink" title="比赛记录"></a>比赛记录</h2><h4 id="2017年"><a href="#2017年" class="headerlink" title="2017年"></a>2017年</h4><table>
-<thead>
-<tr>
-<th style="text-align:center">比赛名称</th>
-<th style="text-align:center">AC/提交/总数</th>
-<th style="text-align:center">Rank</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">AtCoder Regular Contest 077</td>
-<td style="text-align:center">2/3/4</td>
-<td style="text-align:center">144</td>
-</tr>
-<tr>
-<td style="text-align:center">AtCoder Regular Contest 078</td>
-<td style="text-align:center">2/2/4</td>
-<td style="text-align:center">477</td>
-</tr>
-<tr>
-<td style="text-align:center">AtCoder Grand Contest 018</td>
-<td style="text-align:center">1/2/6</td>
-<td style="text-align:center">549</td>
-</tr>
-<tr>
-<td style="text-align:center">AtCoder Regular Contest 079</td>
-<td style="text-align:center">3/3/4</td>
-<td style="text-align:center">261</td>
-</tr>
-<tr>
-<td style="text-align:center">AtCoder Regular Contest 080</td>
-<td style="text-align:center">2/3/4</td>
-<td style="text-align:center">674</td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
+<h4 id="prufer序列"><a href="#prufer序列" class="headerlink" title="prufer序列"></a>prufer序列</h4><p><a href="http://www.cnblogs.com/zhj5chengfeng/archive/2013/08/23/3278557.html" target="_blank" rel="external">参考资料</a> prufer序是无根树的编码表示，对于一棵$n$个节点带编号的无根树，对应唯一一串长度为$n-2$的prufer编码。</p>
 <a id="more"></a>
-<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><h5 id="AtCoder-Regular-Contest-077"><a href="#AtCoder-Regular-Contest-077" class="headerlink" title="AtCoder Regular Contest 077"></a>AtCoder Regular Contest 077</h5><blockquote>
-<p><strong>D - 11</strong> 给定$n$和长度为$n+1$的子序列，每个数都在$[1,n]$，且恰有一个数出现两次。对于$k=1,2,…,n+1$，求出长度为$k$的互异子序列个数。$n&lt;=10^5$</p>
-</blockquote>
-<p>首先找出相同的两个数$x$的位置$l,r$，可以发现剩下的数都是等价的。对于每个$k$，分类讨论计数。按照选取$x$个数，就是$C<em>{n-1}^k+2C</em>{n-1}^{k-1}+C<em>{n-1}^{k-2}$。注意到，如果在$(l,r)$内没有选数，选择$l$和选择$r$会被当作同一情况，于是答案还要减去$C</em>{u+v}^{k-1}$。</p>
-<blockquote>
-<p><strong>E - guruguru</strong> 有一盏灯具有$1,2,…,m$种亮度。遥控板可以一次操作可以将亮度加一（为$m$时，变为$1$）或跳转到固定的亮度$x$。一开始亮度为$a<em>1$，接下来$n-1$次，你需要将亮度从$a</em>{i-1}$调节到$a_i$。选取一个$x$，使得调节的总次数最小。$n,m&lt;=10^5$</p>
-</blockquote>
-<p>记$f(x_0)$为：当$x=x_0$时，需要调节的总次数。考虑亮度$s\Rightarrow t$ 对$f(x)$的贡献（假设$s&lt;t$， 其他情况同样处理）。</p>
-<ul>
-<li>对于$x&lt;=s$，$f(x)+=t-s$</li>
-<li>对于$s&lt;x&lt;=t$， $f(x)+=t-x+1$</li>
-<li>对于$t&lt;x$，$f(x)+=t-s$</li>
+<h5 id="无根树转化为prufer序列"><a href="#无根树转化为prufer序列" class="headerlink" title="无根树转化为prufer序列"></a>无根树转化为prufer序列</h5><p>找到<strong>编号最小的叶子</strong>并删除，序列中添加与之相连的节点编号，重复执行直到只剩下$2$个节点。</p>
+<p>根据以上过程，显然有推论 <strong>一个节点的度数=其在prefer序列出现的次数+1。</strong></p>
+<h5 id="prufer序列转化为无根树"><a href="#prufer序列转化为无根树" class="headerlink" title="prufer序列转化为无根树"></a>prufer序列转化为无根树</h5><p>首先prufer序列中的出现次数+1可以得到每个节点的度。</p>
+<p>先执行$n-2​$步，选取最小标号度为1的点$u​$与Purfer序列的第$i​$个数$v​$表示的顶点相连，并将$u​$和$v​$的度减$1​$。最后再把剩下的两个度为$1​$的点连边。</p>
+<p>由此发现，<strong>一棵无根树和与一个prufer序列一一对应。</strong></p>
+<h5 id="一些推论"><a href="#一些推论" class="headerlink" title="一些推论"></a>一些推论</h5><ul>
+<li>一个无向完全图的生成树个数为$n^{n-2}$。</li>
+<li>设节点$i$的度数限制为$di$，求满足条件树的个数。对应到prufer序列，相当于$i$在序列中出现了$di-1$次，不同的排列数。即为$n!$除以每个$(di-1)!$。 </li>
+<li>对于一些没有限制度数，稍微修改一下即可。</li>
 </ul>
-<p>发现是区间操作，并且只有在最后查询。于是考虑差分，特别的，需要分为常数部分和系数部分。</p>
-<blockquote>
-<p><strong>F - SS</strong> 定义“双串”，由两个相同的字符串拼接而成。定义$f(S)$，在双串S后追加最少字符得到的双串。给定$S0S0$和$l,r$。求$f^{10^{100}}(S0S0)$在$[l,r]$内，26个字母分别出现的个数。$|S|&lt;=2*10^5,l,r&lt;=10^{18}$</p>
-</blockquote>
-<p><strong><em>有待更深入理解。</em></strong>用KMP预处理Next[]，可以的到S0的最短相同前后缀T，设$f(S0S0)=STST$。通过画图发现，若$|T|$是$|S|$的因数，那么S就是由一些T拼成的，$f(STST)=STTSTT$。否则，$f(STST)=STSTST$。设$g(S)g(S)=f(SS)$ ，能得到$g^{i+2}(S)=g^{i+1}(S)+g^i(S)$（显然，对于$i$无限大时也满足第一种情况）。考虑求出前缀的贡献，按照类似fib数列的递推方式计算即可。</p>
-<h5 id="AtCoder-Regular-Contest-078"><a href="#AtCoder-Regular-Contest-078" class="headerlink" title="AtCoder Regular Contest 078"></a>AtCoder Regular Contest 078</h5><blockquote>
-<p><strong>D - Fennec VS. Snuke</strong> 有一棵有$n$个节点的树，A和B在树上玩涂色游戏。一开始，$1$号节点被涂上黑色，$n$号节点被涂上白色，其他节点没有被涂色。A和B轮流进行操作，不能继续操作的玩家输。对于A，能选择一个与被涂黑节点相邻的节点（未涂色）涂上黑色。B是对称的操作。</p>
-</blockquote>
-<p>对于每个玩家，首要考虑的圈占尽可能多的地盘。于是一定先在$1\rightarrow n$的路径上涂色，直到相遇。剩下未涂色的节点谁多，谁就获胜。一般地，我们可以转化为以$1$为根的有根树，找到路径$1\rightarrow n$的中点$p$，比较$size(p)$与$n-size(p)$的大小即可。</p>
-<h5 id="AtCoder-Grand-Contest-018"><a href="#AtCoder-Grand-Contest-018" class="headerlink" title="AtCoder Grand Contest 018"></a>AtCoder Grand Contest 018</h5><p>我太弱了，根本不会做啊啊啊啊。。。。</p>
-<h5 id="AtCoder-Regular-Contest-079"><a href="#AtCoder-Regular-Contest-079" class="headerlink" title="AtCoder Regular Contest 079"></a>AtCoder Regular Contest 079</h5>
+
       
 
       
@@ -279,7 +212,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">比赛</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
@@ -335,7 +268,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://cyanie.github.io/2017/07/01/AtCoder/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://cyanie.github.io/2017/08/04/233/Algorithms-Tree-count/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -349,18 +282,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/07/02/2017.7-Training/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/08/04/233/Algorithms-FWT/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          2017年7月NOIP集训总结
+          FWT(快速沃尔什变换)学习笔记
         
       </div>
     </a>
   
   
-    <a href="/2017/07/01/CodeForces/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CodeForces比赛记录&amp;题解</div>
+    <a href="/2017/07/15/233/Training-ARC-068-076/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">AtCoder泛做-ARC#068~076</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -489,11 +422,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">训练</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">集训</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -501,11 +434,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">集训</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">训练</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>

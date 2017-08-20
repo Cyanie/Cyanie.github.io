@@ -9,17 +9,17 @@
   <link rel="dns-prefetch" href="https://cyanie.github.io">
   <title>CodeForces泛做第一轮 | Cyani&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D">
+  <meta name="description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D 666B">
 <meta name="keywords" content="训练">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CodeForces泛做第一轮">
 <meta property="og:url" content="https://cyanie.github.io/2017/08/08/Training-CF-Div2/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
-<meta property="og:description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D">
-<meta property="og:updated_time" content="2017-08-19T14:00:53.633Z">
+<meta property="og:description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D 666B">
+<meta property="og:updated_time" content="2017-08-20T11:57:27.674Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CodeForces泛做第一轮">
-<meta name="twitter:description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D">
+<meta name="twitter:description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D 666B">
   
     <link rel="alternative" href="/atom.xml" title="Cyani&#39;s Blog" type="application/atom+xml">
   
@@ -186,7 +186,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。</p>
-<font color="red">未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D</font>
+<font color="red">未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D 666B</font>
 
 <a id="more"></a>
 <h5 id="Codeforces-Round-301-Div-2"><a href="#Codeforces-Round-301-Div-2" class="headerlink" title="Codeforces Round #301 (Div. 2)"></a><a href="http://codeforces.com/contest/540" target="_blank" rel="external">Codeforces Round #301 (Div. 2)</a></h5><p>540C,4Y。<strong>BFS判连通。</strong>注意起始点与终点重合或相邻的情况，终点经过两次，只要有两个空格与终点相邻即可。</p>
@@ -452,6 +452,33 @@
 <p>发现就是异或卷积的形式：</p>
 <p>$$\large C = \sum _{j \oplus k = i} A[j] \times B[k]$$</p>
 <p>就可以用$FWT$啦。具体FWT的总结以后填吧QAQ。</p>
+<h5 id="VK-Cup-2016-Round-2"><a href="#VK-Cup-2016-Round-2" class="headerlink" title="VK Cup 2016 - Round 2"></a><a href="http://codeforces.com/contest/641" target="_blank" rel="external">VK Cup 2016 - Round 2</a></h5><blockquote>
+<p>CF641B,1A。原来有一个$N \times M$的矩阵，要求满足一些操作：某一行循环左移，某一列循环上移，给定某个位置的元素是什么，求出最初的矩阵。$n,m&lt;=100, Q&lt;=10000$</p>
+</blockquote>
+<p><strong>模拟。</strong>注意到一个性质，<strong>这些操作都是可逆的</strong>，所以我们只要倒着执行操作即可。</p>
+<blockquote>
+<p>CF641C,1A。给定$n$个数，$1, 2, 3, 4, 5, 6,…, n$。有两种操作，第一个操作是所有数向右边移动x个位置。<br>第二个操作奇数和偶数的位置互换。输出最后的数。n为偶数。$n &lt;= 1,000,000, Q&lt;= 2,000,000$</p>
+</blockquote>
+<p><strong>脑洞，模拟。</strong>如果仅仅只是暴力修改的话，时间复杂度将无法忍受。注意到一个性质，<strong>不管如何操作，奇数偶数都是间隔排列的，而且它们内部的顺序并不会发生改变。</strong>所以我们只需要维护$1,2$所在的位置即可。为了方便，可以令下标从$0$。</p>
+<blockquote>
+<p>CF641D,1A。有两个不同的骰子，点数$[1,n]$。得到每个点数的概率可能不同（总和一定是$1$）。掷出这两个骰子，得到点数$a,b$。取$\max(a,b), \min(a,b)$。给出$\max(a,b)=c$的概率分布，和$\min(a,b)=c$的概率分布。还原两个骰子点数的概率分布，所有概率之和为$1$。$n&lt;=100,000$</p>
+</blockquote>
+<p><strong>概率，数学。</strong>假设第一个骰子的概率分别为$x[i]$，第二个$y[i]$。考虑位置$p$，不难注意到，$P(p\ is\ \min)+P(p\ is\ \max) = x[p]+y[p]$。而根据$1$是最大值的概率，得到$x[1] \times y[1]$，能知道$x[1]$和$y[1]$。然后逐个处理每个位置$p$。根据$x[p] \times \sum <em>{i=1} ^{p-1} y[i] + y[p] \times \sum </em>{i=1} ^{p-1}  x[i] + x[p] \times y[p] = P(p\ is\ \max)$ ，就可以推出所有的$x[p],y[p]$了，需要维护$x[],y[]$的前缀和。</p>
+<blockquote>
+<p>CF641E,2A。有三种操作。$1\ x\ y$，在第$x$秒插入一个$y$。$2\ x\ y$，在第$x$秒移走一个$y$。$3\ x\ y$， ，问第$x$秒有多少个$y$。$n&lt;=100000$</p>
+</blockquote>
+<p><strong>map，树状数组。</strong>考虑首先离散化时间，以时间建立两个树状数组。维护区间时间内，删除和增加的元素个数。考虑到存在重复，所以可以用map维护。注意，虽然也可以用mulitset，但由于它的count复杂度为$O(n)$，会超时。</p>
+<h5 id="Codeforces-Round-349-Div-1"><a href="#Codeforces-Round-349-Div-1" class="headerlink" title="Codeforces Round #349 (Div. 1)"></a><a href="http://codeforces.com/contest/666" target="_blank" rel="external">Codeforces Round #349 (Div. 1)</a></h5><blockquote>
+<p>CF666A,1A。给定一个字符串，这个字符串可以划分成最前面$[5, \infty]$个字符，然后后面接着每次$2$个或$3$个，后面的相邻字符串不能重复，问所有可能的情况中，后面所有字符的集合是什么。$len&lt;=10^4$</p>
+</blockquote>
+<p><strong>DP，set。</strong>由于只要满足相邻的字符串不重复即可，所以可以DP判断所有位置的可行性。把答案存入set，就可以保证不重复。</p>
+<blockquote>
+<p>CF666C,4A。给定一个字符串$s$和$m$次操作。第一种操作，是将字符串$s$替换为一个新的字符串。第二种操作，给定$n$，询问长度为$n$，仅包含小写字母且$s$是其子串的字符串个数。$n,\sum |s|&lt;=100000$</p>
+</blockquote>
+<p><strong>分块，DP。</strong>首先注意到一个性质，<strong>答案仅与字符串的长度有关。</strong>考虑如何求出只有一个字符串的情况。考虑$f[i]$表示母串长度为$i$时的方案数。于是，</p>
+<p>$$ \large f[i] = f[i-1] + C _{i-1} ^{len-1} \times 25 ^{i-len}$$</p>
+<p>如何理解第二部分？事实上就是强制第$i$放最后一个$s[len]$然后前面的$i-1$个位置任意选择$len-1$个，强制每一个都是第一次出现，所以剩下的所有位置都有$25$种选择。</p>
+<p>看上去复杂度不对？事实上，由于$\sum |s|&lt;=100000$，所以不同的$len$最多有$\sqrt{\sum |s|}$个。复杂度$O(n \sqrt n)$。 </p>
 
       
 
@@ -535,7 +562,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/08/13/Algorithms-Generation-function/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/08/13/233/Algorithms-Generation-function/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -545,7 +572,7 @@
     </a>
   
   
-    <a href="/2017/08/06/Training-DP/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/08/06/233/Training-DP/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>
@@ -675,11 +702,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">训练</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">集训</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -687,11 +714,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">集训</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">训练</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
