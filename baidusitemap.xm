@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://cyanie.github.io/2017/08/08/Training-CF-Div2/</loc>
+    <lastmod>2017-08-21T04:14:13.791Z</lastmod>
+    <data>
+        <display>
+        <title>CodeForces泛做第一轮</title>
+        <pubTime>2017-08-08T00:08:08.000Z</pubTime>
+        
+        <tag>训练</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://cyanie.github.io/2017/07/01/CodeForces/</loc>
     <lastmod>2017-08-20T14:00:51.659Z</lastmod>
     <data>
@@ -27,23 +44,6 @@
         <display>
         <title>AtCoder泛做-ARC#068~076</title>
         <pubTime>2017-07-14T16:00:00.000Z</pubTime>
-        
-        <tag>训练</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cyanie.github.io/2017/08/08/Training-CF-Div2/</loc>
-    <lastmod>2017-08-20T14:00:15.529Z</lastmod>
-    <data>
-        <display>
-        <title>CodeForces泛做第一轮</title>
-        <pubTime>2017-08-08T00:08:08.000Z</pubTime>
         
         <tag>训练</tag>
          

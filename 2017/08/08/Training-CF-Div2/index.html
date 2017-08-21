@@ -9,17 +9,17 @@
   <link rel="dns-prefetch" href="https://cyanie.github.io">
   <title>CodeForces泛做第一轮 | Cyani&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D 666B">
+  <meta name="description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D 666B 643C(斜率优化DP)/D">
 <meta name="keywords" content="训练">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CodeForces泛做第一轮">
 <meta property="og:url" content="https://cyanie.github.io/2017/08/08/Training-CF-Div2/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
-<meta property="og:description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D 666B">
-<meta property="og:updated_time" content="2017-08-20T14:00:15.529Z">
+<meta property="og:description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D 666B 643C(斜率优化DP)/D">
+<meta property="og:updated_time" content="2017-08-21T04:14:13.791Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CodeForces泛做第一轮">
-<meta name="twitter:description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D 666B">
+<meta name="twitter:description" content="由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。 未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D 666B 643C(斜率优化DP)/D">
   
     <link rel="alternative" href="/atom.xml" title="Cyani&#39;s Blog" type="application/atom+xml">
   
@@ -186,7 +186,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>由于博主太弱了，所以在NOIP2017之前开了这么一个坑，就这样吧。。</p>
-<font color="red">未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D 666B</font>
+<font color="red">未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D 666B 643C(斜率优化DP)/D</font>
 
 <a id="more"></a>
 <h5 id="Codeforces-Round-301-Div-2"><a href="#Codeforces-Round-301-Div-2" class="headerlink" title="Codeforces Round #301 (Div. 2)"></a><a href="http://codeforces.com/contest/540" target="_blank" rel="external">Codeforces Round #301 (Div. 2)</a></h5><p>540C,4Y。<strong>BFS判连通。</strong>注意起始点与终点重合或相邻的情况，终点经过两次，只要有两个空格与终点相邻即可。</p>
@@ -479,6 +479,20 @@
 <p>$$ \large f[i] = f[i-1] + C _{i-1} ^{len-1} \times 25 ^{i-len}$$</p>
 <p>如何理解第二部分？事实上就是强制第$i$放最后一个$s[len]$然后前面的$i-1$个位置任意选择$len-1$个，强制每一个都是第一次出现，所以剩下的所有位置都有$25$种选择。</p>
 <p>看上去复杂度不对？事实上，由于$\sum |s|&lt;=100000$，所以不同的$len$最多有$\sqrt{\sum |s|}$个。复杂度$O(n \sqrt n)$。 </p>
+<h5 id="VK-Cup-2016-Round-3"><a href="#VK-Cup-2016-Round-3" class="headerlink" title="VK Cup 2016 - Round 3"></a><a href="http://codeforces.com/contest/643" target="_blank" rel="external">VK Cup 2016 - Round 3</a></h5><blockquote>
+<p>CF643B,1A。给定$N,K$和$a,b,c,d$，问是否存在这样两条路径，使得这两条路径经过所有城市，并且从$a$到$b$，和从$c$到$d$，长度为$N$，整个边数不超过$K$。要输出两条路径，要满足$a$到$b$没有路，$c$到$d$没有路。$4≤n≤1000, n-1≤k≤2n-2$ </p>
+</blockquote>
+<p><strong>构造。</strong>首先我们需要根据$a,b,c,d$是否存在重复来分类，对于每一类，我们需要图的边数尽可能少，这样的话，我们可以在中间构造一条链，然后两端是两个三角形。这样一定是最优的。</p>
+<blockquote>
+<p>CF643C,1A。要求维护一棵树，支持以下两种操作：1、以某个节点为父亲，插入一个节点；2、询问对于以某个节点为根的子树，若子树当中每条边有$0.5$的概率被删除，那么整棵子树最大深度的期望值是多少。初始时，树中仅有一个节点。$Q&lt;=100000$</p>
+</blockquote>
+<p><strong>树形概率DP。</strong>考虑定义状态$f[i][j]$表示以$i$为根的子树，其最大深度<strong>不超过</strong>$j$的概率。于是，</p>
+<p>$$\large f[i][h] = \prod _{j \in {son[i]}} 0.5 + 0.5 \times f[j][h-1]$$</p>
+<p>如何理解这个式子？有$0.5$的概率新加入的边删去，$0.5$的概率未删去，此时还要保证$j$的最大深度不超过$h-1$。可以注意到，如果增加了一个节点，我们可以修改它所有的祖先节点。但由于改变量减少极快，所以经过$limit = 60$次左右的更新，已经可以忽略不计。复杂度$O(n \times limit)$</p>
+<h5 id="Codeforces-Round-352-Div-1"><a href="#Codeforces-Round-352-Div-1" class="headerlink" title="Codeforces Round #352 (Div. 1)"></a><a href="http://codeforces.com/contest/671" target="_blank" rel="external">Codeforces Round #352 (Div. 1)</a></h5><blockquote>
+<p>CF671A,1A。有两个人独立地捡垃圾，求他们一起捡完所有垃圾所走的最短路程，从初始点找到第一个垃圾，然后送到垃圾桶，再从垃圾桶出发捡垃圾再送回。人，垃圾，垃圾桶都在二维坐标系中。一个人一次只能拿一个垃圾。$n&lt;=100000$</p>
+</blockquote>
+<p><strong>贪心。</strong>注意到，其他的垃圾到垃圾桶的距离和不变，只要第一次人拿垃圾的代价最小即可。</p>
 
       
 
@@ -710,11 +724,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">比赛</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">比赛</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
