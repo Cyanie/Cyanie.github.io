@@ -7,12 +7,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://cyanie.github.io">
-  <title>Cyani&#39;s Blog</title>
+  <title>Tag: 图论 | Cyani&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="This Cyani&apos;s Bolg.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Cyani&#39;s Blog">
-<meta property="og:url" content="https://cyanie.github.io/index.html">
+<meta property="og:url" content="https://cyanie.github.io/tags/图论/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
 <meta property="og:description" content="This Cyani&apos;s Bolg.">
 <meta name="twitter:card" content="summary">
@@ -165,400 +165,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Training-CF-Data-Structures" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/26/Training-CF-Data-Structures/">CodeForces乱做-数据结构</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/26/Training-CF-Data-Structures/" class="archive-article-date">
-  	<time datetime="2017-08-26T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-26</time>
-</a>
-        
-      </header>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font color="red">未完成: </font>
-
-<p>这是一些CF上的simple??的数据结构题。QAQ</p>
-<h5 id="第一波-2017-8-25-26"><a href="#第一波-2017-8-25-26" class="headerlink" title="第一波-2017.8.25~26"></a>第一波-2017.8.25~26</h5><blockquote>
-<p>CF538F。现在有一个长度为$n$的数组$a1, a2, …, an$。然后对于$k$从$1$到$n-1$别对该数组建$k$叉堆。现在要统计对于每一个$k$叉堆，里面有多少结点是不满足最小堆的性质的。即值比父亲的要小的结点有多少个。他的$k$个儿子编号是$k(v − 1) + 2, …, kv + 1$。</p>
-</blockquote>
-<p><strong>$k$叉堆的性质，调和级数，树状数组。</strong>注意到一个性质<strong>$k$叉堆的父亲只有$n/k$</strong>，也就是说父亲的总数不会超过$O(n(1+1/2+1/3+…+1/n))=O(n\log n)$。这就成为了本题的突破口。</p>
-<p>考虑从小到大加入每一个数到树状数组，可以枚举这个点作为$k$叉堆的父亲。由于属于它的儿子一定是一个区间，所以我们可以用树状数组在$O(\log )$的时间内统计出贡献。总的复杂度为$O(n \log^2 n)$。</p>
-<blockquote>
-<p>CF101B。给定$n,m$。需要从$0$到$n$，有$m$种公交车。第$i$辆公交车从$si$走到$ti$（可以在中途上车），问有多少种方案可以选择。注意人只能坐车，不可以走。$m&lt;=100000$</p>
-</blockquote>
-<p><strong>动态规划，树状数组。</strong>首先离散化，按$t$来排序，我们可以$DP$。注意到可以转移的状态是一段区间，所以直接用树状数组即可。</p>
-<blockquote>
-<p>CF677D。给定一个$n\times m$的地图，标有数字$[1,p]$。需要从$1$出发，依次经过一个$2,3,4…$直到$p$。求最少所需要的步数。$n,m&lt;=300$</p>
-</blockquote>
-<p><strong>二维树状数组。</strong>考虑从数字$k-1$走到$k$的转移。存在四种转移的方向，以从左上角转移为例。于是转移方程即为$f[i][j]=f[x][y]+i-x+j-y$ ，可以拆开使得与$i,j$无关。$f[x][y]-x-y$于是把这个东西放在树状数组里，询问二维前缀最小值即可。<strong>细节较多，代码较长QAQ</strong></p>
-<blockquote>
-<p>CF372C。有$n$个点，$m$个烟花要放。给定放的地点$a[i]$、时间$t[i]$，如果你当时在$x$，那么可以获得$b[i]-|a[i]-x|$的高兴值。每个单位时间可以移动不超过$d$，初始位置是任意的，求通过移动能获取到的最大的值。$$n&lt;=150000, m&lt;=300$$</p>
-</blockquote>
-<p><strong>DP+单调队列。</strong>设$f[i][j]$表示在放第$i$个烟花的时候，站在位置$j$能得到的最多的高兴值。于是有状态转移方程：$f[i][j]=\max(f[i-1][k])+b[i]-|a[i]-j|$，其中，$\max(1,j-td)&lt;=k&lt;=\min(n,j+td)(t是两次烟花的时间差)$。这个复杂度是$O(n^2m)$。</p>
-<p>考虑优化，发现每一次转移的$k$都是一个区间，于是我们可以用单调队列维护。注意使用滚动数组。</p>
-<blockquote>
-<p>CF827C。给定一个只包含$A,T,C,G$的字符串$S$,有如下两种操作。1)$\ x,c$，修改第$x$个字母为$c$。2)$\ l,r$,字符串$e$，生成一个由$e$重复组成的新串，像$eee…$，问$[L,R]$中有几个字母跟这个新的字符串对？$|S|,Q&lt;=100000，|e|&lt;=10$</p>
-</blockquote>
-<p><strong>树状数组，剩余类。</strong>考虑对$S$为$4$个字符，分别建立$10\times 10$的树状数组。表示第$i$个字符在位置$x$满足$x\%j=k$的个数之和。看上去很暴力，对吧？接下来分析复杂度。对于一个修改操作，我们需要修改在$O(|e|)$个树状数组中的值，每次修改的代价为$O(\log n)$。对于一个询问操作，我们需要询问$O(|e|)$询问的代价为$O(\log n)$。所以总体的复杂度为$O(Q\times \log |S| \times |e|)$。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/26/Training-CF-Data-Structures/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Training-CF-Tree" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/25/Training-CF-Tree/">CodeForces乱做-树相关</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/25/Training-CF-Tree/" class="archive-article-date">
-  	<time datetime="2017-08-25T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font color="red">未完成: </font> 
-
-<p>这是一些CF上的simple??的树相关的题。QAQ</p>
-<h5 id="第一波-2017-8-25-26"><a href="#第一波-2017-8-25-26" class="headerlink" title="第一波-2017.8.25~26"></a>第一波-2017.8.25~26</h5><blockquote>
-<p>CF543D。输入给出$N$和一些边的关系$(p2，p3，p4,…,pn)$表示$i$和$pi$有连边。对于以任意$i$为根时，把树边黑白染色，使得任意点走到根的路径上不超过一条黑边，输出染色的方案数。$n&lt;=200000$</p>
-</blockquote>
-<p><strong>树形DP，DFS转移。</strong>考虑以$1$为根的情况，定义$f[i]$表示以$i$为根的方案数，于是有$f[i] = \prod (f[j]+1)$。</p>
-<p>那么，如何将答案转移到子节点上呢？假设$u$的祖先（非子树）的方案为$x$，需要转移到$u$的子节点$v$。假设$u$到$v$的边的颜色为黑色，显然只有一种；为白色时，有$\large \frac {x \times f[u]} {f[v]+1}$种方案。两者之和作为新的$x’$转移到子节点即可。每个节点的答案为$x \times f[u]$。</p>
-<p>值得注意的是，由于涉及到除法和取余，所以需要我们计算逆元。但是，特别的，如果$f[v]+1=MOD$，则不存在逆元，所以需要我们暴力重新计算。</p>
-<blockquote>
-<p>CF396C。给定以$1$为根的树，从节点$2$开始给出每个节点的父节点。$m$次操作，操作分为两种，$1\  u, x, k$，表示在以$u$为根的子树上，对于所有其它与$u$节点的距离为$i$的点$v$，加上$x-i\times k$。$2\ v$，查询节点$v$值。$n,m&lt;=300000$</p>
-</blockquote>
-<p><strong>DFS序，树状数组。</strong>从$x-i\times k$这个式子入手，显然$x$可以用DFS序来维护，那么如何处理后一个数字呢？考虑拆开：$x-i \times k = x - (d[v] - d[u]) \times k = (x + d[u] \times k) + d[v] \times k$。可以发现，我们将答案分为了两部分，一部分与$v$的深度无关，可以用树状数组维护。另一部分与$v$的深度有关，于是维护$k$之和即可。区间修改可以差分化，然后用树状数组维护。</p>
-<blockquote>
-<p>CF696B。给定一棵以$1$为根的树，在时刻$1,2,3…$访问节点。一开始在$1$，之后以随机的方式$DFS$（保证不重复访问）求对于每个节点，访问它的期望时间。$n&lt;=100000$</p>
-</blockquote>
-<p><strong>期望的线性性，树形DP。</strong>假设一个节点$u$已经知道访问父节点$fa$的期望时间$ans[fa]$，那么这个节点$u$的期望时间为多少？考虑到，$u$的兄弟节点各有$50\%$在$u$的前面访问，而且需要的代价为整颗子树的$size$。由此我们可以得到在子树$fa$访问$u$的期望时间。再根据<strong>期望的线性性</strong>，于是，</p>
-<p>$\large ans[u]=ans[fa] + 0.5 \times (size[fa] - size[u] - 1) + 1$</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">树相关</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/25/Training-CF-Tree/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Training-CF-Educational" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/22/Training-CF-Educational/">CodeForces-Educational-Round泛做&amp;记录</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/22/Training-CF-Educational/" class="archive-article-date">
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/08/22/Training-CF-Graphs/" class="archive-article-date">
   	<time datetime="2017-08-22T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-22</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font color="red">未完成: 818G,  598F, 837D/F/G, 609F, 612F, 616F, 620F</font>
-
-<p>呃，主要是把之前没有参加的Educational Codeforces Round补一补。QAQ。。。</p>
-<h5 id="Educational-Codeforces-Round-1-2017-8-22"><a href="#Educational-Codeforces-Round-1-2017-8-22" class="headerlink" title="Educational Codeforces Round 1-2017.8.22"></a>Educational Codeforces Round 1-2017.8.22</h5><p>C:【题意】给定$n$个向量，求夹角最小的两个。</p>
-<p>【题解】用$atan2(x,y)$可以求出向量与$x$轴的夹角，排序即可。<strong>卡精度！！</strong></p>
-<p>E:【题意】给定一个$n\times m$的巧克力，划分一个巧克力的代价为长度的平方，求划分出$K$个小巧克力块的最小代价。</p>
-<p>【题解】定义状态$f[i][j][k]$如题意，暴力转移，$O(n^3K^2)$的暴力可过。</p>
-<h5 id="Educational-Codeforces-Round-3-2017-8-23"><a href="#Educational-Codeforces-Round-3-2017-8-23" class="headerlink" title="Educational Codeforces Round 3-2017.8.23"></a>Educational Codeforces Round 3-2017.8.23</h5><p>E:【题意】给定一个无向图，求必须包含某个点的最小生成树。$n&lt;=200000$</p>
-<p>【题解】这题可以倍增或者并查集按秩合并。其中并查集按秩合并常数较小。</p>
-<h5 id="Educational-Codeforces-Round-4-2017-8-24"><a href="#Educational-Codeforces-Round-4-2017-8-24" class="headerlink" title="Educational Codeforces Round 4-2017.8.24"></a>Educational Codeforces Round 4-2017.8.24</h5><p>E:【题意】给定一个置换，求这个置换的平方根。$n&lt;=10^6$</p>
-<p>【题解】显然，我们需要将置换分解为若干个循环的乘积。如果一个循环的长度为奇数，那么它一定存在平方根。以一个$5$边形为例，它的平方根类似于一个五角星；如果一个循环的长度为偶数，单独的一个循环不存在平方根，如果有两个相同长度的循环，我们可以将这两个循环合并，得到他的平方根。</p>
-<h5 id="Educational-Codeforces-Round-5-2017-8-25"><a href="#Educational-Codeforces-Round-5-2017-8-25" class="headerlink" title="Educational Codeforces Round 5-2017.8.25"></a>Educational Codeforces Round 5-2017.8.25</h5><p>E:【题意】给定$n,m$，求$n\%1+n\%2+n\%3+…+n\%m$的值。$n,m&lt;=10^{13}$。</p>
-<p>【题解】一道数论好题。一开始无从下手，考虑打表。以$n=100,m=100$为例，发现前$10$项毫无规律，从$100$项到第$51$余数以公差为$1$递增，从$50$到$34$项，余数以公差为$2$递增。可以得到规律在第$\large \lfloor \frac n r \rfloor$到第$\large \lfloor \frac n {r+1} \rfloor$以公差为$r$递增，首项为$n \%r$。于是利用等差数列求和公式即可。对于前面的$sqrt(n)$项暴力计算即可。</p>
-<h5 id="Educational-Codeforces-Round-6-2017-8-26"><a href="#Educational-Codeforces-Round-6-2017-8-26" class="headerlink" title="Educational Codeforces Round 6-2017.8.26"></a>Educational Codeforces Round 6-2017.8.26</h5><p>D:【题意】给定两个长度分别为$n,m$的序列，要求至多交换两对不同位置数，使得$|Sa-Sb|$最小，这里的$Sa,Sb$分别表示两个序列的和。</p>
-<p>【题解】对于不交换或只交换一对，直接暴力即可。如果交换两对，可以这么做：将所有对列举出来$(Ai,Bj)$。求出它们差，放在一个数组中。考虑首先排序，左指针从左往右扫，同时，右指针单调往左移。当右指针满足一定会使结果大于当前答案时，左移。每一次移动后，只要在可能的答案区间里扫一下即可。可能无法计算复杂度？</p>
-<p>E:【题意】给定一颗树，每个节点有一个颜色$c(c&lt;=60)$。每一次可以修改一个子树的颜色，或者询问一个子树存在多少不同的颜色。</p>
-<p>【题解】注意到颜色数很小，所以可以直接压成一个$long\ long$，求出$DFS$序，并用线段树维护区间出现了哪些颜色。</p>
-<h5 id="Educational-Codeforces-Round-24"><a href="#Educational-Codeforces-Round-24" class="headerlink" title="Educational Codeforces Round 24"></a>Educational Codeforces Round 24</h5><p>D:【题意】给定n个数${c1,c2…}$和A，用$cntX(i)$表示${c1,c2,…,ci}$中等于X的数。询问是否存在B，使得对于任意i，都有$cntB(i)&gt;=cntA(i)$。</p>
-<p>【题解】考虑一个个枚举B，首先判定$cntB(n)$是否不小于$cntA(n)$ 。发现答案的条件等价于：一个个比较A和B所在的位置，对于所有第i次出现的A，都满足第i个出现的B在前面。假设A的个数为m，则每次判断为$O(m)$，而满足前提的B的个数为$O(n/m)$ ，复杂度$O(n)$ 。</p>
-<p>E:【题意】给定$n$个数${a1,a2…}$和$k$，问存在多少有序数对$(x,y)$满足：删除前$x$个数和后$y$个数，剩下数的乘积是$k$的倍数。</p>
-<p>【题解】将k质因数分解（最多有10个不同的质因子），只要每个质因子的个数达到$k$拥有的就可以了。直接暴力枚举左端区间，发现右区间有单调性，直接维护一个滑动窗口就好了（比赛时写了二分233…）。</p>
-<p>F:【题意】<strong>很好玩的题。</strong> 有q组询问，每组询问给出数n。问n个节点最多能连多少条边，使得桥的数量不少于总边数的一半。</p>
-<p>【题解】有个很显然的结论：<strong><em>n个节点构成的图中桥不超过n-1个</em></strong>。因为无向图可以看一些树连一些边构成的，而n节点数恰好只有n-1个桥，连上的边一定不会成为桥。考虑这样构造：中间构造一个“K-完全图“，剩余的节点就往“完全图“上连单一的边，不难发现这样是存在k个桥时，边数最多的方案。</p>
-<p>实际上，内部的图最多只有$min(n-k, \frac{k(k-1)}{2}) $ 条边，于是总边数为$f(k)=n-k+min(n-k, \frac{k(k-1)}{2}) $ 发现这个函数$f(k)$ 是个单峰函数，用三分法求解（最值两边有严格单调性）即可。</p>
-<p><strong>三分法的正确姿势。</strong> ${Lmid=(2l+r)/3}~~~{Rmid=(l+2r)/3}$ ，当L和R差小于3后，暴力找出最值。</p>
-<p>(坑)G：网络流难题。</p>
-<p><strong>Educational Codeforces Round 26</strong></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">泛做</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/22/Training-CF-Educational/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Training-CF-Number-theory" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/22/Training-CF-Number-theory/">CodeForces乱做-数论</a>
+      <a class="archive-article-title" href="/2017/08/22/Training-CF-Graphs/">CodeForces乱做-图论</a>
     </h1>
   
 
-        
-        <a href="/2017/08/22/Training-CF-Number-theory/" class="archive-article-date">
-  	<time datetime="2017-08-22T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font color="red">未完成:</font>
-
-<p>这是一些CF上的simple??的数论题。QAQ</p>
-<h5 id="第一波-2017-8-23"><a href="#第一波-2017-8-23" class="headerlink" title="第一波-2017.8.23"></a>第一波-2017.8.23</h5><blockquote>
-<p>CF222C 给出两个集合，第一个集合数的乘积是分子，第二个集合的数的乘积是分母，要求够造一个同样大小的集合，但是得到的分数是化简过的。$1≤n,m≤10^5,ai,bi&lt;=10^7$</p>
-</blockquote>
-<p><strong>质因数分解，构造。</strong>考虑首先筛出$10^7$内的所有素数，然后对所有数质因数分解。最后暴力消除即可。为了保证一定能存在答案，只需要在原来数的基础上消除即可。</p>
-<blockquote>
-<p>CF446C 给定$n$个元素的数组$a[]$。操作$1, l, r$。要求对于$l&lt;=i&lt;=r$，$a[i] += f[i-l+1]$。询问$2,l,r$。返回$\sum_{i=l}^{r} a[i]$，对$10^9+9$取模。其中$f[i]$为斐波那契数列，$f[1]=1,f[2]=1$。$n,m&lt;=300000$</p>
-</blockquote>
-<p><strong>斐波那契数列，线段树维护等比数列。</strong>本题似乎无从下手，因为每一个数增加的值不同。事实上，我们可以利用斐波那契数列的的通项公式<del>（可以用母函数证明，是线性常系数其次递推关系，可窝不会）。</del></p>
-<p>$$\large fib(i) = \frac {1} {\sqrt{5}} \left( \left(\frac {1+\sqrt{5}} {2}\right)^n + \left( \frac {1-\sqrt{5}} {2} \right)^n \right)$$</p>
-<p>令$\large q1= \frac {1+\sqrt{5}} {2}, q2 = \frac {1-\sqrt{5}} {2}$，于是我们只需要维护两个等比数列即可，由于公比是$q1,q2$不变，所以直接利用等比数列求和即可，用线段树维护区间和。注意，本题需要得到$q1,q2$在模意义下的值，只需要暴力算出$\sqrt5$即可。</p>
-<p>顺便提一下，我们需要利用等比数列求和公式$\large \frac {q^n-1} {q-1}$ ，但是本题中$q1,q2$满足$q^2-q-1=0$，就是说$rev(q-1)=q$，原来的公式就变为了$q^{n+1}-q$，足以见得斐波那契数列的神奇。</p>
-<blockquote>
-<p>CF711E,2A。给定$n,k$，已知一年有$2^n$天，选取$k$个人，两个人的生日是在同一天的的概率。要求答案写成最简分数。$n,k&lt;=10^{18}$</p>
-</blockquote>
-<p><strong>欧拉定理降幂，组合相关。</strong>首先需要特判一个情况，就是$k&gt;2^n$概率就是$1$。从反面情况入手，总共生日的方案数为$A=2^{nk}$，所有人的生日互不相同的情况为$B=A_{2^n}^{k}$。答案即为$\large \frac {A-B} A$ 。注意到，$A$的质因数仅有$2$，所以我们需要知道$B$中质因数$2$的个数即可。考虑其展开式，</p>
-<p>$$\large B = A_{2^n}^k = 2^n \times (2^n-1) \times (2^n-2) \times … \times (2^n-k+1)$$</p>
-<p>首先，$2^n$中有$n$个，然后若存在$2^n-a2^b(b&lt;n)$，那么显然这一项含有$b$个质因数$2$，所以我们只要统计$(k-1)!$的质因数$2$的个数即可。</p>
-<p>但是$A=2^{nk}$，指数过大，应该如何处理。考虑<strong>降幂大法</strong>，欧拉定理：</p>
-<p>$$\large a^{\varphi(m)}\equiv a^{0}  \pmod m$$</p>
-<p>所以<strong>指数对$\varphi(m)$取模即可</strong>。</p>
-<blockquote>
-<p>CF121C,1A。对于一个数，如果它仅包含$4$或$7$，则称之为幸运数。求$[1,n]$的第$K$个置换，有多少幸运数位于的位置也是幸运数。$n,k&lt;=10^9$</p>
-</blockquote>
-<p><strong>观察，求第$K$排列。</strong>注意到$k$很小，当$n&gt;=14$时，最前面的$n-13$位是不发生改变的。而且$10^9$内的幸运数只有$1023$个，所以，对于前面的数字，我们暴力计算，后面的，暴力求出第$K$排列即可。</p>
-<blockquote>
-<p>CF772C,1A。给定$m$和$n$个整数$ai(0&lt;=ai&lt;=m-1)$，请您构造一个最长的序列，满足对于所有前缀积对$m$取模，它们互不相同，且不等于任意一个$ai$。$n,m&lt;=200,000$</p>
-</blockquote>
-<p><strong>GCD，DAG最长路。</strong>考虑最后一个数与$m$的$\gcd\ t$，可以注意到，这个数通过乘与$m$互质的数，可以得到任意一个与$m$的$\gcd$为$t$。<strong>同样我们也可以乘上一个与$m$不互质的数，得到与$m$的$\gcd$为$kt$的数。</strong>DP得到最长路后，dfs输出答案即可。</p>
-<p>考虑证明这一点。其中$kax \equiv bcx \pmod m$，$x$是原来最后一个数与$m$的$gcd$（所以$a$与$m$互质），$cx$是新的$gcd$，由乘上一个$k$得到。然后$ka \equiv bc \pmod {\frac m x}$ ，因为$a$与$m$互质，所以一定存在$k$。</p>
-<blockquote>
-<p>CF396B,1A。定义函数$v(n)$为不大于$n$的最大素数。定义函数$u(n)$为大于$n$的最小素数。求$\large \sum \frac 1 {v(i) \times u(i)}(2&lt;=i&lt;=n)$。$T&lt;=500,n&lt;=1e9$</p>
-</blockquote>
-<p><strong>裂项，素数判断。</strong>思路很巧妙，考虑到，</p>
-<p>$$ (u(n)-v(n)) \times \frac 1 {v(n) \times u(n)} = \frac 1 {v(n)} - \frac 1{u(n)}$$</p>
-<p>所以我们就可以裂项相消了，于是，</p>
-<p>$Ans = 1/2 -1/3 + 1/3 - 1/5 + …….. -1/v + \frac 1 {v\times u\times (n-v+1)}$</p>
-<p>消掉，约分即可。</p>
-<blockquote>
-<p>CF283D。对于$(x,y)$，如果满足$x$可以表示为连续$y$个整数之和，则它是酷的。如果$(a1,a2),(a2,a3),..,(an-1,an)$都是酷的。那么整个序列就是酷的。给定长度为$n$的序列，求最少改变几个数字，使得整个序列是酷的。$n&lt;=5000$</p>
-</blockquote>
-<p><strong>数论，动态规划。</strong>首先考虑$(x,y)$符合要求的条件，根据等差数列求和公式，可以知道：当$y$为奇数时，只要$x$是$y$的倍数；当$y$为偶数时，只要$2x$是$y$的奇数倍即可。<strong>观察第二个条件，也就是说$x$质因数$2$的个数比$y$质因数$2$的个数少$1$，对于其它部分$x’$是$y’$的倍数。</strong>受此启发考虑令$a[i]=2^{x[i]}\times y[i]$，以方便状态的转移。</p>
-<p>定义$f[i]$表示$i$是不变的，以$i$结尾的序列，需要满足条件，可以不改变的最长子序列。于是对于一个状态$i$我们寻找$j$同样是不改变的。</p>
-<ul>
-<li>如果$a[i]$是奇数($x[i]=0$)，且$y[j] \bmod y[i] = 0$ ，则$f[i]$可以由$f[j]$转移过来</li>
-<li>如果$x[i]!=0$，条件就比较复杂。首先$y[j] \bmod y[i] = 0$是一个必要条件，接下来考虑$x[i]$与$x[j]$</li>
-<li>考虑$x[i]$向前移动，如果向前移动一位，则$x$必定会减一，于是会出现两种情形。-</li>
-<li>一是$x$还没有到$j$已经变为了$0$（也就是$x[i]&lt;i-j$），变为了奇数，一定能够在最后一次变为$x[i]$。</li>
-<li>二是$x$到$j$时仍然不是$0$，这就要求$x=x[j]$，也就是说$x[i]-x[j]=i-j$。</li>
-</ul>
-<p>至此，问题得到完整的解决。注意一点，我们可以在序列的最后增加一个数$1$使得之前所有状态的答案会聚到这一状态。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数论</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/22/Training-CF-Number-theory/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Training-CF-Graphs" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/22/Training-CF-Graphs/">CodeForces乱做-图论</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/22/Training-CF-Graphs/" class="archive-article-date">
-  	<time datetime="2017-08-22T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font color="red">未完成:</font>
-
-<p>这是一些CF上的simple??的图论题。QAQ</p>
-<blockquote>
-<p>CF208C。给定一个有$n$个节点的无向图。选一个点成为特殊点，与特殊点相连的边称之为特殊边。求，对于所有$1 \rightarrow n$的最短路，经过的特殊边数量的平均值，的最大值。$n&lt;=100, m&lt;=n(n-1)/2$</p>
-</blockquote>
-<p><strong>最短路，拓扑图的DP。</strong>考虑到有两种情况，一种是$1$或$n$成为了特殊点，此时答案一定为$1$。否则我们可以求出经过每个点的最短路条数，即可。<strong>在BFS之后，按照距离来排序就完成了拓扑排序。</strong></p>
-<blockquote>
-<p>CF154C。有编号为$[1,n]$的$n$个人，并给一些相识关系。对于两个人$(i, j)$有，对所有剩下的人，$k$要么与$i,j$相识，$k$要么与$i,j$不相识，求这样的$(i,j)$有多少对。</p>
-</blockquote>
-<p><strong>图上的HASH。</strong>考虑到我们可以将点连出去的边进行$Hash$，如果两个点的$Hash$值相同，则这一对点满足条件。还存在着一个问题，就是说，如果$(i,j)$本身存在连边，他们的$Hash$值不同，于是它们可以把自己加入各自的$Hash$。由于这个$Hash$函数要求<strong>与顺序无关</strong>，所以我们可以对每个点赋予一个值，然后加起来或者异或，即可。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -570,236 +204,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/22/Training-CF-Graphs/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-
-
-
-
   
-    <article id="post-Training-CF-Combinatorial-Mathematics" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/22/Training-CF-Combinatorial-Mathematics/">CodeForces乱做-组合计数</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/22/Training-CF-Combinatorial-Mathematics/" class="archive-article-date">
-  	<time datetime="2017-08-22T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font color="red">未完成: 559D</font>
-
-<p>首先，安利一篇博文，<a href="http://blog.miskcoo.com/2015/06/codeforces-combinatorics-and-probabilities-problem" target="_blank" rel="external">Codeforces 上的一些组合计数问题</a>。 </p>
-<p>这是一些CF上的simple??的组合计数题。QAQ</p>
-<h5 id="第一波-2017-8-24"><a href="#第一波-2017-8-24" class="headerlink" title="第一波-2017.8.24"></a>第一波-2017.8.24</h5><blockquote>
-<p>CF57C。给定$n$，求存在多少长度为$n$的序列满足：所有数在$1$到$n$之间，这个序列是<strong>非递增</strong>或<strong>非递减的</strong>。$n&lt;=100000$</p>
-</blockquote>
-<p><strong>组合数的格路模型。</strong>不失一般性，我们考虑序列是非递减的方案数。可以注意到，假设最后一个数字是$n$，<strong>其等价于从$(0,0)$走到$(n-1,n-1)$的方案数。</strong>为什么呢？我们可以把向右走看作是到下一个数，向上走可以看成是当前位置的数$+1$，并且，序列的数是非递增的。最后一个数可以是$[1,n]$，同理求出。</p>
-<blockquote>
-<p>CF689E。给定$n$和$K$，然后给定$n$个区间，在$n$个区间中选择$K$个，求它们的交集总和。$n&lt;=100000$</p>
-</blockquote>
-<p><strong>离散化，贡献。</strong>本题似乎难以直接穷举所有的情况，考虑<strong>离散化</strong>，并计算每一条线段被多少个区间覆盖。假设某一段被$x$条线段覆盖，那么，我们只需要从这$x$条中选取$K$个，就会对答案产生贡献。即为$len \times C_{x} ^{K}$。</p>
-<blockquote>
-<p>CF28C。有$n$个人等概率随机进入$m$个房间，一个房间可以有多个人，第$i$个房间有$ai$个水龙头，在一个房间的人要去排队装水，他们会使得最长的队尽可能小，求所有房间中最长队列长度的期望。$n,m&lt;=50$</p>
-</blockquote>
-<p><strong>概率，动态规划。</strong>注意到，一个房间内原来有多少人到达最长是无法记录在状态中的，所以直接求概率十分困难。考虑<strong>概率的原始定义：方案数除以总方案数</strong>。也就是说我们求出状态的方案数即可。</p>
-<p>用$f(i,j,l)$表示已经分配了前$i$个房间和$j$个人，最长队列长度为$l$的方案数。首先$f(i,0,0)=1$。</p>
-<p>状态可以有两种决策转移，一种是当前房间队列到达$l$，前面的房间任意；另一种是前面有房间队列到达$l$，但当前的房间任意，于是，</p>
-<p>$$\large f(i,j,l) = \sum <em>{k=0} ^{l}  \left( ^{n-j+p} </em>{\ \ \ \  p}  \right)  f(i-1,j-p,k) \ \large + \sum <em>{k=0} ^{\min p -1} \left( ^{n-j+k} </em>{\ \ \ \ \ k} \right) f(i-1,j-k,l)$$</p>
-<p>其中$p$为使得第$i$个房间队列长度为$l$的数的集合，需要枚举。</p>
-<blockquote>
-<p>CF15E。给定一个整数$N$，当$N=12$的时候是这样一幅图：</p>
-<p><img src="\img\CF15E2.PNG" alt="CF15E2"></p>
-<p>然后你要从最上面的$H$点出发，走一条道路，这条道路中间不包括任何灰色三角形，最后回到$H$。$N$是偶数，$n&lt;=10^6$，问有多少情况，答案对$1e9+9$取模。</p>
-</blockquote>
-<p><strong>递推。</strong>为了方便起见，我们以下图所示的阶段划分。</p>
-<p><img src="\img\CF15E.PNG" alt="CF15E"></p>
-<p>由于整个图是对称的，所以我们考虑左半部分。<strong>除去几种特殊情况，我们都需要从绿点出发回到紫点，</strong>方案数记为$g[1]$。令$f[i]$表示陷进去$i$层的方案数（强制不能从洞口经过，防止重复计数）。令$g[i]$表示第i个蓝点到红点的方案数，于是显然有，</p>
-<p>$$\large f[0] = 0,\ f[1] = 4,\  f[i] = 4 + 2 \times f[i-1]$$</p>
-<p>通过$f[]$我们可以很容易地递推出$g[]$。首先，</p>
-<p>$$\large g[n/2] = 1$$</p>
-<p>$g[i]$可以从哪些方面转移呢，第一种是从蓝点$i$不经过蓝点$i+1$回到红点$i$，根据是否进入洞穴来分；第二种是经过了蓝点$i+1$。综上，即为，</p>
-<p>$$\large  g[i] = 3 \times  f[i-1] + 4 + g[i+1] \times (f[i-1]+1)$$</p>
-<p>如何根据$g[1]$来计算答案？可以注意到，一种是从绿点到紫点再到绿点；一种是从绿点到紫点再直接回去；还有$2$种情况是不经过绿点。于是答案即为：</p>
-<p>$$\large ans = 2 \times (g[1] \times  g[1] + 2 \times  g[1] + 2)$$</p>
-<blockquote>
-<p>CF40E。给出一个$n\times m$的矩阵，每个元素都是$1$或$−1$，其中有$k$个位置元素已经确定，并且这个矩阵满足每一行、每一列元素的乘积都是$−1$，问有多少种不同的矩阵。$1≤n,m≤1000,0≤k&lt;\max(n,m)。$</p>
-</blockquote>
-<p><strong>组合，观察。</strong>注意到乘积为$-1$的等价条件为<strong>$-1$有奇数个</strong>。需要注意一个条件$k&lt;\max(n,m)$，<strong>这意味至少存在一行（或列）是空的</strong>。这是极其重要的一条性质。</p>
-<p>假设空的一行为$x$，我们可以先去填上其他行。此后满足其他行的乘积都为$-1$，这个可以通过组合数很容易地算出来。然后，我们要求列的乘积也是$-1$，不难发现，<strong>第$x$的每一个数都是唯一确定的。</strong>也就是是说，其他行方案的乘积就是总的方案数。</p>
-<p>但是这样还没有完，我们仍需要保证第$x$行的乘积是负数，如何确定呢。注意到，所有数的乘积是$(-1)^m$，如果$(-1)^m \not= (-1)^n$则一定无解，否则第$x$行的乘积一定是负数。</p>
-<blockquote>
-<p>CF830D。给定$n$，现有深度为$n$的满二叉树，对于一个节点，给它与它的所有父亲连一条边。 问得到的新的图有多少条不同的简单路径（1-&gt;2和2-&gt;1算不同路径） 。$n≤400$</p>
-</blockquote>
-<p><strong>树形DP，巧妙<del>非常规</del>的状态定义。</strong>首先考虑一个<strong>错误的算法</strong>，<strong>通过对错误的分析，可以得到正确的算法。</strong></p>
-<p>假设状态$f[i]$表示深度为$i$的满二叉树，方案的个数为$f[i]$。我们考虑按照是否通过根结点来讨论。一种是根经过根据所在子树不同，有$f[i-1] \times f[i-1] \times 4$种情况，一种是从根出发或结束，有$f[i-1] \times 4$种情况，还有一种是不经过根$f[i-1] \times 2$，当然，只包含$1$的简单路径也算，就是要$+1$。</p>
-<p>可以发现，这比答案大很多。问题出在哪里呢？可以发现，如果我从左子树到根再到左子树，就会发生方案不合法，同时注意到$n$比较小，考虑附加一些状态来避免非法。</p>
-<p>我们需要在同一个子树中选择两个<strong>不相交</strong>的路径，然后与根相连。<strong>此后不相交的路径条数会不变或减小。</strong></p>
-<p>这就启发我们还要记录一个状态：此时树中有多少个<strong>不相交</strong>路径。即$f[i,j]$表示从深度为$i$的树中，选出$j$条不相交的路径的方案数。那么答案就是$f[k,1]$，按照根所在路径，枚举$f[i-1,j]$和$f[i-1,k]$转移如下：</p>
-<ul>
-<li>如果让根成为单独的一条路径，那么$f[i,j+k+1]\ +=  f[i−1,j] × f[i−1,k] $</li>
-<li>如果不选根，那么$f[i,j+k] += f[i−1,j] × f[i−1,k] $</li>
-<li>让根与左儿子中的一条路径结合或和右儿子中的一条路径结合，那么$f[i,j+k] += f[i−1,j] × f[i−1,k] × 2 × (j+k)$</li>
-<li>从$j+k$条边中选出两条，让这两条边与根结合形成新的一条边，那么$f[i,j+k−1] += f[i−1,j] × f[i−1,k] × C(j+k, 2) × 2$</li>
-</ul>
-<p>真的是一道DP神题！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">组合</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/22/Training-CF-Combinatorial-Mathematics/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Training-CF-DP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/21/Training-CF-DP/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-Training-CF-Div2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/08/Training-CF-Div2/">CodeForces泛做第一轮</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/08/Training-CF-Div2/" class="archive-article-date">
-  	<time datetime="2017-08-08T00:08:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>完结，撒花~</strong></p>
-<p><strong>时间: 2017.8.8~2017.8.22</strong></p>
-<p>由于博主太弱了，所以在NOIP2017之前开了这么一个坑，差不多是#301到#360，中间还有一些非常规赛。就这样吧。。</p>
-<font color="red">未完成: 546E 568C/D 571B/D CF573D 578D 582D 594B 601D 603B 605A 611E 613B 613D(虚树) 638E 663B/D 666B 643C(斜率优化DP)/D 671C/D 676D/E</font>
-        
-          <a class="article-more-a" href="/2017/08/08/Training-CF-Div2/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">训练</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/08/Training-CF-Div2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-  
 
 
           </div>
@@ -821,10 +238,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

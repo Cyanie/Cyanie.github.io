@@ -7,19 +7,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://cyanie.github.io">
-  <title>CodeForces-Educational-Round泛做&amp;记录 | Cyani&#39;s Blog</title>
+  <title>CodeForces乱做-图论 | Cyani&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="未完成: 818G,  598F, 837D/F/G, 609F  呃，主要是把之前没有参加的Educational Codeforces Round补一补。QAQ。。。 Educational Codeforces Round 1C:【题意】给定$n$个向量，求夹角最小的两个。 【题解】用$atan2(x,y)$可以求出向量与$x$轴的夹角，排序即可。卡精度！！ E:【题意】给定一个$n\tim">
-<meta name="keywords" content="泛做">
+  <meta name="description" content="未完成:  这是一些CF上的simple??的图论题。QAQ  CF208C。给定一个有$n$个节点的无向图。选一个点成为特殊点，与特殊点相连的边称之为特殊边。求，对于所有$1 \rightarrow n$的最短路，经过的特殊边数量的平均值，的最大值。$n&amp;lt;=100, m&amp;lt;=n(n-1)/2$  最短路，拓扑图的DP。考虑到有两种情况，一种是$1$或$n$成为了特殊点，此时答案一定为$">
+<meta name="keywords" content="图论">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CodeForces-Educational-Round泛做&amp;记录">
-<meta property="og:url" content="https://cyanie.github.io/2017/07/01/Training-CF-Educational/index.html">
+<meta property="og:title" content="CodeForces乱做-图论">
+<meta property="og:url" content="https://cyanie.github.io/2017/08/22/Training-CF-Graphs/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
-<meta property="og:description" content="未完成: 818G,  598F, 837D/F/G, 609F  呃，主要是把之前没有参加的Educational Codeforces Round补一补。QAQ。。。 Educational Codeforces Round 1C:【题意】给定$n$个向量，求夹角最小的两个。 【题解】用$atan2(x,y)$可以求出向量与$x$轴的夹角，排序即可。卡精度！！ E:【题意】给定一个$n\tim">
-<meta property="og:updated_time" content="2017-08-23T08:11:16.343Z">
+<meta property="og:description" content="未完成:  这是一些CF上的simple??的图论题。QAQ  CF208C。给定一个有$n$个节点的无向图。选一个点成为特殊点，与特殊点相连的边称之为特殊边。求，对于所有$1 \rightarrow n$的最短路，经过的特殊边数量的平均值，的最大值。$n&amp;lt;=100, m&amp;lt;=n(n-1)/2$  最短路，拓扑图的DP。考虑到有两种情况，一种是$1$或$n$成为了特殊点，此时答案一定为$">
+<meta property="og:updated_time" content="2017-08-27T03:23:18.987Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CodeForces-Educational-Round泛做&amp;记录">
-<meta name="twitter:description" content="未完成: 818G,  598F, 837D/F/G, 609F  呃，主要是把之前没有参加的Educational Codeforces Round补一补。QAQ。。。 Educational Codeforces Round 1C:【题意】给定$n$个向量，求夹角最小的两个。 【题解】用$atan2(x,y)$可以求出向量与$x$轴的夹角，排序即可。卡精度！！ E:【题意】给定一个$n\tim">
+<meta name="twitter:title" content="CodeForces乱做-图论">
+<meta name="twitter:description" content="未完成:  这是一些CF上的simple??的图论题。QAQ  CF208C。给定一个有$n$个节点的无向图。选一个点成为特殊点，与特殊点相连的边称之为特殊边。求，对于所有$1 \rightarrow n$的最短路，经过的特殊边数量的平均值，的最大值。$n&amp;lt;=100, m&amp;lt;=n(n-1)/2$  最短路，拓扑图的DP。考虑到有两种情况，一种是$1$或$n$成为了特殊点，此时答案一定为$">
   
     <link rel="alternative" href="/atom.xml" title="Cyani&#39;s Blog" type="application/atom+xml">
   
@@ -165,46 +165,37 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Training-CF-Educational" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Training-CF-Graphs" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      CodeForces-Educational-Round泛做&amp;记录
+      CodeForces乱做-图论
     </h1>
   
 
         
-        <a href="/2017/07/01/Training-CF-Educational/" class="archive-article-date">
-  	<time datetime="2017-07-01T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
+        <a href="/2017/08/22/Training-CF-Graphs/" class="archive-article-date">
+  	<time datetime="2017-08-22T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <font color="red">未完成: 818G,  598F, 837D/F/G, 609F</font>
+        <font color="red">未完成:</font>
 
-<p>呃，主要是把之前没有参加的Educational Codeforces Round补一补。QAQ。。。</p>
-<h5 id="Educational-Codeforces-Round-1"><a href="#Educational-Codeforces-Round-1" class="headerlink" title="Educational Codeforces Round 1"></a>Educational Codeforces Round 1</h5><p>C:【题意】给定$n$个向量，求夹角最小的两个。</p>
-<p>【题解】用$atan2(x,y)$可以求出向量与$x$轴的夹角，排序即可。<strong>卡精度！！</strong></p>
-<p>E:【题意】给定一个$n\times m$的巧克力，划分一个巧克力的代价为长度的平方，求划分出$K$个小巧克力块的最小代价。</p>
-<p>【题解】定义状态$f[i][j][k]$如题意，暴力转移，$O(n^3K^2)$的暴力可过。</p>
-<p><strong>Educational Codeforces Round 3</strong></p>
-<p>E:【题意】给定一个无向图，求必须包含某个点的最小生成树。$n&lt;=200000$</p>
-<p>【题解】这题可以倍增或者并查集按秩合并。其中并查集按秩合并常数较小。</p>
-<h5 id="Educational-Codeforces-Round-24"><a href="#Educational-Codeforces-Round-24" class="headerlink" title="Educational Codeforces Round 24"></a>Educational Codeforces Round 24</h5><p>D:【题意】给定n个数${c1,c2…}$和A，用$cntX(i)$表示${c1,c2,…,ci}$中等于X的数。询问是否存在B，使得对于任意i，都有$cntB(i)&gt;=cntA(i)$。</p>
-<p>【题解】考虑一个个枚举B，首先判定$cntB(n)$是否不小于$cntA(n)$ 。发现答案的条件等价于：一个个比较A和B所在的位置，对于所有第i次出现的A，都满足第i个出现的B在前面。假设A的个数为m，则每次判断为$O(m)$，而满足前提的B的个数为$O(n/m)$ ，复杂度$O(n)$ 。</p>
-<p>E:【题意】给定n个数${a1,a2…}$和k，问存在多少有序数对$(x,y)$满足：删除前x个数和后y个数，剩下数的乘积是k的倍数。</p>
-<p>【题解】将k质因数分解（最多有10个不同的质因子），只要每个质因子的个数达到k拥有的就可以了。直接暴力枚举左端区间，发现右区间有单调性，直接维护一个滑动窗口就好了（比赛时写了二分233…）。</p>
-<p>F:【题意】<strong>很好玩的题。</strong> 有q组询问，每组询问给出数n。问n个节点最多能连多少条边，使得桥的数量不少于总边数的一半。</p>
-<p>【题解】有个很显然的结论：<strong><em>n个节点构成的图中桥不超过n-1个</em></strong>。因为无向图可以看一些树连一些边构成的，而n节点数恰好只有n-1个桥，连上的边一定不会成为桥。考虑这样构造：中间构造一个“K-完全图“，剩余的节点就往“完全图“上连单一的边，不难发现这样是存在k个桥时，边数最多的方案。</p>
-<p>实际上，内部的图最多只有$min(n-k, \frac{k(k-1)}{2}) $ 条边，于是总边数为$f(k)=n-k+min(n-k, \frac{k(k-1)}{2}) $ 发现这个函数$f(k)$ 是个单峰函数，用三分法求解（最值两边有严格单调性）即可。</p>
-<p><strong>三分法的正确姿势。</strong> ${Lmid=(2l+r)/3}~~~{Rmid=(l+2r)/3}$ ，当L和R差小于3后，暴力找出最值。</p>
-<p>(坑)G：网络流难题。</p>
-<p><strong>Educational Codeforces Round 26</strong></p>
+<p>这是一些CF上的simple??的图论题。QAQ</p>
+<blockquote>
+<p>CF208C。给定一个有$n$个节点的无向图。选一个点成为特殊点，与特殊点相连的边称之为特殊边。求，对于所有$1 \rightarrow n$的最短路，经过的特殊边数量的平均值，的最大值。$n&lt;=100, m&lt;=n(n-1)/2$</p>
+</blockquote>
+<p><strong>最短路，拓扑图的DP。</strong>考虑到有两种情况，一种是$1$或$n$成为了特殊点，此时答案一定为$1$。否则我们可以求出经过每个点的最短路条数，即可。<strong>在BFS之后，按照距离来排序就完成了拓扑排序。</strong></p>
+<blockquote>
+<p>CF154C。有编号为$[1,n]$的$n$个人，并给一些相识关系。对于两个人$(i, j)$有，对所有剩下的人，$k$要么与$i,j$相识，$k$要么与$i,j$不相识，求这样的$(i,j)$有多少对。</p>
+</blockquote>
+<p><strong>图上的HASH。</strong>考虑到我们可以将点连出去的边进行$Hash$，如果两个点的$Hash$值相同，则这一对点满足条件。还存在着一个问题，就是说，如果$(i,j)$本身存在连边，他们的$Hash$值不同，于是它们可以把自己加入各自的$Hash$。由于这个$Hash$函数要求<strong>与顺序无关</strong>，所以我们可以对每个点赋予一个值，然后加起来或者异或，即可。</p>
 
       
 
@@ -218,7 +209,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">泛做</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">图论</a>
         		</li>
       		
 		</ul>
@@ -274,7 +265,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://cyanie.github.io/2017/07/01/Training-CF-Educational/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://cyanie.github.io/2017/08/22/Training-CF-Graphs/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -288,18 +279,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/08/08/Training-CF-Div2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/08/22/Training-CF-Number-theory/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          CodeForces泛做第一轮
+          CodeForces乱做-数论
         
       </div>
     </a>
   
   
-    <a href="/2017/07/01/Training-CF-Number-theory/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CodeForces乱做-数论</div>
+    <a href="/2017/08/22/Training-CF-Combinatorial-Mathematics/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CodeForces乱做-组合计数</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -428,11 +419,31 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">训练</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">泛做</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">训练</a>
+                <a href="javascript:void(0)" class="js-tag color4">树相关</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数论</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">图论</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">组合</a>
               </li>
             
             <div class="clearfix"></div>

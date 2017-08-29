@@ -1,1 +1,1 @@
-https://cyanie.github.io/2017/08/21/Training-CF-DP/
+https://cyanie.github.io/2017/08/26/Training-CF-Data-Structures/

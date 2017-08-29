@@ -7,17 +7,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://cyanie.github.io">
-  <title>Archives: 2017/7 | Cyani&#39;s Blog</title>
+  <title>CodeForces乱做-树相关 | Cyani&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This Cyani&apos;s Bolg.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Cyani&#39;s Blog">
-<meta property="og:url" content="https://cyanie.github.io/archives/2017/07/index.html">
+  <meta name="description" content="未完成:    这是一些CF上的simple??的树相关的题。QAQ 第一波-2017.8.25~26 CF543D。输入给出$N$和一些边的关系$(p2，p3，p4,…,pn)$表示$i$和$pi$有连边。对于以任意$i$为根时，把树边黑白染色，使得任意点走到根的路径上不超过一条黑边，输出染色的方案数。$n&amp;lt;=200000$  树形DP，DFS转移。考虑以$1$为根的情况，定义$f[i]$">
+<meta name="keywords" content="树相关">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CodeForces乱做-树相关">
+<meta property="og:url" content="https://cyanie.github.io/2017/08/25/Training-CF-Tree/index.html">
 <meta property="og:site_name" content="Cyani&#39;s Blog">
-<meta property="og:description" content="This Cyani&apos;s Bolg.">
+<meta property="og:description" content="未完成:    这是一些CF上的simple??的树相关的题。QAQ 第一波-2017.8.25~26 CF543D。输入给出$N$和一些边的关系$(p2，p3，p4,…,pn)$表示$i$和$pi$有连边。对于以任意$i$为根时，把树边黑白染色，使得任意点走到根的路径上不超过一条黑边，输出染色的方案数。$n&amp;lt;=200000$  树形DP，DFS转移。考虑以$1$为根的情况，定义$f[i]$">
+<meta property="og:updated_time" content="2017-08-26T04:29:29.677Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cyani&#39;s Blog">
-<meta name="twitter:description" content="This Cyani&apos;s Bolg.">
+<meta name="twitter:title" content="CodeForces乱做-树相关">
+<meta name="twitter:description" content="未完成:    这是一些CF上的simple??的树相关的题。QAQ 第一波-2017.8.25~26 CF543D。输入给出$N$和一些边的关系$(p2，p3，p4,…,pn)$表示$i$和$pi$有连边。对于以任意$i$为根时，把树边黑白染色，使得任意点走到根的路径上不超过一条黑边，输出染色的方案数。$n&amp;lt;=200000$  树形DP，DFS转移。考虑以$1$为根的情况，定义$f[i]$">
   
     <link rel="alternative" href="/atom.xml" title="Cyani&#39;s Blog" type="application/atom+xml">
   
@@ -163,98 +165,155 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Training-CF-Tree" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/01/Training-CF-Educational/" class="archive-article-date">
-  	<time datetime="2017-07-01T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/01/Training-CF-Educational/">CodeForces-Educational-Round泛做&amp;记录</a>
+    <h1 class="article-title" itemprop="name">
+      CodeForces乱做-树相关
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/08/25/Training-CF-Tree/" class="archive-article-date">
+  	<time datetime="2017-08-25T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <font color="red">未完成: </font> 
+
+<p>这是一些CF上的simple??的树相关的题。QAQ</p>
+<h5 id="第一波-2017-8-25-26"><a href="#第一波-2017-8-25-26" class="headerlink" title="第一波-2017.8.25~26"></a>第一波-2017.8.25~26</h5><blockquote>
+<p>CF543D。输入给出$N$和一些边的关系$(p2，p3，p4,…,pn)$表示$i$和$pi$有连边。对于以任意$i$为根时，把树边黑白染色，使得任意点走到根的路径上不超过一条黑边，输出染色的方案数。$n&lt;=200000$</p>
+</blockquote>
+<p><strong>树形DP，DFS转移。</strong>考虑以$1$为根的情况，定义$f[i]$表示以$i$为根的方案数，于是有$f[i] = \prod (f[j]+1)$。</p>
+<p>那么，如何将答案转移到子节点上呢？假设$u$的祖先（非子树）的方案为$x$，需要转移到$u$的子节点$v$。假设$u$到$v$的边的颜色为黑色，显然只有一种；为白色时，有$\large \frac {x \times f[u]} {f[v]+1}$种方案。两者之和作为新的$x’$转移到子节点即可。每个节点的答案为$x \times f[u]$。</p>
+<p>值得注意的是，由于涉及到除法和取余，所以需要我们计算逆元。但是，特别的，如果$f[v]+1=MOD$，则不存在逆元，所以需要我们暴力重新计算。</p>
+<blockquote>
+<p>CF396C。给定以$1$为根的树，从节点$2$开始给出每个节点的父节点。$m$次操作，操作分为两种，$1\  u, x, k$，表示在以$u$为根的子树上，对于所有其它与$u$节点的距离为$i$的点$v$，加上$x-i\times k$。$2\ v$，查询节点$v$值。$n,m&lt;=300000$</p>
+</blockquote>
+<p><strong>DFS序，树状数组。</strong>从$x-i\times k$这个式子入手，显然$x$可以用DFS序来维护，那么如何处理后一个数字呢？考虑拆开：$x-i \times k = x - (d[v] - d[u]) \times k = (x + d[u] \times k) + d[v] \times k$。可以发现，我们将答案分为了两部分，一部分与$v$的深度无关，可以用树状数组维护。另一部分与$v$的深度有关，于是维护$k$之和即可。区间修改可以差分化，然后用树状数组维护。</p>
+<blockquote>
+<p>CF696B。给定一棵以$1$为根的树，在时刻$1,2,3…$访问节点。一开始在$1$，之后以随机的方式$DFS$（保证不重复访问）求对于每个节点，访问它的期望时间。$n&lt;=100000$</p>
+</blockquote>
+<p><strong>期望的线性性，树形DP。</strong>假设一个节点$u$已经知道访问父节点$fa$的期望时间$ans[fa]$，那么这个节点$u$的期望时间为多少？考虑到，$u$的兄弟节点各有$50\%$在$u$的前面访问，而且需要的代价为整颗子树的$size$。由此我们可以得到在子树$fa$访问$u$的期望时间。再根据<strong>期望的线性性</strong>，于是，</p>
+<p>$\large ans[u]=ans[fa] + 0.5 \times (size[fa] - size[u] - 1) + 1$</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">泛做</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">树相关</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://cyanie.github.io/2017/08/25/Training-CF-Tree/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/01/Training-CF-Number-theory/" class="archive-article-date">
-  	<time datetime="2017-07-01T02:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-01</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/01/Training-CF-Number-theory/">CodeForces乱做-数论</a>
-    </h1>
+    <a href="/2017/08/26/Training-CF-Data-Structures/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CodeForces乱做-数据结构
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/22/Training-CF-Educational/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CodeForces-Educational-Round泛做&amp;记录</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+   
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">泛做</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -277,8 +336,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -367,11 +426,31 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">训练</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">泛做</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">训练</a>
+                <a href="javascript:void(0)" class="js-tag color4">树相关</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数论</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">图论</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">组合</a>
               </li>
             
             <div class="clearfix"></div>
